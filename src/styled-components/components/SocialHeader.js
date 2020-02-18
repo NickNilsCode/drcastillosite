@@ -11,7 +11,12 @@ export const SocialHeader = styled.div`
   @media(min-width: 700px){
     height: 36px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    h6 {
+      width: 475px;
+      margin-left: 16px;
+      justify-content: flex-start;
+    }
   }
 `;
 
@@ -35,4 +40,9 @@ export const LinkWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media(min-width: 700px){
+    width: 475px;
+    justify-content: flex-end;
+    margin-right: 16px;
+  }
 `;

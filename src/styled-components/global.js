@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const H6 = styled.div`
+export const H6 = styled.h6`
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: normal;

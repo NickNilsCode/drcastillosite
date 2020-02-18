@@ -21,6 +21,6 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var H6 = _styledComponents["default"].div(_templateObject());
+var H6 = _styledComponents["default"].h6(_templateObject());
 
 exports.H6 = H6;
