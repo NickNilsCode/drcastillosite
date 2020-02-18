@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { BlogWrapper, BlogContent } from '../styled-components/blog';
+import { BlogWrapper, BlogContent } from '../styled-components/pages/blog';
 
 class Blog extends Component {
     render(){

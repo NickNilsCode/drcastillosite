@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ServicestemplateWrapper, ServicestemplateContent } from '../styled-components/servicestemplate';
+import { ServicestemplateWrapper, ServicestemplateContent } from '../styled-components/pages/servicestemplate';
 
 class Servicestemplate extends Component {
     render(){

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { PatientinfoWrapper, PatientinfoContent } from '../styled-components/patientinfo';
+import { PatientinfoWrapper, PatientinfoContent } from '../styled-components/pages/patientinfo';
 
 class Patientinfo extends Component {
     render(){

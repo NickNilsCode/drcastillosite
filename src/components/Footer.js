@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Footer } from '../styled-components/footer';
+import { InformationalFooter, SocialFooter } from './'
+import { Footer } from '../styled-components/components/Footer';
 
 class FooterComponent extends Component {
   render(){
     return (
       <Footer>
-        footer
+        <InformationalFooter/>
+        <SocialFooter/>
       </Footer>
     );
   }

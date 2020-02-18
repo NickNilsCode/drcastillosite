@@ -7,7 +7,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _footer = require("../styled-components/footer");
+var _ = require("./");
+
+var _Footer = require("../styled-components/components/Footer");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -45,7 +47,7 @@ function (_Component) {
   _createClass(FooterComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_footer.Footer, null, "footer");
+      return _react["default"].createElement(_Footer.Footer, null, _react["default"].createElement(_.InformationalFooter, null), _react["default"].createElement(_.SocialFooter, null));
     }
   }]);
 

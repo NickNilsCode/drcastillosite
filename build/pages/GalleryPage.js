@@ -11,7 +11,7 @@ var _Header = _interopRequireDefault(require("../components/Header"));
 
 var _Footer = _interopRequireDefault(require("../components/Footer"));
 
-var _gallery = require("../styled-components/gallery");
+var _gallery = require("../styled-components/pages/gallery");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

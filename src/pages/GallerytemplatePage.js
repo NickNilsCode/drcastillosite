@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { GallerytemplateWrapper, GallerytemplateContent } from '../styled-components/gallerytemplate';
+import { GallerytemplateWrapper, GallerytemplateContent } from '../styled-components/pages/gallerytemplate';
 
 class Gallerytemplate extends Component {
     render(){

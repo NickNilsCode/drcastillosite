@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { DrcastilloWrapper, DrcastilloContent } from '../styled-components/drcastillo';
+import { DrcastilloWrapper, DrcastilloContent } from '../styled-components/pages/drcastillo';
 
 class Drcastillo extends Component {
     render(){

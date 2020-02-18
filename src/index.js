@@ -244,6 +244,8 @@ function returnHTML(data, bundle, Page, title){
               <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <title>${title}</title>
+                <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7CMontserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+                <script src="https://kit.fontawesome.com/c0157dbc17.js" crossorigin="anonymous"></script>
                 <meta name="Description" content="${title}">
                 <style>
                   body { margin: 0; font-family: Helvetica; }

@@ -11,7 +11,7 @@ var _Header = _interopRequireDefault(require("../components/Header"));
 
 var _Footer = _interopRequireDefault(require("../components/Footer"));
 
-var _teamtemplate = require("../styled-components/teamtemplate");
+var _teamtemplate = require("../styled-components/pages/teamtemplate");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

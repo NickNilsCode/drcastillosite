@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Header } from '../styled-components/header';
+import { SocialHeader, NavHeader } from './';
+import { Header } from '../styled-components/components/Header';
 
 class HeaderComponent extends Component {
   render(){
     return (
       <Header>
-        header
+        <SocialHeader/>
+        <NavHeader/>
       </Header>
     );
   }

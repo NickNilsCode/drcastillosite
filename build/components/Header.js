@@ -7,7 +7,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _header = require("../styled-components/header");
+var _ = require("./");
+
+var _Header = require("../styled-components/components/Header");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -45,7 +47,7 @@ function (_Component) {
   _createClass(HeaderComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_header.Header, null, "header");
+      return _react["default"].createElement(_Header.Header, null, _react["default"].createElement(_.SocialHeader, null), _react["default"].createElement(_.NavHeader, null));
     }
   }]);
 

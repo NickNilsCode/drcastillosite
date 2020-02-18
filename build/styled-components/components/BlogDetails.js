@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Header = void 0;
+exports.BlogDetails = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -21,6 +21,6 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Header = _styledComponents["default"].header(_templateObject());
+var BlogDetails = _styledComponents["default"].div(_templateObject());
 
-exports.Header = Header;
+exports.BlogDetails = BlogDetails;

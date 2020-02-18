@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { TeamWrapper, TeamContent } from '../styled-components/team';
+import { TeamWrapper, TeamContent } from '../styled-components/pages/team';
 
 class Team extends Component {
     render(){

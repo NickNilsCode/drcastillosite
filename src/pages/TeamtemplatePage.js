@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { TeamtemplateWrapper, TeamtemplateContent } from '../styled-components/teamtemplate';
+import { TeamtemplateWrapper, TeamtemplateContent } from '../styled-components/pages/teamtemplate';
 
 class Teamtemplate extends Component {
     render(){

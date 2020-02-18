@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ContactWrapper, ContactContent } from '../styled-components/contact';
+import { ContactWrapper, ContactContent } from '../styled-components/pages/contact';
 
 class Contact extends Component {
     render(){
