@@ -44,6 +44,8 @@ var _compression = _interopRequireDefault(require("compression"));
 
 var _cors = _interopRequireDefault(require("cors"));
 
+var _path = _interopRequireDefault(require("path"));
+
 var _bodyParser = _interopRequireDefault(require("body-parser"));
 
 var _nodemailer = _interopRequireDefault(require("nodemailer"));
@@ -77,67 +79,55 @@ var dataObj = {},
 _fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   homeBundle = data || "";
-});
+}); // fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   aboutBundle = data || "";
+// })
+// fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicesBundle = data || "";
+// })
+// fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicestemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/drcastillo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   drcastilloBundle = data || "";
+// })
+// fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamBundle = data || "";
+// })
+// fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamtemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   galleryBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   gallerytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   patientinfoBundle = data || "";
+// })
+// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
+// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogtemplateBundle = data || "";
+// })
 
-_fs["default"].readFile('./dist/js/about.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  aboutBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/services.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  servicesBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  servicestemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/drcastillo.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  drcastilloBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/team.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  teamBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  teamtemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/gallery.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  galleryBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  gallerytemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/patientinfo.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  patientinfoBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/contact.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  contactBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blog.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogtemplateBundle = data || "";
-});
 
 app.get('/', function (req, res) {
   var data = "";
@@ -204,6 +194,10 @@ app.get('/blogtemplate', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, _BlogtemplateRoot["default"], "blogtemplate"));
 });
+app.get('/images/:id', function (req, res) {
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.sendFile(_path["default"].join(__dirname, '../images/' + req.params.id));
+});
 app.post('/email', function (req, res) {
   var transporter = _nodemailer["default"].createTransport({
     host: 'smtp.gmail.com',
@@ -267,7 +261,7 @@ function returnHTML(data, bundle, Page, title) {
     data: data
   })));
   var styles = sheet.getStyleTags();
-  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <link href=\"http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7CMontserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800\" rel=\"stylesheet\" type=\"text/css\">\n                <script src=\"https://kit.fontawesome.com/c0157dbc17.js\" crossorigin=\"anonymous\"></script>\n                <meta name=\"Description\" content=\"").concat(title, "\">\n                <style>\n                  body { margin: 0; font-family: Helvetica; }\n                  a { text-decoration: none; color: #000; }\n                </style>\n                ").concat(styles, "\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
+  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <link href=\"http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7CMontserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800\" rel=\"stylesheet\" type=\"text/css\">\n                <script src=\"https://kit.fontawesome.com/c0157dbc17.js\" crossorigin=\"anonymous\"></script>\n                <meta name=\"Description\" content=\"").concat(title, "\">\n                <style>\n                  body { margin: 0; font-family: Helvetica; }\n                  a { text-decoration: none; color: #000; }\n                  .i-margin { margin-right: 6px }\n                </style>\n                ").concat(styles, "\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
 }
 
 function errHandle(err) {

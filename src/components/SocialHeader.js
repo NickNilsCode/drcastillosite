@@ -8,25 +8,35 @@ class SocialHeaderComponent extends Component {
     return (
       <SocialHeader>
         <H6>
-          <i className="fas fa-phone-alt"></i>
-          <span style={{marginLeft: '5px'}}>Call for free consultation: 0800 123 45 678</span>
+          <i className="fas fa-phone-alt i-margin"></i>
+          <span>Call for free consultation: (559) 221-0302</span>
         </H6>
         <LinkWrap>
-          <LinkSquare>
-            <i className="fab fa-facebook-f"></i>
-          </LinkSquare>
-          <LinkSquare>
-            <i className="fab fa-google-plus-g"></i>
-          </LinkSquare>
-          <LinkSquare>
-            <i className="fab fa-pinterest"></i>
-          </LinkSquare>
-          <LinkSquare>
-            <i className="fab fa-youtube"></i>
-          </LinkSquare>
-          <LinkSquare>
-            <i className="fas fa-rss"></i>
-          </LinkSquare>
+          <a href="">
+            <LinkSquare>
+              <i className="fab fa-facebook-f"></i>
+            </LinkSquare>
+          </a>
+          <a href="">
+            <LinkSquare>
+              <i className="fab fa-google-plus-g"></i>
+            </LinkSquare>
+          </a>
+          <a href="">
+            <LinkSquare>
+              <i className="fab fa-pinterest"></i>
+            </LinkSquare>
+          </a>
+          <a href="">
+            <LinkSquare>
+              <i className="fab fa-youtube"></i>
+            </LinkSquare>
+          </a>
+          <a href="">
+            <LinkSquare>
+              <i className="fas fa-rss"></i>
+            </LinkSquare>
+          </a>
         </LinkWrap>
       </SocialHeader>
     );

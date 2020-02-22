@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { NavHeader } from '../styled-components/components/NavHeader';
+import { MobileHeader, DesktopHeader } from './'
 
 class NavHeaderComponent extends Component {
   render(){
     return (
       <NavHeader>
-        Nav Header
+        <MobileHeader/>
+        <DesktopHeader/>
       </NavHeader>
     );
   }

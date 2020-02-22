@@ -7,9 +7,13 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _SocialFooter = require("../styled-components/components/SocialFooter");
+var _DesktopHeader = require("../styled-components/components/DesktopHeader");
+
+var _menuOptions = _interopRequireDefault(require("../data/menuOptions"));
 
 var _global = require("../styled-components/global");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -33,42 +37,53 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var SocialFooterComponent =
+var DesktopHeaderComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(SocialFooterComponent, _Component);
+  _inherits(DesktopHeaderComponent, _Component);
 
-  function SocialFooterComponent() {
-    _classCallCheck(this, SocialFooterComponent);
+  function DesktopHeaderComponent(props) {
+    var _this;
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(SocialFooterComponent).apply(this, arguments));
+    _classCallCheck(this, DesktopHeaderComponent);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(DesktopHeaderComponent).call(this, props));
+    _this.state = {
+      thisPath: ""
+    };
+    return _this;
   }
 
-  _createClass(SocialFooterComponent, [{
+  _createClass(DesktopHeaderComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.setState({
+        thisPath: window.location.pathname
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_SocialFooter.SocialFooter, null, _react["default"].createElement(_global.H6, null, _react["default"].createElement("span", {
-        style: {
-          fontWeight: "bold"
-        }
-      }, "Luis Castillo"), " - Professional Dental Corporation. All rights reserved 2016."), _react["default"].createElement(_SocialFooter.LinkWrap, null, _react["default"].createElement("a", {
-        href: ""
-      }, _react["default"].createElement(_SocialFooter.LinkSquare, null, _react["default"].createElement("i", {
-        className: "fab fa-facebook-f"
-      }))), _react["default"].createElement("a", {
-        href: ""
-      }, _react["default"].createElement(_SocialFooter.LinkSquare, null, _react["default"].createElement("i", {
-        className: "fab fa-google-plus-g"
-      }))), _react["default"].createElement("a", {
-        href: ""
-      }, _react["default"].createElement(_SocialFooter.LinkSquare, null, _react["default"].createElement("i", {
-        className: "fab fa-pinterest"
-      })))));
+      var thisPath = this.state.thisPath;
+      return _react["default"].createElement(_DesktopHeader.DesktopHeader, null, _react["default"].createElement("a", {
+        href: "/"
+      }, _react["default"].createElement("img", {
+        src: "/images/dentistlogo.png"
+      })), _react["default"].createElement(_DesktopHeader.LinkWrap, null, _menuOptions["default"].map(function (a, i) {
+        var thisPage = thisPath == a.link ? "thisPage" : "";
+        return _react["default"].createElement(_react.Fragment, {
+          key: i
+        }, a.link != '/' && _react["default"].createElement("span", null, "\xB7"), _react["default"].createElement(_DesktopHeader.MenuLink, {
+          href: a.link
+        }, _react["default"].createElement(_global.H3, {
+          className: thisPage
+        }, a.label)));
+      })));
     }
   }]);
 
-  return SocialFooterComponent;
+  return DesktopHeaderComponent;
 }(_react.Component);
 
-var _default = SocialFooterComponent;
+var _default = DesktopHeaderComponent;
 exports["default"] = _default;

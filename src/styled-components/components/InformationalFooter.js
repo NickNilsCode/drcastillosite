@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 export const InformationalFooter = styled.div`
-  width: calc(100% - 32px);
-  min-height: 100px;
-  background-color: #fff;
-  border-bottom: 1px solid #8d8d8d;
-  color: #000;
-  padding: 16px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  
+  @media(min-width: 1000px){
+    flex-direction: row;
+  }
 `;

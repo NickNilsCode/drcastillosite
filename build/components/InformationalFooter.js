@@ -47,7 +47,17 @@ function (_Component) {
   _createClass(InformationalFooterComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_InformationalFooter.InformationalFooter, null, _react["default"].createElement(_.FooterCard, null), _react["default"].createElement(_.FooterCard, null), _react["default"].createElement(_.FooterCard, null));
+      return _react["default"].createElement(_InformationalFooter.InformationalFooter, null, _react["default"].createElement(_.FooterCard, {
+        title: "COME TO OUR OFFICE"
+      }, _react["default"].createElement("p", null, "Luis Castillo Professional Dental Corp.", _react["default"].createElement("br", null), "5359 N Fresno St # 110", _react["default"].createElement("br", null), "Fresno, CA 93710", _react["default"].createElement("br", null))), _react["default"].createElement(_.FooterCard, {
+        title: "OFFICE HOURS"
+      }, _react["default"].createElement("p", null, "Monday to Friday: 8:00am - 5:30pm", _react["default"].createElement("br", null), "Saturday: By Appointment", _react["default"].createElement("br", null), "Sunday: Closed")), _react["default"].createElement(_.FooterCard, {
+        title: "CONTACT US"
+      }, _react["default"].createElement("p", null, _react["default"].createElement("i", {
+        className: "fas fa-envelope i-margin"
+      }), "dentalsmiles222@gmail.com", _react["default"].createElement("br", null), _react["default"].createElement("i", {
+        className: "fas fa-phone-alt i-margin"
+      }), "(559) 221- 0302")));
     }
   }]);
 

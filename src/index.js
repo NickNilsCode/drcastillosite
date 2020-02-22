@@ -27,6 +27,7 @@ const cryptr = new Cryptr(config.key);
 import fs from 'fs';
 import compression from 'compression';
 import cors from 'cors';
+import path from 'path';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
 
@@ -57,54 +58,54 @@ fs.readFile('./dist/js/home.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   homeBundle = data || "";
 })
-fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  aboutBundle = data || "";
-})
-fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  servicesBundle = data || "";
-})
-fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  servicestemplateBundle = data || "";
-})
-fs.readFile('./dist/js/drcastillo.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  drcastilloBundle = data || "";
-})
-fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  teamBundle = data || "";
-})
-fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  teamtemplateBundle = data || "";
-})
-fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  galleryBundle = data || "";
-})
-fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  gallerytemplateBundle = data || "";
-})
-fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  patientinfoBundle = data || "";
-})
-fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  contactBundle = data || "";
-})
-fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  blogBundle = data || "";
-})
-fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  blogtemplateBundle = data || "";
-})
+// fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   aboutBundle = data || "";
+// })
+// fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicesBundle = data || "";
+// })
+// fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicestemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/drcastillo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   drcastilloBundle = data || "";
+// })
+// fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamBundle = data || "";
+// })
+// fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamtemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   galleryBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   gallerytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   patientinfoBundle = data || "";
+// })
+// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
+// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogtemplateBundle = data || "";
+// })
 
 app.get('/', (req, res) => {
   let data = "";
@@ -170,6 +171,11 @@ app.get('/blogtemplate', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "blogtemplate"));
+});
+
+app.get('/images/:id', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.sendFile(path.join(__dirname, '../images/' + req.params.id));
 });
 
 app.post('/email', (req, res) => {
@@ -250,6 +256,7 @@ function returnHTML(data, bundle, Page, title){
                 <style>
                   body { margin: 0; font-family: Helvetica; }
                   a { text-decoration: none; color: #000; }
+                  .i-margin { margin-right: 6px }
                 </style>
                 ${styles}
               </head>

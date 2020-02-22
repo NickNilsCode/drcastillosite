@@ -22,8 +22,9 @@ export const SocialHeader = styled.div`
 
 export const LinkSquare = styled.div`
   width: 30px;
-  height: 36px;
+  height: 33px;
   background-color: #00394e;
+  border-bottom: #00394e 3px solid;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -32,6 +33,11 @@ export const LinkSquare = styled.div`
   i {
     font-size: 12px;
     line-height: 12px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: #e3262e
+    border-bottom: #e3262e 3px solid;
   }
 `;
 export const LinkWrap = styled.div`

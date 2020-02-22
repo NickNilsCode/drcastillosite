@@ -51,6 +51,12 @@ Object.defineProperty(exports, "DentistQuote", {
     return _DentistQuote["default"];
   }
 });
+Object.defineProperty(exports, "DesktopHeader", {
+  enumerable: true,
+  get: function get() {
+    return _DesktopHeader["default"];
+  }
+});
 Object.defineProperty(exports, "Footer", {
   enumerable: true,
   get: function get() {
@@ -115,6 +121,12 @@ Object.defineProperty(exports, "MembersList", {
   enumerable: true,
   get: function get() {
     return _MembersList["default"];
+  }
+});
+Object.defineProperty(exports, "MobileHeader", {
+  enumerable: true,
+  get: function get() {
+    return _MobileHeader["default"];
   }
 });
 Object.defineProperty(exports, "MoreProcedures", {
@@ -194,6 +206,8 @@ var _ContactForm = _interopRequireDefault(require("./ContactForm"));
 
 var _DentistQuote = _interopRequireDefault(require("./DentistQuote"));
 
+var _DesktopHeader = _interopRequireDefault(require("./DesktopHeader"));
+
 var _Footer = _interopRequireDefault(require("./Footer"));
 
 var _FooterCard = _interopRequireDefault(require("./FooterCard"));
@@ -215,6 +229,8 @@ var _MemberCard = _interopRequireDefault(require("./MemberCard"));
 var _MemberDetails = _interopRequireDefault(require("./MemberDetails"));
 
 var _MembersList = _interopRequireDefault(require("./MembersList"));
+
+var _MobileHeader = _interopRequireDefault(require("./MobileHeader"));
 
 var _MoreProcedures = _interopRequireDefault(require("./MoreProcedures"));
 

@@ -48,22 +48,28 @@ function (_Component) {
     key: "render",
     value: function render() {
       return _react["default"].createElement(_SocialHeader.SocialHeader, null, _react["default"].createElement(_global.H6, null, _react["default"].createElement("i", {
-        className: "fas fa-phone-alt"
-      }), _react["default"].createElement("span", {
-        style: {
-          marginLeft: '5px'
-        }
-      }, "Call for free consultation: 0800 123 45 678")), _react["default"].createElement(_SocialHeader.LinkWrap, null, _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
+        className: "fas fa-phone-alt i-margin"
+      }), _react["default"].createElement("span", null, "Call for free consultation: (559) 221-0302")), _react["default"].createElement(_SocialHeader.LinkWrap, null, _react["default"].createElement("a", {
+        href: ""
+      }, _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
         className: "fab fa-facebook-f"
-      })), _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
+      }))), _react["default"].createElement("a", {
+        href: ""
+      }, _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
         className: "fab fa-google-plus-g"
-      })), _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
+      }))), _react["default"].createElement("a", {
+        href: ""
+      }, _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
         className: "fab fa-pinterest"
-      })), _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
+      }))), _react["default"].createElement("a", {
+        href: ""
+      }, _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
         className: "fab fa-youtube"
-      })), _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
+      }))), _react["default"].createElement("a", {
+        href: ""
+      }, _react["default"].createElement(_SocialHeader.LinkSquare, null, _react["default"].createElement("i", {
         className: "fas fa-rss"
-      }))));
+      })))));
     }
   }]);
 
