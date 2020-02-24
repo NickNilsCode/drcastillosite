@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _MainBanner = require("../styled-components/components/MainBanner");
+var _Dropdown = require("../styled-components/components/Dropdown");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -31,31 +31,49 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var MainBannerComponent =
+var DropdownComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(MainBannerComponent, _Component);
+  _inherits(DropdownComponent, _Component);
 
-  function MainBannerComponent() {
-    _classCallCheck(this, MainBannerComponent);
+  function DropdownComponent() {
+    _classCallCheck(this, DropdownComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MainBannerComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(DropdownComponent).apply(this, arguments));
   }
 
-  _createClass(MainBannerComponent, [{
+  _createClass(DropdownComponent, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          img = _this$props.img,
-          title = _this$props.title,
-          text = _this$props.text,
-          textLeft = _this$props.textLeft;
-      return _react["default"].createElement(_MainBanner.MainBanner, this.props, _react["default"].createElement(_MainBanner.TextGroup, this.props, _react["default"].createElement("h1", null, title), _react["default"].createElement("h3", null, text)));
+          onChange = _this$props.onChange,
+          options = _this$props.options,
+          value = _this$props.value,
+          required = _this$props.required,
+          multiple = _this$props.multiple,
+          onClick = _this$props.onClick,
+          placeholder = _this$props.placeholder;
+      return _react["default"].createElement(_Dropdown.Dropdown, {
+        value: value,
+        onChange: function onChange() {},
+        required: required,
+        multiple: multiple
+      }, _react["default"].createElement("option", {
+        className: "greyOption",
+        onClick: onClick,
+        value: ""
+      }, placeholder), this.props.options.map(function (a, i) {
+        return _react["default"].createElement("option", {
+          onClick: onClick,
+          key: i,
+          value: a
+        }, a);
+      }));
     }
   }]);
 
-  return MainBannerComponent;
+  return DropdownComponent;
 }(_react.Component);
 
-var _default = MainBannerComponent;
+var _default = DropdownComponent;
 exports["default"] = _default;

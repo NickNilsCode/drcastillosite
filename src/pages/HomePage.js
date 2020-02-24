@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Header, Footer, CarouselBanner, ConsultationForm, DentistQuote } from '../components';
 import { HomeWrapper, HomeContent } from '../styled-components/pages/home';
+import { ToothBackground } from '../styled-components/global';
 
 class Home extends Component {
     render(){
@@ -9,7 +9,11 @@ class Home extends Component {
           <HomeWrapper>
               <Header/>
               <HomeContent>
-                home page
+                <CarouselBanner/>
+                <ToothBackground>
+                  <ConsultationForm/>
+                  <DentistQuote/>
+                </ToothBackground>
               </HomeContent>
               <Footer/>
           </HomeWrapper>

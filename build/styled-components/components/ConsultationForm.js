@@ -3,14 +3,54 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ConsultationForm = void 0;
+exports.Pill = exports.PillBox = exports.ConsultationSubmit = exports.ConsultationInput = exports.ConsultationForm = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  background-color: #ffffff80;\n  border-radius: 4px;\n  display: inline-block;\n  font-size: 8px;\n  height: initial;\n  padding: 2px 2px;\n  margin: 2px 2px;\n  overflow-x: scroll;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  width: calc(100% - 8px);\n  text-align: left;\n  height: max-content;\n  height: max-content;\n  overflow-x: scroll;\n  position: absolute;\n  top: 4px;\n  left: 4px;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  background: transparent;\n  border: #FFF 1px solid;\n  color: #FFF;\n  padding: 10px 20px;\n  -moz-border-radius: 5px;\n  -webkit-border-radius: 5px;\n  border-radius: 5px;\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 12px;\n  font-weight: normal;\n  text-transform: uppercase;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  background-color: #7ad8ee;\n  -moz-border-radius: 0px;\n  -webkit-border-radius: 0px;\n  border-radius: 0px;\n  border: none;\n  font-family: \"Roboto\", sans-serif;\n  font-weight: normal;\n  font-size: 13px;\n  font-style: italic;\n  color: #FFF;\n  width: 100%;\n  display: block;\n  height: 34px;\n  padding: 6px 12px;\n  line-height: 1.42857143;\n  margin: 12px 0;\n  &::placeholder {\n    color: #fff;\n    opacity: 1;\n  }\n  &:-ms-input-placeholder { /* Internet Explorer 10-11 */\n    color: #fff;\n  }\n\n  &::-ms-input-placeholder { /* Microsoft Edge */\n    color: #fff;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: calc(100% - 32px);\n  min-height: 100px;\n  background-color: #fff;\n  border-bottom: 1px solid #8d8d8d;\n  color: #000;\n  padding: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  padding-top: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  @media(min-width: 1000px){\n    flex-direction: row;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -21,6 +61,22 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var ConsultationForm = _styledComponents["default"].div(_templateObject());
+var ConsultationForm = _styledComponents["default"].form(_templateObject());
 
 exports.ConsultationForm = ConsultationForm;
+
+var ConsultationInput = _styledComponents["default"].input(_templateObject2());
+
+exports.ConsultationInput = ConsultationInput;
+
+var ConsultationSubmit = _styledComponents["default"].button(_templateObject3());
+
+exports.ConsultationSubmit = ConsultationSubmit;
+
+var PillBox = _styledComponents["default"].div(_templateObject4());
+
+exports.PillBox = PillBox;
+
+var Pill = _styledComponents["default"].span(_templateObject5());
+
+exports.Pill = Pill;

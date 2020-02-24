@@ -58,54 +58,54 @@ fs.readFile('./dist/js/home.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   homeBundle = data || "";
 })
-fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  aboutBundle = data || "";
-})
-fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  servicesBundle = data || "";
-})
-fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  servicestemplateBundle = data || "";
-})
-fs.readFile('./dist/js/drcastillo.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  drcastilloBundle = data || "";
-})
-fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  teamBundle = data || "";
-})
-fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  teamtemplateBundle = data || "";
-})
-fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  galleryBundle = data || "";
-})
-fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  gallerytemplateBundle = data || "";
-})
-fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  patientinfoBundle = data || "";
-})
-fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  contactBundle = data || "";
-})
-fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  blogBundle = data || "";
-})
-fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  blogtemplateBundle = data || "";
-})
+// fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   aboutBundle = data || "";
+// })
+// fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicesBundle = data || "";
+// })
+// fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicestemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/drcastillo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   drcastilloBundle = data || "";
+// })
+// fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamBundle = data || "";
+// })
+// fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamtemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   galleryBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   gallerytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   patientinfoBundle = data || "";
+// })
+// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
+// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogtemplateBundle = data || "";
+// })
 
 app.get('/', (req, res) => {
   let data = "";
@@ -178,7 +178,7 @@ app.get('/images/:id', (req, res) => {
   res.sendFile(path.join(__dirname, '../images/' + req.params.id));
 });
 
-app.post('/email', (req, res) => {
+app.post('/emailer', (req, res) => {
   var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
@@ -197,10 +197,13 @@ app.post('/email', (req, res) => {
     subject: 'Dr. Castillo Dental Inquiry',
     html: `
       <h3>Hi Dr. Castillo!</h3>
-      <h3>The following person, ${req.body.name}(${req.body.email}), has a message for you and it can be read below.</h3>
-      <h3>Message:</h3>
-      <h3>${req.body.message}</h3>
+      <h3>The following person is requesting a consultation for the listed procedures.<h3/>
 
+      <h4>First Name: ${req.body.name}</h4>
+      <h4>Last Name: ${req.body.surname}</h4>
+      <h4>Email: ${req.body.email}</h4>
+      <h4>Phone: ${req.body.phone}</h4>
+      <h4>Procedures: ${req.body.procedures}</h4>
     `
   }, (error, info) => {
     if (error) res.send({error: error});

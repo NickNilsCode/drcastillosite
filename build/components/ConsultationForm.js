@@ -7,7 +7,13 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ = require("./");
+
 var _ConsultationForm = require("../styled-components/components/ConsultationForm");
+
+var _treatmentsList = _interopRequireDefault(require("../data/treatmentsList"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -23,29 +29,176 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var ConsultationFormComponent =
 /*#__PURE__*/
 function (_Component) {
   _inherits(ConsultationFormComponent, _Component);
 
-  function ConsultationFormComponent() {
+  function ConsultationFormComponent(props) {
+    var _this;
+
     _classCallCheck(this, ConsultationFormComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ConsultationFormComponent).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ConsultationFormComponent).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "submitForm", function (e) {
+      e.preventDefault();
+      var _this$state = _this.state,
+          name = _this$state.name,
+          surname = _this$state.surname,
+          email = _this$state.email,
+          phone = _this$state.phone,
+          selectedTreatments = _this$state.selectedTreatments;
+      var data = {
+        name: name,
+        surname: surname,
+        phone: phone,
+        email: email,
+        procedures: selectedTreatments.join(', ')
+      };
+      fetch('/emailer', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        alert("An email has been submitted to Dr. Castillo's office. Someone will be in contact with you regarding your inquiry.");
+
+        _this.setState({
+          selectedTreatments: [],
+          name: "",
+          surname: "",
+          phone: "",
+          email: ""
+        });
+      })["catch"](function (err) {
+        alert("Something went wrong. Please contact Dr. Castillo's office directly. We are sorry for the inconvenience.");
+
+        _this.setState({
+          selectedTreatments: [],
+          name: "",
+          surname: "",
+          phone: "",
+          email: ""
+        });
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "changeState", function (e, prop) {
+      var obj = {};
+      obj[prop] = e.target.value;
+
+      _this.setState(obj);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "changeTreatment", function (e) {
+      e.preventDefault();
+
+      if (e.target.value) {
+        console.log(e.target.value);
+        var vals = _this.state.selectedTreatments;
+        var removeIndex = vals.findIndex(function (a) {
+          return a == e.target.value;
+        });
+
+        if (removeIndex == -1) {
+          vals.push(e.target.value);
+        } else {
+          vals.splice(removeIndex, 1);
+        }
+
+        _this.setState({
+          selectedTreatments: vals
+        });
+      }
+    });
+
+    _this.state = {
+      selectedTreatments: [],
+      name: "",
+      surname: "",
+      phone: "",
+      email: ""
+    };
+    return _this;
   }
 
   _createClass(ConsultationFormComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_ConsultationForm.ConsultationForm, null, "Consultation Form");
+      var _this2 = this;
+
+      var _this$state2 = this.state,
+          name = _this$state2.name,
+          surname = _this$state2.surname,
+          email = _this$state2.email,
+          phone = _this$state2.phone,
+          selectedTreatments = _this$state2.selectedTreatments;
+      return _react["default"].createElement(_ConsultationForm.ConsultationForm, {
+        onSubmit: this.submitForm
+      }, _react["default"].createElement(_.ConsultationCard, {
+        title: "REQUEST A CONSULTATION"
+      }, _react["default"].createElement(_ConsultationForm.ConsultationInput, {
+        placeholder: "Name",
+        onChange: function onChange(e) {
+          _this2.changeState(e, "name");
+        },
+        value: name,
+        type: "text",
+        required: true
+      }), _react["default"].createElement(_ConsultationForm.ConsultationInput, {
+        placeholder: "Surname",
+        onChange: function onChange(e) {
+          _this2.changeState(e, "surname");
+        },
+        value: surname,
+        type: "text",
+        required: true
+      })), _react["default"].createElement(_.ConsultationCard, {
+        title: "OTHER INFORMATION"
+      }, _react["default"].createElement(_ConsultationForm.ConsultationInput, {
+        placeholder: "Phone",
+        onChange: function onChange(e) {
+          _this2.changeState(e, "phone");
+        },
+        value: phone,
+        type: "tel",
+        required: true
+      }), _react["default"].createElement(_ConsultationForm.ConsultationInput, {
+        placeholder: "Email",
+        onChange: function onChange(e) {
+          _this2.changeState(e, "email");
+        },
+        value: email,
+        type: "email",
+        required: true
+      })), _react["default"].createElement(_.ConsultationCard, {
+        title: "TREATMENTS"
+      }, _react["default"].createElement(_ConsultationForm.PillBox, null, selectedTreatments && selectedTreatments.length ? selectedTreatments.map(function (a, i) {
+        return _react["default"].createElement(_ConsultationForm.Pill, null, a);
+      }) : null), _react["default"].createElement(_.Dropdown, {
+        placeholder: "Select Treatment(s)",
+        options: _treatmentsList["default"],
+        value: selectedTreatments,
+        onClick: this.changeTreatment,
+        required: true,
+        multiple: true
+      }), _react["default"].createElement(_ConsultationForm.ConsultationSubmit, {
+        type: "submit"
+      }, "REQUEST NOW")));
     }
   }]);
 

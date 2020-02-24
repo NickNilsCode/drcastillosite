@@ -79,67 +79,55 @@ var dataObj = {},
 _fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   homeBundle = data || "";
-});
+}); // fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   aboutBundle = data || "";
+// })
+// fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicesBundle = data || "";
+// })
+// fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicestemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/drcastillo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   drcastilloBundle = data || "";
+// })
+// fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamBundle = data || "";
+// })
+// fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   teamtemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   galleryBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   gallerytemplateBundle = data || "";
+// })
+// fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   patientinfoBundle = data || "";
+// })
+// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
+// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogBundle = data || "";
+// })
+// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   blogtemplateBundle = data || "";
+// })
 
-_fs["default"].readFile('./dist/js/about.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  aboutBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/services.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  servicesBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  servicestemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/drcastillo.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  drcastilloBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/team.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  teamBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  teamtemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/gallery.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  galleryBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  gallerytemplateBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/patientinfo.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  patientinfoBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/contact.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  contactBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blog.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  blogtemplateBundle = data || "";
-});
 
 app.get('/', function (req, res) {
   var data = "";
@@ -210,7 +198,7 @@ app.get('/images/:id', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.sendFile(_path["default"].join(__dirname, '../images/' + req.params.id));
 });
-app.post('/email', function (req, res) {
+app.post('/emailer', function (req, res) {
   var transporter = _nodemailer["default"].createTransport({
     host: 'smtp.gmail.com',
     port: 587,
@@ -227,7 +215,7 @@ app.post('/email', function (req, res) {
     to: cryptr.decrypt(_config["default"].email),
     // to: cryptr.decrypt(config.email2),
     subject: 'Dr. Castillo Dental Inquiry',
-    html: "\n      <h3>Hi Dr. Castillo!</h3>\n      <h3>The following person, ".concat(req.body.name, "(").concat(req.body.email, "), has a message for you and it can be read below.</h3>\n      <h3>Message:</h3>\n      <h3>").concat(req.body.message, "</h3>\n\n    ")
+    html: "\n      <h3>Hi Dr. Castillo!</h3>\n      <h3>The following person is requesting a consultation for the listed procedures.<h3/>\n\n      <h4>First Name: ".concat(req.body.name, "</h4>\n      <h4>Last Name: ").concat(req.body.surname, "</h4>\n      <h4>Email: ").concat(req.body.email, "</h4>\n      <h4>Phone: ").concat(req.body.phone, "</h4>\n      <h4>Procedures: ").concat(req.body.procedures, "</h4>\n    ")
   }, function (error, info) {
     if (error) res.send({
       error: error

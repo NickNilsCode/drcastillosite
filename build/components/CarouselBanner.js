@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ = require("./");
+
 var _CarouselBanner = require("../styled-components/components/CarouselBanner");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -36,16 +38,47 @@ var CarouselBannerComponent =
 function (_Component) {
   _inherits(CarouselBannerComponent, _Component);
 
-  function CarouselBannerComponent() {
+  function CarouselBannerComponent(props) {
+    var _this;
+
     _classCallCheck(this, CarouselBannerComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CarouselBannerComponent).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CarouselBannerComponent).call(this, props));
+    _this.state = {
+      showFirst: true
+    };
+    return _this;
   }
 
   _createClass(CarouselBannerComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      setInterval(function () {
+        _this2.setState({
+          showFirst: !_this2.state.showFirst
+        });
+      }, 6000);
+    }
+  }, {
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_CarouselBanner.CarouselBanner, null, "Carousel Banner");
+      return _react["default"].createElement(_CarouselBanner.CarouselBanner, null, this.state.showFirst ? _react["default"].createElement(_.MainBanner, {
+        img: "/images/front-header.jpg",
+        title: "TRANSFORMING FRESNO SMILES",
+        text: "GENTLE - FRIENDLY - EASY",
+        bgPos: "right",
+        bgPosSmall: "right",
+        textLeft: true
+      }) : _react["default"].createElement(_.MainBanner, {
+        img: "/images/heroimage.jpg",
+        title: "ACHIEVE A FLAWLESS SMILE",
+        text: "Personalized Care in a Comfortable Environment",
+        bgPos: "right",
+        bgPosSmall: "30%",
+        textLeft: false
+      }));
     }
   }]);
 

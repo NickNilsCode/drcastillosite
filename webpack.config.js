@@ -3,18 +3,18 @@ const webpack = require('webpack');
 require('@babel/polyfill');
 const pages = [
   'home',
-  'about',
-  'services',
-  'servicestemplate',
-  'drcastillo',
-  'team',
-  'teamtemplate',
-  'gallery',
-  'gallerytemplate',
-  'patientinfo',
-  'contact',
-  'blog',
-  'blogtemplate'
+  // 'about',
+  // 'services',
+  // 'servicestemplate',
+  // 'drcastillo',
+  // 'team',
+  // 'teamtemplate',
+  // 'gallery',
+  // 'gallerytemplate',
+  // 'patientinfo',
+  // 'contact',
+  // 'blog',
+  // 'blogtemplate'
 ];
 
 module.exports = pages.map((page) => {

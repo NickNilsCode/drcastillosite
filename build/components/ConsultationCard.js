@@ -7,7 +7,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _MainBanner = require("../styled-components/components/MainBanner");
+var _ConsultationCard = require("../styled-components/components/ConsultationCard");
+
+var _global = require("../styled-components/global");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -31,31 +33,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var MainBannerComponent =
+var ConsultationCardComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(MainBannerComponent, _Component);
+  _inherits(ConsultationCardComponent, _Component);
 
-  function MainBannerComponent() {
-    _classCallCheck(this, MainBannerComponent);
+  function ConsultationCardComponent() {
+    _classCallCheck(this, ConsultationCardComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MainBannerComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ConsultationCardComponent).apply(this, arguments));
   }
 
-  _createClass(MainBannerComponent, [{
+  _createClass(ConsultationCardComponent, [{
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          img = _this$props.img,
-          title = _this$props.title,
-          text = _this$props.text,
-          textLeft = _this$props.textLeft;
-      return _react["default"].createElement(_MainBanner.MainBanner, this.props, _react["default"].createElement(_MainBanner.TextGroup, this.props, _react["default"].createElement("h1", null, title), _react["default"].createElement("h3", null, text)));
+      return _react["default"].createElement(_ConsultationCard.ConsultationCard, null, _react["default"].createElement(_global.H5, null, this.props.title), this.props.children);
     }
   }]);
 
-  return MainBannerComponent;
+  return ConsultationCardComponent;
 }(_react.Component);
 
-var _default = MainBannerComponent;
+var _default = ConsultationCardComponent;
 exports["default"] = _default;

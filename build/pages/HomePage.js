@@ -7,13 +7,11 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _Header = _interopRequireDefault(require("../components/Header"));
-
-var _Footer = _interopRequireDefault(require("../components/Footer"));
+var _components = require("../components");
 
 var _home = require("../styled-components/pages/home");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _global = require("../styled-components/global");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -51,7 +49,7 @@ function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_Header["default"], null), _react["default"].createElement(_home.HomeContent, null, "home page"), _react["default"].createElement(_Footer["default"], null));
+      return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_home.HomeContent, null, _react["default"].createElement(_components.CarouselBanner, null), _react["default"].createElement(_global.ToothBackground, null, _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, null))), _react["default"].createElement(_components.Footer, null));
     }
   }]);
 
