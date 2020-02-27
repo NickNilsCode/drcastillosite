@@ -49,7 +49,13 @@ function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_home.HomeContent, null, _react["default"].createElement(_components.CarouselBanner, null), _react["default"].createElement(_global.ToothBackground, null, _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, null))), _react["default"].createElement(_components.Footer, null));
+      return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_home.HomeContent, null, _react["default"].createElement(_components.CarouselBanner, null), _react["default"].createElement(_global.ToothBackground, null, _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, {
+        title: "TOTAL DENTAL WELLNESS",
+        name: "DR. LUIS CASTILLO",
+        blurb: "Give yourself the gift of a truly sensational and healthy smile. Start our Whole Health Dentistry Program.",
+        link: "/",
+        img: "/images/layer-01.png"
+      }))), _react["default"].createElement(_components.Footer, null));
     }
   }]);
 

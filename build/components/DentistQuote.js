@@ -9,6 +9,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _DentistQuote = require("../styled-components/components/DentistQuote");
 
+var _global = require("../styled-components/global");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -45,7 +47,17 @@ function (_Component) {
   _createClass(DentistQuoteComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_DentistQuote.DentistQuote, null, "Dentist Quote");
+      var _this$props = this.props,
+          title = _this$props.title,
+          name = _this$props.name,
+          blurb = _this$props.blurb,
+          link = _this$props.link,
+          img = _this$props.img;
+      return _react["default"].createElement(_DentistQuote.DentistQuote, null, _react["default"].createElement(_DentistQuote.LeftSide, null, _react["default"].createElement(_global.H2, null, title), _react["default"].createElement(_DentistQuote.DentistName, null, "with ", name), _react["default"].createElement(_DentistQuote.DentistMessage, null, blurb), _react["default"].createElement("a", {
+        href: link
+      }, _react["default"].createElement(_DentistQuote.Button, null, "Learn More"))), _react["default"].createElement(_DentistQuote.RightSide, null, _react["default"].createElement("img", {
+        src: img
+      })));
     }
   }]);
 

@@ -12,7 +12,13 @@ class Home extends Component {
                 <CarouselBanner/>
                 <ToothBackground>
                   <ConsultationForm/>
-                  <DentistQuote/>
+                  <DentistQuote
+                    title="TOTAL DENTAL WELLNESS"
+                    name="DR. LUIS CASTILLO"
+                    blurb="Give yourself the gift of a truly sensational and healthy smile. Start our Whole Health Dentistry Program."
+                    link="/"
+                    img="/images/layer-01.png"
+                  />
                 </ToothBackground>
               </HomeContent>
               <Footer/>
