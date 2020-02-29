@@ -66,7 +66,10 @@ function (_Component) {
     value: function render() {
       var thisPath = this.state.thisPath;
       return _react["default"].createElement(_DesktopHeader.DesktopHeader, null, _react["default"].createElement("a", {
-        href: "/"
+        href: "/",
+        style: {
+          margin: "0 12px"
+        }
       }, _react["default"].createElement("img", {
         src: "/images/dentistlogo.png"
       })), _react["default"].createElement(_DesktopHeader.LinkWrap, null, _menuOptions["default"].map(function (a, i) {

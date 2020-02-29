@@ -7,11 +7,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _components = require("../components");
-
-var _home = require("../styled-components/pages/home");
-
-var _global = require("../styled-components/global");
+var _ServiceCard = require("../styled-components/components/ServiceCard");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -35,32 +31,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Home =
+var ServiceCardComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Home, _Component);
+  _inherits(ServiceCardComponent, _Component);
 
-  function Home() {
-    _classCallCheck(this, Home);
+  function ServiceCardComponent() {
+    _classCallCheck(this, ServiceCardComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ServiceCardComponent).apply(this, arguments));
   }
 
-  _createClass(Home, [{
+  _createClass(ServiceCardComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_home.HomeContent, null, _react["default"].createElement(_components.CarouselBanner, null), _react["default"].createElement(_global.ToothBackground, null, _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, {
-        title: "TOTAL DENTAL WELLNESS",
-        name: "DR. LUIS CASTILLO",
-        blurb: "Give yourself the gift of a truly sensational and healthy smile. Start our Whole Health Dentistry Program.",
-        link: "/",
-        img: "/images/layer-01.png"
-      })), _react["default"].createElement(_components.AboutExperience, null), _react["default"].createElement(_global.GreyBackground, null, _react["default"].createElement(_components.ServicesList, null))), _react["default"].createElement(_components.Footer, null));
+      return _react["default"].createElement(_ServiceCard.ServiceCard, null, "Single Service");
     }
   }]);
 
-  return Home;
+  return ServiceCardComponent;
 }(_react.Component);
 
-var _default = Home;
+var _default = ServiceCardComponent;
 exports["default"] = _default;

@@ -40,7 +40,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 40%;\n  max-width: 970px;\n  img {\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 40%;\n  max-width: 1140px;\n  img {\n    width: 100%;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -50,7 +50,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: calc(60% - 24px);\n  margin-right: 24px;\n  max-width: 970px;\n  text-align: left;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: calc(60% - 24px);\n  margin-right: 24px;\n  max-width: 1140px;\n  text-align: left;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -60,7 +60,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 970px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: calc(1140px - 30px);\n  padding: 15px;\n  padding-bottom: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: auto;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

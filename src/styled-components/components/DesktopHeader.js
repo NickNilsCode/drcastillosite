@@ -3,6 +3,8 @@ export const DesktopHeader = styled.div`
   display: none;
   height: 75px;
   width: 100%;
+  max-width: 1140px;
+  margin: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -15,6 +17,7 @@ export const DesktopHeader = styled.div`
   }
   @media(min-width: 800px){
     flex-direction: row;
+    justify-content: space-between;
     img {
       margin-bottom: 0;
     }

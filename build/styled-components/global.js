@@ -3,14 +3,44 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ToothBackground = exports.H6 = exports.H5 = exports.H3 = exports.H2 = exports.H1 = void 0;
+exports.GreyBackground = exports.ToothBackground = exports.Para = exports.H6 = exports.H5 = exports.H3 = exports.H2BannerTitle = exports.H2 = exports.H1 = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject6() {
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  background-color: #f5f5f5\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n  background-image: url(\"/images/parallax-03.jpg\");\n  background-size: cover;\n  background-position: center;\n  @media(min-width: 700px){\n    background-image: url(\"/images/parallax-01.jpg\");\n  }\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", sans-serif;\n  font-weight: normal;\n  text-align: left;\n  font-size: 14px;\n  line-height: 25px;\n  color: #696969;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", sans-serif;\n  font-size: 13px;\n  font-weight: normal;\n  font-style: italic;\n  color: #FFF;\n  margin: 0;\n  padding: 10px 0;\n  line-height: 13px;\n  -webkit-font-smoothing: antialiased;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -20,7 +50,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", sans-serif;\n  font-size: 13px;\n  font-weight: normal;\n  font-style: italic;\n  color: #FFF;\n  margin: 0;\n  padding: 10px 0;\n  line-height: 13px;\n  -webkit-font-smoothing: antialiased;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 12px;\n  font-weight: normal;\n  color: #FFF;\n  margin: 0;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -30,7 +60,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 12px;\n  font-weight: normal;\n  color: #FFF;\n  margin: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 13px;\n  font-weight: bold;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -40,7 +70,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 13px;\n  font-weight: bold;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: table;\n  position: relative;\n  padding-left: 10px;\n  padding-right: 50px;\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 20px;\n  font-weight: 700;\n  color: #000;\n  text-transform: uppercase;\n  margin: 6px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -79,18 +109,30 @@ var H2 = _styledComponents["default"].h2(_templateObject2());
 
 exports.H2 = H2;
 
-var H3 = _styledComponents["default"].h3(_templateObject3());
+var H2BannerTitle = _styledComponents["default"].h2(_templateObject3());
+
+exports.H2BannerTitle = H2BannerTitle;
+
+var H3 = _styledComponents["default"].h3(_templateObject4());
 
 exports.H3 = H3;
 
-var H5 = _styledComponents["default"].h6(_templateObject4());
+var H5 = _styledComponents["default"].h6(_templateObject5());
 
 exports.H5 = H5;
 
-var H6 = _styledComponents["default"].h6(_templateObject5());
+var H6 = _styledComponents["default"].h6(_templateObject6());
 
 exports.H6 = H6;
 
-var ToothBackground = _styledComponents["default"].div(_templateObject6());
+var Para = _styledComponents["default"].p(_templateObject7());
+
+exports.Para = Para;
+
+var ToothBackground = _styledComponents["default"].div(_templateObject8());
 
 exports.ToothBackground = ToothBackground;
+
+var GreyBackground = _styledComponents["default"].div(_templateObject9());
+
+exports.GreyBackground = GreyBackground;

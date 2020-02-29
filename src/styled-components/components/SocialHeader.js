@@ -13,7 +13,7 @@ export const SocialHeader = styled.div`
     flex-direction: row;
     justify-content: center;
     h6 {
-      width: 475px;
+      width: 570px;
       margin-left: 16px;
       justify-content: flex-start;
     }
@@ -47,7 +47,7 @@ export const LinkWrap = styled.div`
   justify-content: center;
   align-items: center;
   @media(min-width: 700px){
-    width: 475px;
+    width: 570px;
     justify-content: flex-end;
     margin-right: 16px;
   }

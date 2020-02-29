@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 export const DentistQuote = styled.div`
   width: 100%;
-  max-width: 970px;
+  max-width: calc(1140px - 30px);
+  padding: 15px;
+  padding-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,12 +12,12 @@ export const DentistQuote = styled.div`
 export const LeftSide = styled.div`
   width: calc(60% - 24px);
   margin-right: 24px;
-  max-width: 970px;
+  max-width: 1140px;
   text-align: left;
 `;
 export const RightSide = styled.div`
   width: 40%;
-  max-width: 970px;
+  max-width: 1140px;
   img {
     width: 100%;
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Footer, CarouselBanner, ConsultationForm, DentistQuote } from '../components';
+import { Header, Footer, CarouselBanner, ConsultationForm, DentistQuote, AboutExperience, ServicesList } from '../components';
 import { HomeWrapper, HomeContent } from '../styled-components/pages/home';
-import { ToothBackground } from '../styled-components/global';
+import { ToothBackground, GreyBackground } from '../styled-components/global';
 
 class Home extends Component {
     render(){
@@ -20,6 +20,10 @@ class Home extends Component {
                     img="/images/layer-01.png"
                   />
                 </ToothBackground>
+                <AboutExperience/>
+                <GreyBackground>
+                  <ServicesList/>
+                </GreyBackground>
               </HomeContent>
               <Footer/>
           </HomeWrapper>

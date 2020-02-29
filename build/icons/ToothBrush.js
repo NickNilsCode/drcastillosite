@@ -7,11 +7,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _components = require("../components");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _home = require("../styled-components/pages/home");
-
-var _global = require("../styled-components/global");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -35,32 +33,46 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Home =
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 50px;\n  height: 50px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var BrushSVG = _styledComponents["default"].svg(_templateObject());
+
+var ToothBrush =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Home, _Component);
+  _inherits(ToothBrush, _Component);
 
-  function Home() {
-    _classCallCheck(this, Home);
+  function ToothBrush() {
+    _classCallCheck(this, ToothBrush);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ToothBrush).apply(this, arguments));
   }
 
-  _createClass(Home, [{
+  _createClass(ToothBrush, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_home.HomeContent, null, _react["default"].createElement(_components.CarouselBanner, null), _react["default"].createElement(_global.ToothBackground, null, _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, {
-        title: "TOTAL DENTAL WELLNESS",
-        name: "DR. LUIS CASTILLO",
-        blurb: "Give yourself the gift of a truly sensational and healthy smile. Start our Whole Health Dentistry Program.",
-        link: "/",
-        img: "/images/layer-01.png"
-      })), _react["default"].createElement(_components.AboutExperience, null), _react["default"].createElement(_global.GreyBackground, null, _react["default"].createElement(_components.ServicesList, null))), _react["default"].createElement(_components.Footer, null));
+      return _react["default"].createElement(BrushSVG, {
+        "aria-hidden": "true",
+        viewBox: "0 0 640 512"
+      }, _react["default"].createElement("path", {
+        fill: "#27b1d2",
+        d: "M624 416H448V224h-32v192h-32V224h-32v192h-32V224h-32v192h-32V224h-32v192h-32V224h-32v192h-32V224H96v192H64V224H32v192H16c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16zm-16 64H32v-32h576v32zM64 192h352c35.35 0 64-28.65 64-64C480 57.31 422.69 0 352 0c23.62 23.62 6.89 64-26.51 64H64C28.65 64 0 92.65 0 128s28.65 64 64 64zm0-96h261.49c28.21 0 53.41-16.84 64.2-42.9 1.59-3.84 2.82-7.76 3.69-11.72C425.66 56.87 448 89.88 448 128c0 17.64-14.36 32-32 32H64c-17.64 0-32-14.36-32-32s14.36-32 32-32z"
+      }));
     }
   }]);
 
-  return Home;
+  return ToothBrush;
 }(_react.Component);
 
-var _default = Home;
+var _default = ToothBrush;
 exports["default"] = _default;

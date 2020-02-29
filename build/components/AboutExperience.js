@@ -7,7 +7,15 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ExperienceCard = _interopRequireDefault(require("./ExperienceCard"));
+
 var _AboutExperience = require("../styled-components/components/AboutExperience");
+
+var _global = require("../styled-components/global");
+
+var _aboutExperience = _interopRequireDefault(require("../data/aboutExperience"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -45,7 +53,17 @@ function (_Component) {
   _createClass(AboutExperienceComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_AboutExperience.AboutExperience, null, "About Experience");
+      return _react["default"].createElement(_AboutExperience.AboutExperience, null, _react["default"].createElement(_AboutExperience.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "ABOUT OUR EXPERIENCE"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "By entrusting us with your dental needs and concerns, we will provide you with compassionate care tailored to your specific needs. As equal partners in achieving total dental wellness for you, we will develop an individualized dental plan to work together with our team of qualified, caring professionls to reach your goal.")), _react["default"].createElement(_AboutExperience.FlexWrap, null, _react["default"].createElement(_AboutExperience.LeftSide, null, _aboutExperience["default"].map(function (a, i) {
+        return _react["default"].createElement(_ExperienceCard["default"], {
+          key: i,
+          Icon: a.Icon,
+          link: a.link,
+          title: a.title,
+          blurb: a.blurb
+        });
+      })), _react["default"].createElement(_AboutExperience.RightSide, null, _react["default"].createElement("img", {
+        src: "/images/about_us.jpg"
+      }))));
     }
   }]);
 

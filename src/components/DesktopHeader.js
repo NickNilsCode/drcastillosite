@@ -19,7 +19,7 @@ class DesktopHeaderComponent extends Component {
     const { thisPath } = this.state;
     return (
       <DesktopHeader>
-        <a href="/"><img src="/images/dentistlogo.png"/></a>
+        <a href="/" style={{margin: "0 12px"}}><img src="/images/dentistlogo.png"/></a>
         <LinkWrap>
         {
           menuOptions.map((a,i) => {

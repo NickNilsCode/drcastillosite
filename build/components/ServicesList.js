@@ -7,7 +7,11 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ = require("./");
+
 var _ServicesList = require("../styled-components/components/ServicesList");
+
+var _global = require("../styled-components/global");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -45,7 +49,7 @@ function (_Component) {
   _createClass(ServicesListComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_ServicesList.ServicesList, null, "Services List");
+      return _react["default"].createElement(_ServicesList.ServicesList, null, _react["default"].createElement(_ServicesList.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "Services"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "We provide comprehensive care to our patients. You will get a thorough understanding of your dental issues and what can be done to help you be in optimal dental health.")), _react["default"].createElement(_ServicesList.FlexWrap, null), _react["default"].createElement(_.DentistLine, null));
     }
   }]);
 

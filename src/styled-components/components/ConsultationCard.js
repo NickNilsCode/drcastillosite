@@ -25,8 +25,7 @@ export const ConsultationCard = styled.div`
     line-height: 25px;
   }
   @media(min-width: 1020px){
-    width: calc(calc(100%/3) - 140px - 30px);
+    width: 300px;
     margin: 0 15px;
-    max-width: 253px;
   }
 `;

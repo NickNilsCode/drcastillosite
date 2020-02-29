@@ -7,9 +7,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _components = require("../components");
-
-var _home = require("../styled-components/pages/home");
+var _ExperienceCard = require("../styled-components/components/ExperienceCard");
 
 var _global = require("../styled-components/global");
 
@@ -35,32 +33,39 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Home =
+var ExperienceCardComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Home, _Component);
+  _inherits(ExperienceCardComponent, _Component);
 
-  function Home() {
-    _classCallCheck(this, Home);
+  function ExperienceCardComponent() {
+    _classCallCheck(this, ExperienceCardComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ExperienceCardComponent).apply(this, arguments));
   }
 
-  _createClass(Home, [{
+  _createClass(ExperienceCardComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_home.HomeContent, null, _react["default"].createElement(_components.CarouselBanner, null), _react["default"].createElement(_global.ToothBackground, null, _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, {
-        title: "TOTAL DENTAL WELLNESS",
-        name: "DR. LUIS CASTILLO",
-        blurb: "Give yourself the gift of a truly sensational and healthy smile. Start our Whole Health Dentistry Program.",
-        link: "/",
-        img: "/images/layer-01.png"
-      })), _react["default"].createElement(_components.AboutExperience, null), _react["default"].createElement(_global.GreyBackground, null, _react["default"].createElement(_components.ServicesList, null))), _react["default"].createElement(_components.Footer, null));
+      var _this$props = this.props,
+          link = _this$props.link,
+          Icon = _this$props.Icon,
+          title = _this$props.title,
+          blurb = _this$props.blurb;
+      return _react["default"].createElement(_ExperienceCard.ExperienceCard, {
+        href: link
+      }, _react["default"].createElement(_ExperienceCard.LeftSide, null, _react["default"].createElement(_ExperienceCard.CircleDiv, {
+        className: "circleDiv"
+      }, _react["default"].createElement(Icon, null))), _react["default"].createElement(_ExperienceCard.RightSide, null, _react["default"].createElement(_global.H3, null, title), _react["default"].createElement(_global.Para, {
+        style: {
+          fontSize: '13px'
+        }
+      }, blurb)));
     }
   }]);
 
-  return Home;
+  return ExperienceCardComponent;
 }(_react.Component);
 
-var _default = Home;
+var _default = ExperienceCardComponent;
 exports["default"] = _default;
