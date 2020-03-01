@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Header, Footer, MainBanner, MemberDetails, ConsultationForm, DentistQuote } from '../components';
 import { TeamtemplateWrapper, TeamtemplateContent } from '../styled-components/pages/teamtemplate';
 
 class Teamtemplate extends Component {
@@ -9,7 +8,10 @@ class Teamtemplate extends Component {
           <TeamtemplateWrapper>
               <Header/>
               <TeamtemplateContent>
-                teamtemplate page
+                <MainBanner/>
+                <MemberDetails/>
+                <ConsultationForm/>
+                <DentistQuote/>
               </TeamtemplateContent>
               <Footer/>
           </TeamtemplateWrapper>

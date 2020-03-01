@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Header, Footer, MainBanner, SingleService, RelatedContent, MoreProcedures, ConsultationForm, DentistQuote } from '../components';
 import { ServicestemplateWrapper, ServicestemplateContent } from '../styled-components/pages/servicestemplate';
 
 class Servicestemplate extends Component {
@@ -9,7 +8,12 @@ class Servicestemplate extends Component {
           <ServicestemplateWrapper>
               <Header/>
               <ServicestemplateContent>
-                servicestemplate page
+                <MainBanner/>
+                <SingleService/>
+                <RelatedContent/>
+                <MoreProcedures/>
+                <ConsultationForm/>
+                <DentistQuote/>
               </ServicestemplateContent>
               <Footer/>
           </ServicestemplateWrapper>

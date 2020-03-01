@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Header, Footer, MainBanner, NewPatientInfo, AboutExperience, ServicesList, ScheduleBanner, ReviewBanner, Contact, BlogList } from '../components';
 import { BlogWrapper, BlogContent } from '../styled-components/pages/blog';
 
 class Blog extends Component {
@@ -9,7 +8,9 @@ class Blog extends Component {
           <BlogWrapper>
               <Header/>
               <BlogContent>
-                blog page
+                <MainBanner/>
+                <BlogList/>
+                <ScheduleBanner/>
               </BlogContent>
               <Footer/>
           </BlogWrapper>

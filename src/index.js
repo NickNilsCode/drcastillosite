@@ -7,7 +7,6 @@ import HomeRoot from "./roots/HomeRoot";
 import AboutRoot from "./roots/AboutRoot";
 import ServicesRoot from "./roots/ServicesRoot";
 import ServicestemplateRoot from "./roots/ServicestemplateRoot";
-import DrcastilloRoot from "./roots/DrcastilloRoot";
 import TeamRoot from "./roots/TeamRoot";
 import TeamtemplateRoot from "./roots/TeamtemplateRoot";
 import GalleryRoot from "./roots/GalleryRoot";
@@ -58,54 +57,50 @@ fs.readFile('./dist/js/home.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   homeBundle = data || "";
 })
-// fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   aboutBundle = data || "";
-// })
-// fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   servicesBundle = data || "";
-// })
-// fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   servicestemplateBundle = data || "";
-// })
-// fs.readFile('./dist/js/drcastillo.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   drcastilloBundle = data || "";
-// })
-// fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   teamBundle = data || "";
-// })
-// fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   teamtemplateBundle = data || "";
-// })
-// fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   galleryBundle = data || "";
-// })
-// fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   gallerytemplateBundle = data || "";
-// })
-// fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   patientinfoBundle = data || "";
-// })
-// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   contactBundle = data || "";
-// })
-// fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   blogBundle = data || "";
-// })
-// fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
-//   if (err) console.log("ERR" ,err);
-//   blogtemplateBundle = data || "";
-// })
+fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  aboutBundle = data || "";
+})
+fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  servicesBundle = data || "";
+})
+fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  servicestemplateBundle = data || "";
+})
+fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  teamBundle = data || "";
+})
+fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  teamtemplateBundle = data || "";
+})
+fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  galleryBundle = data || "";
+})
+fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  gallerytemplateBundle = data || "";
+})
+fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  patientinfoBundle = data || "";
+})
+fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  contactBundle = data || "";
+})
+fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  blogBundle = data || "";
+})
+fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  blogtemplateBundle = data || "";
+})
 
 app.get('/', (req, res) => {
   let data = "";
@@ -126,11 +121,6 @@ app.get('/servicestemplate', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "servicestemplate"));
-});
-app.get('/drcastillo', (req, res) => {
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, drcastilloBundle, DrcastilloRoot, "drcastillo"));
 });
 app.get('/staff', (req, res) => {
   let data = "";

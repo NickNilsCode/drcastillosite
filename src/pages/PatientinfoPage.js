@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Header, Footer, MainBanner, NewPatientInfo, AboutExperience, ServicesList, ScheduleBanner, ReviewBanner, Contact } from '../components';
 import { PatientinfoWrapper, PatientinfoContent } from '../styled-components/pages/patientinfo';
 
 class Patientinfo extends Component {
@@ -9,7 +8,13 @@ class Patientinfo extends Component {
           <PatientinfoWrapper>
               <Header/>
               <PatientinfoContent>
-                patientinfo page
+                <MainBanner img="/images/banner6.jpg"/>
+                <NewPatientInfo/>
+                <AboutExperience/>
+                <ServicesList/>
+                <ScheduleBanner/>
+                <ReviewBanner/>
+                <Contact/>
               </PatientinfoContent>
               <Footer/>
           </PatientinfoWrapper>

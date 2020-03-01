@@ -7,7 +7,15 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ = require("./");
+
 var _BlogList = require("../styled-components/components/BlogList");
+
+var _global = require("../styled-components/global");
+
+var _blogList = _interopRequireDefault(require("../data/blogList"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -45,7 +53,23 @@ function (_Component) {
   _createClass(BlogListComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_BlogList.BlogList, null, "Blog List");
+      return _react["default"].createElement(_BlogList.BlogList, null, _react["default"].createElement(_BlogList.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "Latest Blog Posts"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "Our practice prides itself on providing the very finest level of service, from a simple filling to complex cosmetic dentistry.")), _react["default"].createElement(_BlogList.FlexWrap, null, _blogList["default"].map(function (a, i) {
+        return _react["default"].createElement(_.BlogCard, {
+          key: i,
+          link: a.link,
+          img: a.img,
+          title: a.title,
+          author: a.author,
+          blurb: a.blurb
+        });
+      })), _react["default"].createElement(_global.Button, {
+        color1: "#fff",
+        color2: "#27b1d2",
+        color3: "#27b1d2",
+        style: {
+          marginBottom: '24px'
+        }
+      }, "See Full Blog Page"), _react["default"].createElement(_.DentistLine, null));
     }
   }]);
 

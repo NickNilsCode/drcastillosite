@@ -7,13 +7,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _Header = _interopRequireDefault(require("../components/Header"));
-
-var _Footer = _interopRequireDefault(require("../components/Footer"));
+var _components = require("../components");
 
 var _teamtemplate = require("../styled-components/pages/teamtemplate");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -51,7 +47,7 @@ function (_Component) {
   _createClass(Teamtemplate, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_teamtemplate.TeamtemplateWrapper, null, _react["default"].createElement(_Header["default"], null), _react["default"].createElement(_teamtemplate.TeamtemplateContent, null, "teamtemplate page"), _react["default"].createElement(_Footer["default"], null));
+      return _react["default"].createElement(_teamtemplate.TeamtemplateWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_teamtemplate.TeamtemplateContent, null, _react["default"].createElement(_components.MainBanner, null), _react["default"].createElement(_components.MemberDetails, null), _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, null)), _react["default"].createElement(_components.Footer, null));
     }
   }]);
 

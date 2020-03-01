@@ -1,11 +1,41 @@
 import React, { Component } from 'react';
-import { BlogList } from '../styled-components/components/BlogList';
+import { DentistLine, BlogCard } from './'
+import { BlogList, Description, FlexWrap } from '../styled-components/components/BlogList';
+import { Para, H2BannerTitle, Button } from '../styled-components/global';
+import blogList from '../data/blogList';
 
 class BlogListComponent extends Component {
   render(){
     return (
       <BlogList>
-        Blog List
+        <Description>
+          <H2BannerTitle>Latest Blog Posts</H2BannerTitle>
+          <hr/>
+          <Para>Our practice prides itself on providing the very finest level of service, from a simple filling to complex cosmetic dentistry.</Para>
+        </Description>
+        <FlexWrap>
+          {
+            blogList.map((a,i) => {
+              return (
+                <BlogCard
+                  key={i}
+                  link={a.link}
+                  img={a.img}
+                  title={a.title}
+                  author={a.author}
+                  blurb={a.blurb}
+                />
+              )
+            })
+          }
+        </FlexWrap>
+        <Button
+          color1="#fff"
+          color2="#27b1d2"
+          color3="#27b1d2"
+          style={{ marginBottom: '24px' }}
+        >See Full Blog Page</Button>
+        <DentistLine/>
       </BlogList>
     );
   }
