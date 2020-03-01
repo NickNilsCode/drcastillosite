@@ -3,14 +3,34 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GreyBackground = exports.ToothBackground = exports.Para = exports.H6 = exports.H5 = exports.H3 = exports.H2BannerTitle = exports.H2 = exports.H1 = void 0;
+exports.GreyBackground = exports.ToothBackground = exports.Button = exports.LargeMessage = exports.Para = exports.H6 = exports.H5 = exports.H3 = exports.H2BannerTitle = exports.H2 = exports.H1 = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject9() {
+function _templateObject11() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n  background-color: #f5f5f5\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  background-image: url(\"/images/parallax-03.jpg\");\n  background-size: cover;\n  background-position: center;\n  @media(min-width: 700px){\n    background-image: url(\"/images/parallax-01.jpg\");\n  }\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 15px;\n  font-weight: 700;\n  background-color: ", ";\n  color: ", ";\n  border: ", ";\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  border-radius: 3px;\n  padding: 15px 30px;\n  text-decoration: none;\n  &:hover {\n    background-color: ", ";\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -20,7 +40,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  background-image: url(\"/images/parallax-03.jpg\");\n  background-size: cover;\n  background-position: center;\n  @media(min-width: 700px){\n    background-image: url(\"/images/parallax-01.jpg\");\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", sans-serif;\n  margin: 0;\n  font-weight: 700;\n  font-size: 24px;\n  margin: 8px 0;\n  color: #000;\n  line-height: 42px;\n  @media (min-width: 1000px){\n    font-size: 29px;\n  }\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -129,10 +149,28 @@ var Para = _styledComponents["default"].p(_templateObject7());
 
 exports.Para = Para;
 
-var ToothBackground = _styledComponents["default"].div(_templateObject8());
+var LargeMessage = _styledComponents["default"].p(_templateObject8());
+
+exports.LargeMessage = LargeMessage;
+
+var Button = _styledComponents["default"].button(_templateObject9(), function (props) {
+  return props.color1 ? props.color1 : "transparent";
+}, function (props) {
+  return props.color2 ? props.color2 : "#27b1d2";
+}, function (props) {
+  return props.color3 ? props.color3 + " 2px solid" : "#27b1d2 2px solid";
+}, function (props) {
+  return props.color2 ? props.color2 : "#27b1d2";
+}, function (props) {
+  return props.color1 ? props.color1 : "#fff";
+});
+
+exports.Button = Button;
+
+var ToothBackground = _styledComponents["default"].div(_templateObject10());
 
 exports.ToothBackground = ToothBackground;
 
-var GreyBackground = _styledComponents["default"].div(_templateObject9());
+var GreyBackground = _styledComponents["default"].div(_templateObject11());
 
 exports.GreyBackground = GreyBackground;

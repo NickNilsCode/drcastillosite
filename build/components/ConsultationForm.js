@@ -13,6 +13,8 @@ var _ConsultationForm = require("../styled-components/components/ConsultationFor
 
 var _treatmentsList = _interopRequireDefault(require("../data/treatmentsList"));
 
+var _global = require("../styled-components/global");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -188,7 +190,9 @@ function (_Component) {
       })), _react["default"].createElement(_.ConsultationCard, {
         title: "TREATMENTS"
       }, _react["default"].createElement(_ConsultationForm.PillBox, null, selectedTreatments && selectedTreatments.length ? selectedTreatments.map(function (a, i) {
-        return _react["default"].createElement(_ConsultationForm.Pill, null, a);
+        return _react["default"].createElement(_ConsultationForm.Pill, {
+          key: i
+        }, a);
       }) : null), _react["default"].createElement(_.Dropdown, {
         placeholder: "Select Treatment(s)",
         options: _treatmentsList["default"],
@@ -196,8 +200,16 @@ function (_Component) {
         onClick: this.changeTreatment,
         required: true,
         multiple: true
-      }), _react["default"].createElement(_ConsultationForm.ConsultationSubmit, {
-        type: "submit"
+      }), _react["default"].createElement(_global.Button, {
+        color1: "#5ad4f1",
+        color2: "#fff",
+        color3: "#fff",
+        type: "submit",
+        style: {
+          fontSize: '12px',
+          fontWeight: 'normal',
+          borderWidth: '1px'
+        }
       }, "REQUEST NOW")));
     }
   }]);

@@ -17,5 +17,5 @@ module.exports = [{
   link: "/",
   img: "/images/gendent.png",
   title: "GENERAL DENTISTRY",
-  blurb: "Our experienced dental team provides a comprehensive range of preventive dentalc care designed to maintain healthy teeth and gums."
+  blurb: "Our experienced dental team provides a comprehensive range of preventive dentalcare designed to maintain healthy teeth and gums."
 }]

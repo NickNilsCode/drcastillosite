@@ -9,6 +9,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _ServiceCard = require("../styled-components/components/ServiceCard");
 
+var _global = require("../styled-components/global");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -45,7 +47,19 @@ function (_Component) {
   _createClass(ServiceCardComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_ServiceCard.ServiceCard, null, "Single Service");
+      var _this$props = this.props,
+          link = _this$props.link,
+          img = _this$props.img,
+          title = _this$props.title,
+          blurb = _this$props.blurb,
+          num = _this$props.num;
+      return _react["default"].createElement(_ServiceCard.ServiceCard, {
+        href: link
+      }, _react["default"].createElement(_ServiceCard.CardImg, {
+        style: {
+          backgroundImage: "url(".concat(img, ")")
+        }
+      }, _react["default"].createElement(_ServiceCard.NumDiamond, null, _react["default"].createElement("span", null, "0" + num))), _react["default"].createElement(_global.H2, null, title), _react["default"].createElement(_global.Para, null, blurb));
     }
   }]);
 

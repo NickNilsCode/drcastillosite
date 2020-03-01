@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import { ServiceCard } from '../styled-components/components/ServiceCard';
+import { ServiceCard, CardImg, NumDiamond } from '../styled-components/components/ServiceCard';
+import { Para, H2 } from '../styled-components/global';
 
 class ServiceCardComponent extends Component {
   render(){
+    const { link, img, title, blurb, num } = this.props;
     return (
-      <ServiceCard>
-        Single Service
+      <ServiceCard href={link}>
+        <CardImg style={{backgroundImage: `url(${img})`}}>
+          <NumDiamond>
+            <span>{"0" + num}</span>
+          </NumDiamond>
+        </CardImg>
+        <H2>{title}</H2>
+        <Para>{blurb}</Para>
       </ServiceCard>
     );
   }

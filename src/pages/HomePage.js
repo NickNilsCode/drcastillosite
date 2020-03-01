@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Footer, CarouselBanner, ConsultationForm, DentistQuote, AboutExperience, ServicesList } from '../components';
+import { Header, Footer, CarouselBanner, ConsultationForm, DentistQuote, AboutExperience, ServicesList, ScheduleBanner, ReviewBanner, BlogList, Contact } from '../components';
 import { HomeWrapper, HomeContent } from '../styled-components/pages/home';
 import { ToothBackground, GreyBackground } from '../styled-components/global';
 
@@ -24,6 +24,10 @@ class Home extends Component {
                 <GreyBackground>
                   <ServicesList/>
                 </GreyBackground>
+                <ScheduleBanner/>
+                <ReviewBanner/>
+                <BlogList/>
+                <Contact/>
               </HomeContent>
               <Footer/>
           </HomeWrapper>

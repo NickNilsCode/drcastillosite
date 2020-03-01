@@ -62,6 +62,39 @@ export const Para = styled.p`
   color: #696969;
 `;
 
+export const LargeMessage = styled.p`
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 8px 0;
+  color: #000;
+  line-height: 42px;
+  @media (min-width: 1000px){
+    font-size: 29px;
+  }
+`;
+
+export const Button = styled.button`
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: ${props => props.color1 ? props.color1 : "transparent"};
+  color: ${props => props.color2 ? props.color2 : "#27b1d2"};
+  border: ${props => props.color3 ? props.color3 + " 2px solid" : "#27b1d2 2px solid"};
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 15px 30px;
+  text-decoration: none;
+  &:hover {
+    background-color: ${props => props.color2 ? props.color2 : "#27b1d2"};
+    color: ${props => props.color1 ? props.color1 : "#fff"};
+    cursor: pointer;
+  }
+`;
+
 export const ToothBackground = styled.div`
   width: 100%;
   background-image: url("/images/parallax-03.jpg");

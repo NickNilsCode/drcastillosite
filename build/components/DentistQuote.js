@@ -53,9 +53,13 @@ function (_Component) {
           blurb = _this$props.blurb,
           link = _this$props.link,
           img = _this$props.img;
-      return _react["default"].createElement(_DentistQuote.DentistQuote, null, _react["default"].createElement(_DentistQuote.LeftSide, null, _react["default"].createElement(_global.H2, null, title), _react["default"].createElement(_DentistQuote.DentistName, null, "with ", name), _react["default"].createElement(_DentistQuote.DentistMessage, null, blurb), _react["default"].createElement("a", {
+      return _react["default"].createElement(_DentistQuote.DentistQuote, null, _react["default"].createElement(_DentistQuote.LeftSide, null, _react["default"].createElement(_global.H2, null, title), _react["default"].createElement(_DentistQuote.DentistName, null, "with ", name), _react["default"].createElement(_global.LargeMessage, {
+        style: {
+          marginBottom: '24px'
+        }
+      }, blurb), _react["default"].createElement("a", {
         href: link
-      }, _react["default"].createElement(_DentistQuote.Button, null, "Learn More"))), _react["default"].createElement(_DentistQuote.RightSide, null, _react["default"].createElement("img", {
+      }, _react["default"].createElement(_global.Button, null, "Learn More"))), _react["default"].createElement(_DentistQuote.RightSide, null, _react["default"].createElement("img", {
         src: img
       })));
     }

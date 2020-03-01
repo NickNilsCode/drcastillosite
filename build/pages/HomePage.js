@@ -55,7 +55,7 @@ function (_Component) {
         blurb: "Give yourself the gift of a truly sensational and healthy smile. Start our Whole Health Dentistry Program.",
         link: "/",
         img: "/images/layer-01.png"
-      })), _react["default"].createElement(_components.AboutExperience, null), _react["default"].createElement(_global.GreyBackground, null, _react["default"].createElement(_components.ServicesList, null))), _react["default"].createElement(_components.Footer, null));
+      })), _react["default"].createElement(_components.AboutExperience, null), _react["default"].createElement(_global.GreyBackground, null, _react["default"].createElement(_components.ServicesList, null)), _react["default"].createElement(_components.ScheduleBanner, null), _react["default"].createElement(_components.ReviewBanner, null), _react["default"].createElement(_components.BlogList, null), _react["default"].createElement(_components.Contact, null)), _react["default"].createElement(_components.Footer, null));
     }
   }]);
 

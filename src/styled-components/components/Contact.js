@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const ReviewBanner = styled.div`
+export const Contact = styled.div`
   width: calc(100% - 32px);
   min-height: 100px;
   background-color: #fff;

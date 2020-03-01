@@ -32,29 +32,3 @@ export const DentistName = styled.div`
   color: #969696;
   padding-top: 7px;
 `;
-
-export const DentistMessage = styled.div`
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 29px;
-  color: #000;
-  line-height: 42px;
-`;
-
-export const Button = styled.button`
-  display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  background-color: transparent;
-  color: #27b1d2;
-  border: #27b1d2 2px solid;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  padding: 15px 30px;
-  text-decoration: none;
-  margin-right: 15px;
-  margin-top: 35px;
-  margin-bottom: 20px;
-`;

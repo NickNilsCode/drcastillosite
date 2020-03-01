@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const AboutExperience = styled.div`
-  width: 100%;
+  width: calc(100% - 30px);
   max-width: calc(1140px - 30px);
   padding: 100px 15px;
   margin: auto;
@@ -23,18 +23,29 @@ export const FlexWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  @media(min-width: 700px){
+    flex-direction: row;
+  }
 `;
 export const LeftSide = styled.div`
-  width: calc(50% - 12px);
-  margin-right: 12px;
+  width: 100%;
   max-width: 1140px;
   text-align: left;
+  @media(min-width: 700px){
+    width: calc(50% - 12px);
+    margin-right: 12px;
+  }
 `;
 export const RightSide = styled.div`
-  width: calc(50% - 12px);
-  margin-left: 12px;
+  width: 100%;
+
   max-width: 1140px;
   img {
     width: 100%;
+  }
+  @media(min-width: 700px){
+    width: calc(50% - 12px);
+    margin-left: 12px;
   }
 `;

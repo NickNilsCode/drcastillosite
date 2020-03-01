@@ -5,6 +5,7 @@ export { default as BlogList } from "./BlogList";
 export { default as CarouselBanner } from "./CarouselBanner";
 export { default as ConsultationCard } from "./ConsultationCard";
 export { default as ConsultationForm } from "./ConsultationForm";
+export { default as Contact } from "./Contact";
 export { default as ContactForm } from "./ContactForm";
 export { default as DentistQuote } from "./DentistQuote";
 export { default as DentistLine } from "./DentistLine";

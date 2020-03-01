@@ -9,13 +9,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _ = require("./");
 
-var _ServicesList = require("../styled-components/components/ServicesList");
-
-var _global = require("../styled-components/global");
-
-var _servicesList = _interopRequireDefault(require("../data/servicesList"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _Contact = require("../styled-components/components/Contact");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -39,35 +33,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var ServicesListComponent =
+var ContactComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(ServicesListComponent, _Component);
+  _inherits(ContactComponent, _Component);
 
-  function ServicesListComponent() {
-    _classCallCheck(this, ServicesListComponent);
+  function ContactComponent() {
+    _classCallCheck(this, ContactComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ServicesListComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ContactComponent).apply(this, arguments));
   }
 
-  _createClass(ServicesListComponent, [{
+  _createClass(ContactComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_ServicesList.ServicesList, null, _react["default"].createElement(_ServicesList.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "Services"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "We provide comprehensive care to our patients. You will get a thorough understanding of your dental issues and what can be done to help you be in optimal dental health.")), _react["default"].createElement(_ServicesList.FlexWrap, null, _servicesList["default"].map(function (a, i) {
-        return _react["default"].createElement(_.ServiceCard, {
-          key: i,
-          num: i + 1,
-          link: a.link,
-          img: a.img,
-          title: a.title,
-          blurb: a.blurb
-        });
-      })), _react["default"].createElement(_.DentistLine, null));
+      return _react["default"].createElement(_Contact.Contact, null, _react["default"].createElement(_.ContactForm, null), _react["default"].createElement(_.Map, null));
     }
   }]);
 
-  return ServicesListComponent;
+  return ContactComponent;
 }(_react.Component);
 
-var _default = ServicesListComponent;
+var _default = ContactComponent;
 exports["default"] = _default;

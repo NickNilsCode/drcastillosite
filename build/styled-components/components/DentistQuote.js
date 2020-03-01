@@ -3,31 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.DentistMessage = exports.DentistName = exports.RightSide = exports.LeftSide = exports.DentistQuote = void 0;
+exports.DentistName = exports.RightSide = exports.LeftSide = exports.DentistQuote = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  font-family: \"Montserrat\", sans-serif;\n  font-size: 15px;\n  font-weight: 700;\n  background-color: transparent;\n  color: #27b1d2;\n  border: #27b1d2 2px solid;\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  border-radius: 3px;\n  padding: 15px 30px;\n  text-decoration: none;\n  margin-right: 15px;\n  margin-top: 35px;\n  margin-bottom: 20px;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 700;\n  font-size: 29px;\n  color: #000;\n  line-height: 42px;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject4() {
   var data = _taggedTemplateLiteral(["\n  display: block;\n  font-family: \"Roboto\", sans-serif;\n  font-weight: normal;\n  font-style: italic;\n  font-size: 13px;\n  color: #969696;\n  padding-top: 7px;\n"]);
@@ -86,11 +66,3 @@ exports.RightSide = RightSide;
 var DentistName = _styledComponents["default"].div(_templateObject4());
 
 exports.DentistName = DentistName;
-
-var DentistMessage = _styledComponents["default"].div(_templateObject5());
-
-exports.DentistMessage = DentistMessage;
-
-var Button = _styledComponents["default"].button(_templateObject6());
-
-exports.Button = Button;

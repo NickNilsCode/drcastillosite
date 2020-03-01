@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { DentistQuote, DentistName, DentistMessage, LeftSide, RightSide, Button } from '../styled-components/components/DentistQuote';
-import { H2 } from '../styled-components/global';
+import { DentistQuote, DentistName, LeftSide, RightSide } from '../styled-components/components/DentistQuote';
+import { H2, LargeMessage, Button } from '../styled-components/global';
 
 class DentistQuoteComponent extends Component {
   render(){
@@ -10,7 +10,7 @@ class DentistQuoteComponent extends Component {
         <LeftSide>
           <H2>{title}</H2>
           <DentistName>with {name}</DentistName>
-          <DentistMessage>{blurb}</DentistMessage>
+          <LargeMessage style={{marginBottom: '24px'}}>{blurb}</LargeMessage>
           <a href={link}><Button>Learn More</Button></a>
         </LeftSide>
         <RightSide>

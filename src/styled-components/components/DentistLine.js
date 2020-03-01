@@ -5,6 +5,7 @@ export const DentistLine = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
   img {
     width: 100px;
     margin: 8px;

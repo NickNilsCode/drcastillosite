@@ -45,6 +45,12 @@ Object.defineProperty(exports, "ConsultationForm", {
     return _ConsultationForm["default"];
   }
 });
+Object.defineProperty(exports, "Contact", {
+  enumerable: true,
+  get: function get() {
+    return _Contact["default"];
+  }
+});
 Object.defineProperty(exports, "ContactForm", {
   enumerable: true,
   get: function get() {
@@ -233,6 +239,8 @@ var _CarouselBanner = _interopRequireDefault(require("./CarouselBanner"));
 var _ConsultationCard = _interopRequireDefault(require("./ConsultationCard"));
 
 var _ConsultationForm = _interopRequireDefault(require("./ConsultationForm"));
+
+var _Contact = _interopRequireDefault(require("./Contact"));
 
 var _ContactForm = _interopRequireDefault(require("./ContactForm"));
 

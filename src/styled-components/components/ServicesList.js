@@ -21,4 +21,10 @@ export const FlexWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  @media (min-width: 700px){
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
