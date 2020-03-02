@@ -44,10 +44,15 @@ export const TextBox = styled.div`
   text-align: left;
   & p, & h2, & h6 {
     color: #fff;
+    text-align: left;
+  }
+  & h6 {
+    padding: 0;
+    padding-bottom: 50px;
   }
   padding: 12px;
   position: absolute;
-  top: 75%;
+  top: calc(100% - 100px);
   left: 0;
   background-color: rgba(39, 177, 210, 0.9);
 `;

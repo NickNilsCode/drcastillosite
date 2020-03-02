@@ -189,6 +189,12 @@ Object.defineProperty(exports, "ReviewBanner", {
     return _ReviewBanner["default"];
   }
 });
+Object.defineProperty(exports, "ReviewCard", {
+  enumerable: true,
+  get: function get() {
+    return _ReviewCard["default"];
+  }
+});
 Object.defineProperty(exports, "ScheduleBanner", {
   enumerable: true,
   get: function get() {
@@ -287,6 +293,8 @@ var _NewPatientInfo = _interopRequireDefault(require("./NewPatientInfo"));
 var _RelatedContent = _interopRequireDefault(require("./RelatedContent"));
 
 var _ReviewBanner = _interopRequireDefault(require("./ReviewBanner"));
+
+var _ReviewCard = _interopRequireDefault(require("./ReviewCard"));
 
 var _ScheduleBanner = _interopRequireDefault(require("./ScheduleBanner"));
 

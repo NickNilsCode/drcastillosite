@@ -26,6 +26,18 @@ export const H2BannerTitle = styled.h2`
   margin: 6px;
 `;
 
+export const Description = styled.div`
+  width: 100%;
+  margin: auto;
+  margin-bottom: 24px;
+  max-width: 1140px;
+  hr {
+    width: 330px;
+    border: 1px solid #27b1d2;
+    margin: 0;
+  }
+`;
+
 export const H3 = styled.h3`
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
@@ -88,6 +100,7 @@ export const Button = styled.button`
   border-radius: 3px;
   padding: 15px 30px;
   text-decoration: none;
+  transition: background-color 1s, color 1s;
   &:hover {
     background-color: ${props => props.color2 ? props.color2 : "#27b1d2"};
     color: ${props => props.color1 ? props.color1 : "#fff"};
@@ -97,15 +110,34 @@ export const Button = styled.button`
 
 export const ToothBackground = styled.div`
   width: 100%;
-  background-image: url("/images/parallax-03.jpg");
+  background-image: url("/images/parallax-01.jpg");
   background-size: cover;
   background-position: center;
-  @media(min-width: 700px){
-    background-image: url("/images/parallax-01.jpg");
-  }
 `;
 
 export const GreyBackground = styled.div`
   width: 100%;
   background-color: #f5f5f5
+`;
+
+export const Parallax = styled.div`
+  width: 100%;
+  height: 500px;
+  background-image: ${props => `url(${props.img})`};
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+export const Slider = styled.div`
+  width: ${props => (props.count * 100) + "%"};
+  position: absolute;
+  left: ${props => (props.index * -100) + "%"};
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  transition: left 1s;
 `;

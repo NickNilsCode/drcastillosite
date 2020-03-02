@@ -23,7 +23,8 @@ class ConsultationFormComponent extends Component {
       surname: surname,
       phone: phone,
       email: email,
-      procedures: selectedTreatments.join(', ')
+      procedures: selectedTreatments.join(', '),
+      option: 1
     }
     fetch('/emailer', {
       method: "POST",

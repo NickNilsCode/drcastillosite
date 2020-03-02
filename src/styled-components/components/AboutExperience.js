@@ -8,15 +8,6 @@ export const AboutExperience = styled.div`
   color: #696969;
 `;
 
-export const Description = styled.div`
-  width: 100%;
-  margin-bottom: 24px;
-  hr {
-    width: 330px;
-    border: 1px solid #27b1d2;
-    margin: 0;
-  }
-`;
 
 export const FlexWrap = styled.div`
   width: 100%;

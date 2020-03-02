@@ -7,15 +7,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _ExperienceCard = _interopRequireDefault(require("./ExperienceCard"));
-
-var _AboutExperience = require("../styled-components/components/AboutExperience");
-
-var _global = require("../styled-components/global");
-
-var _aboutExperience = _interopRequireDefault(require("../data/aboutExperience"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _ReviewCard = require("../styled-components/components/ReviewCard");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -39,38 +31,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var AboutExperienceComponent =
+var ReviewCardComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(AboutExperienceComponent, _Component);
+  _inherits(ReviewCardComponent, _Component);
 
-  function AboutExperienceComponent() {
-    _classCallCheck(this, AboutExperienceComponent);
+  function ReviewCardComponent() {
+    _classCallCheck(this, ReviewCardComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(AboutExperienceComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ReviewCardComponent).apply(this, arguments));
   }
 
-  _createClass(AboutExperienceComponent, [{
+  _createClass(ReviewCardComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_AboutExperience.AboutExperience, {
-        id: "about"
-      }, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "ABOUT OUR EXPERIENCE"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "By entrusting us with your dental needs and concerns, we will provide you with compassionate care tailored to your specific needs. As equal partners in achieving total dental wellness for you, we will develop an individualized dental plan to work together with our team of qualified, caring professionls to reach your goal.")), _react["default"].createElement(_AboutExperience.FlexWrap, null, _react["default"].createElement(_AboutExperience.LeftSide, null, _aboutExperience["default"].map(function (a, i) {
-        return _react["default"].createElement(_ExperienceCard["default"], {
-          key: i,
-          Icon: a.Icon,
-          link: a.link,
-          title: a.title,
-          blurb: a.blurb
-        });
-      })), _react["default"].createElement(_AboutExperience.RightSide, null, _react["default"].createElement("img", {
-        src: "/images/about_us.jpg"
-      }))));
+      var _this$props = this.props,
+          message = _this$props.message,
+          author = _this$props.author,
+          num = _this$props.num,
+          count = _this$props.count;
+      return _react["default"].createElement(_ReviewCard.ReviewCard, {
+        count: count
+      }, _react["default"].createElement(_ReviewCard.GiantQuotes, null, _react["default"].createElement("i", {
+        className: "fas fa-quote-left"
+      })), _react["default"].createElement(_ReviewCard.ReviewP, null, message));
     }
   }]);
 
-  return AboutExperienceComponent;
+  return ReviewCardComponent;
 }(_react.Component);
 
-var _default = AboutExperienceComponent;
+var _default = ReviewCardComponent;
 exports["default"] = _default;

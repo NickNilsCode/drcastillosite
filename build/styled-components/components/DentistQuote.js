@@ -40,7 +40,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: calc(1140px - 30px);\n  padding: 15px;\n  padding-bottom: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: calc(100% - 30px);\n  max-width: calc(1140px - 30px);\n  padding: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: auto;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

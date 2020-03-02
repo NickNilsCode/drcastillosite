@@ -47,6 +47,15 @@ function (_Component) {
   }
 
   _createClass(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (window.location.pathname == "/about" && window.location.hash != "#about") {
+        window.location.href = "/about#about";
+      } else if (window.location.pathname == "/services" && window.location.hash != "#services") {
+        window.location.href = "/services#services";
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react["default"].createElement(_home.HomeWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_home.HomeContent, null, _react["default"].createElement(_components.CarouselBanner, null), _react["default"].createElement(_global.ToothBackground, null, _react["default"].createElement(_components.ConsultationForm, null), _react["default"].createElement(_components.DentistQuote, {

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 export const DentistQuote = styled.div`
-  width: 100%;
+  width: calc(100% - 30px);
   max-width: calc(1140px - 30px);
   padding: 15px;
-  padding-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;

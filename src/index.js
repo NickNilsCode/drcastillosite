@@ -57,14 +57,14 @@ fs.readFile('./dist/js/home.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   homeBundle = data || "";
 })
-fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  aboutBundle = data || "";
-})
-fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  servicesBundle = data || "";
-})
+// fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   aboutBundle = data || "";
+// })
+// fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicesBundle = data || "";
+// })
 fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   servicestemplateBundle = data || "";
@@ -89,10 +89,10 @@ fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   patientinfoBundle = data || "";
 })
-fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  contactBundle = data || "";
-})
+// fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
 fs.readFile('./dist/js/blog.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   blogBundle = data || "";
@@ -110,15 +110,17 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, aboutBundle, AboutRoot, "about"));
+  res.send(returnHTML(data, homeBundle, HomeRoot, "about"));
 });
 app.get('/services', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, servicesBundle, ServicesRoot, "services"));
+  res.send(returnHTML(data, homeBundle, HomeRoot,  "services"));
 });
-app.get('/servicestemplate', (req, res) => {
-  let data = "";
+app.get('/services/:id', (req, res) => {
+  let data = {
+    serviceId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "servicestemplate"));
 });
@@ -127,8 +129,10 @@ app.get('/staff', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamBundle, TeamRoot, "team"));
 });
-app.get('/teamtemplate', (req, res) => {
-  let data = "";
+app.get('/team/:id', (req, res) => {
+  let data = {
+    teamId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamtemplateBundle, TeamtemplateRoot, "teamtemplate"));
 });
@@ -137,8 +141,10 @@ app.get('/gallery', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, galleryBundle, GalleryRoot, "gallery"));
 });
-app.get('/gallerytemplate', (req, res) => {
-  let data = "";
+app.get('/gallery/:id', (req, res) => {
+  let data = {
+    galleryId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, gallerytemplateBundle, GallerytemplateRoot, "gallerytemplate"));
 });
@@ -150,15 +156,17 @@ app.get('/patient-information', (req, res) => {
 app.get('/contact', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, contactBundle, ContactRoot, "contact"));
+  res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "contact"));
 });
 app.get('/blog', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
 });
-app.get('/blogtemplate', (req, res) => {
-  let data = "";
+app.get('/blog/:id', (req, res) => {
+  let data = {
+    blogId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "blogtemplate"));
 });
@@ -167,6 +175,34 @@ app.get('/images/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.sendFile(path.join(__dirname, '../images/' + req.params.id));
 });
+
+const getEmailHTML = (req, option) => {
+  switch(option) {
+    case 1:
+      return `
+        <h3>Hi Dr. Castillo!</h3>
+        <h3>The following person is requesting a consultation for the listed procedures.<h3/>
+
+        <h4>First Name: ${req.body.name}</h4>
+        <h4>Last Name: ${req.body.surname}</h4>
+        <h4>Email: ${req.body.email}</h4>
+        <h4>Phone: ${req.body.phone}</h4>
+        <h4>Procedures: ${req.body.procedures}</h4>
+      `
+    case 2:
+      return `
+        <h3>Hi Dr. Castillo!</h3>
+        <h3>The following person is has a message for you.<h3/>
+
+        <h4>First Name: ${req.body.name}</h4>
+        <h4>Last Name: ${req.body.surname}</h4>
+        <h4>Email: ${req.body.email}</h4>
+        <h4>Phone: ${req.body.phone}</h4>
+
+        <h4>Message: ${req.body.message}</h4>
+      `
+  }
+}
 
 app.post('/emailer', (req, res) => {
   var transporter = nodemailer.createTransport({
@@ -185,16 +221,7 @@ app.post('/emailer', (req, res) => {
     to: cryptr.decrypt(config.email),
     // to: cryptr.decrypt(config.email2),
     subject: 'Dr. Castillo Dental Inquiry',
-    html: `
-      <h3>Hi Dr. Castillo!</h3>
-      <h3>The following person is requesting a consultation for the listed procedures.<h3/>
-
-      <h4>First Name: ${req.body.name}</h4>
-      <h4>Last Name: ${req.body.surname}</h4>
-      <h4>Email: ${req.body.email}</h4>
-      <h4>Phone: ${req.body.phone}</h4>
-      <h4>Procedures: ${req.body.procedures}</h4>
-    `
+    html: getEmailHTML(req, req.body.option)
   }, (error, info) => {
     if (error) res.send({error: error});
     else res.send({response: info});

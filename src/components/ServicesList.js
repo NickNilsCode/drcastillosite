@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { DentistLine, ServiceCard } from './'
-import { ServicesList, Description, FlexWrap } from '../styled-components/components/ServicesList';
-import { Para, H2BannerTitle } from '../styled-components/global';
+import { ServicesList, FlexWrap } from '../styled-components/components/ServicesList';
+import { Para, H2BannerTitle, Description } from '../styled-components/global';
 import servicesList from '../data/servicesList';
 
 class ServicesListComponent extends Component {
   render(){
     return (
-      <ServicesList>
+      <ServicesList id="services">
         <Description>
           <H2BannerTitle>Services</H2BannerTitle>
           <hr/>

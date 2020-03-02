@@ -4,6 +4,13 @@ import { HomeWrapper, HomeContent } from '../styled-components/pages/home';
 import { ToothBackground, GreyBackground } from '../styled-components/global';
 
 class Home extends Component {
+    componentDidMount(){
+      if(window.location.pathname == "/about" && window.location.hash != "#about"){
+        window.location.href = "/about#about";
+      } else if(window.location.pathname == "/services" && window.location.hash != "#services"){
+        window.location.href = "/services#services";
+      }
+    }
     render(){
       return (
           <HomeWrapper>

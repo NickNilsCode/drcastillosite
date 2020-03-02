@@ -77,17 +77,15 @@ var dataObj = {},
 _fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   homeBundle = data || "";
-});
+}); // fs.readFile('./dist/js/about.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   aboutBundle = data || "";
+// })
+// fs.readFile('./dist/js/services.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   servicesBundle = data || "";
+// })
 
-_fs["default"].readFile('./dist/js/about.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  aboutBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/services.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  servicesBundle = data || "";
-});
 
 _fs["default"].readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
@@ -117,12 +115,11 @@ _fs["default"].readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", funct
 _fs["default"].readFile('./dist/js/patientinfo.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   patientinfoBundle = data || "";
-});
+}); // fs.readFile('./dist/js/contact.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   contactBundle = data || "";
+// })
 
-_fs["default"].readFile('./dist/js/contact.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  contactBundle = data || "";
-});
 
 _fs["default"].readFile('./dist/js/blog.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
@@ -142,15 +139,17 @@ app.get('/', function (req, res) {
 app.get('/about', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, aboutBundle, _AboutRoot["default"], "about"));
+  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "about"));
 });
 app.get('/services', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, servicesBundle, _ServicesRoot["default"], "services"));
+  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "services"));
 });
-app.get('/servicestemplate', function (req, res) {
-  var data = "";
+app.get('/services/:id', function (req, res) {
+  var data = {
+    serviceId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, servicestemplateBundle, _ServicestemplateRoot["default"], "servicestemplate"));
 });
@@ -159,8 +158,10 @@ app.get('/staff', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamBundle, _TeamRoot["default"], "team"));
 });
-app.get('/teamtemplate', function (req, res) {
-  var data = "";
+app.get('/team/:id', function (req, res) {
+  var data = {
+    teamId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamtemplateBundle, _TeamtemplateRoot["default"], "teamtemplate"));
 });
@@ -169,8 +170,10 @@ app.get('/gallery', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, galleryBundle, _GalleryRoot["default"], "gallery"));
 });
-app.get('/gallerytemplate', function (req, res) {
-  var data = "";
+app.get('/gallery/:id', function (req, res) {
+  var data = {
+    galleryId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, gallerytemplateBundle, _GallerytemplateRoot["default"], "gallerytemplate"));
 });
@@ -182,15 +185,17 @@ app.get('/patient-information', function (req, res) {
 app.get('/contact', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, contactBundle, _ContactRoot["default"], "contact"));
+  res.send(returnHTML(data, patientinfoBundle, _PatientinfoRoot["default"], "contact"));
 });
 app.get('/blog', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogBundle, _BlogRoot["default"], "blog"));
 });
-app.get('/blogtemplate', function (req, res) {
-  var data = "";
+app.get('/blog/:id', function (req, res) {
+  var data = {
+    blogId: req.params.id
+  };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, blogtemplateBundle, _BlogtemplateRoot["default"], "blogtemplate"));
 });
@@ -198,6 +203,17 @@ app.get('/images/:id', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.sendFile(_path["default"].join(__dirname, '../images/' + req.params.id));
 });
+
+var getEmailHTML = function getEmailHTML(req, option) {
+  switch (option) {
+    case 1:
+      return "\n        <h3>Hi Dr. Castillo!</h3>\n        <h3>The following person is requesting a consultation for the listed procedures.<h3/>\n\n        <h4>First Name: ".concat(req.body.name, "</h4>\n        <h4>Last Name: ").concat(req.body.surname, "</h4>\n        <h4>Email: ").concat(req.body.email, "</h4>\n        <h4>Phone: ").concat(req.body.phone, "</h4>\n        <h4>Procedures: ").concat(req.body.procedures, "</h4>\n      ");
+
+    case 2:
+      return "\n        <h3>Hi Dr. Castillo!</h3>\n        <h3>The following person is has a message for you.<h3/>\n\n        <h4>First Name: ".concat(req.body.name, "</h4>\n        <h4>Last Name: ").concat(req.body.surname, "</h4>\n        <h4>Email: ").concat(req.body.email, "</h4>\n        <h4>Phone: ").concat(req.body.phone, "</h4>\n\n        <h4>Message: ").concat(req.body.message, "</h4>\n      ");
+  }
+};
+
 app.post('/emailer', function (req, res) {
   var transporter = _nodemailer["default"].createTransport({
     host: 'smtp.gmail.com',
@@ -215,7 +231,7 @@ app.post('/emailer', function (req, res) {
     to: cryptr.decrypt(_config["default"].email),
     // to: cryptr.decrypt(config.email2),
     subject: 'Dr. Castillo Dental Inquiry',
-    html: "\n      <h3>Hi Dr. Castillo!</h3>\n      <h3>The following person is requesting a consultation for the listed procedures.<h3/>\n\n      <h4>First Name: ".concat(req.body.name, "</h4>\n      <h4>Last Name: ").concat(req.body.surname, "</h4>\n      <h4>Email: ").concat(req.body.email, "</h4>\n      <h4>Phone: ").concat(req.body.phone, "</h4>\n      <h4>Procedures: ").concat(req.body.procedures, "</h4>\n    ")
+    html: getEmailHTML(req, req.body.option)
   }, function (error, info) {
     if (error) res.send({
       error: error

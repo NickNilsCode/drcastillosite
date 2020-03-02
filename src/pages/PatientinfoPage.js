@@ -3,6 +3,11 @@ import { Header, Footer, MainBanner, NewPatientInfo, AboutExperience, ServicesLi
 import { PatientinfoWrapper, PatientinfoContent } from '../styled-components/pages/patientinfo';
 
 class Patientinfo extends Component {
+    componentDidMount(){
+      if(window.location.pathname == "/contact" && window.location.hash != "#contact"){
+        window.location.href = "/contact#contact";
+      }
+    }
     render(){
       return (
           <PatientinfoWrapper>

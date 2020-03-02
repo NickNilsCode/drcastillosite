@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { DentistLine, BlogCard } from './'
-import { BlogList, Description, FlexWrap } from '../styled-components/components/BlogList';
-import { Para, H2BannerTitle, Button } from '../styled-components/global';
+import { BlogList, FlexWrap } from '../styled-components/components/BlogList';
+import { Para, H2BannerTitle, Button, Description } from '../styled-components/global';
 import blogList from '../data/blogList';
 
 class BlogListComponent extends Component {

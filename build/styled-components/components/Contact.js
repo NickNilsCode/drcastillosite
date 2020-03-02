@@ -3,14 +3,24 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Contact = void 0;
+exports.ContactForms = exports.Contact = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  position: relative;\n  height: max-content;\n  @media (min-width: 700px){\n    height: 500px;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: calc(100% - 32px);\n  min-height: 100px;\n  background-color: #fff;\n  color: #000;\n  padding: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  .description {\n    width: calc(100% - 30px);\n    padding: 15px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -24,3 +34,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Contact = _styledComponents["default"].div(_templateObject());
 
 exports.Contact = Contact;
+
+var ContactForms = _styledComponents["default"].div(_templateObject2());
+
+exports.ContactForms = ContactForms;

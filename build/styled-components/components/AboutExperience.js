@@ -3,24 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.RightSide = exports.LeftSide = exports.FlexWrap = exports.Description = exports.AboutExperience = void 0;
+exports.RightSide = exports.LeftSide = exports.FlexWrap = exports.AboutExperience = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n\n  max-width: 1140px;\n  img {\n    width: 100%;\n  }\n  @media(min-width: 700px){\n    width: calc(50% - 12px);\n    margin-left: 12px;\n  }\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 1140px;\n  text-align: left;\n  @media(min-width: 700px){\n    width: calc(50% - 12px);\n    margin-right: 12px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n\n  max-width: 1140px;\n  img {\n    width: 100%;\n  }\n  @media(min-width: 700px){\n    width: calc(50% - 12px);\n    margin-left: 12px;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -30,7 +20,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  @media(min-width: 700px){\n    flex-direction: row;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 1140px;\n  text-align: left;\n  @media(min-width: 700px){\n    width: calc(50% - 12px);\n    margin-right: 12px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -40,7 +30,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin-bottom: 24px;\n  hr {\n    width: 330px;\n    border: 1px solid #27b1d2;\n    margin: 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  @media(min-width: 700px){\n    flex-direction: row;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -65,18 +55,14 @@ var AboutExperience = _styledComponents["default"].div(_templateObject());
 
 exports.AboutExperience = AboutExperience;
 
-var Description = _styledComponents["default"].div(_templateObject2());
-
-exports.Description = Description;
-
-var FlexWrap = _styledComponents["default"].div(_templateObject3());
+var FlexWrap = _styledComponents["default"].div(_templateObject2());
 
 exports.FlexWrap = FlexWrap;
 
-var LeftSide = _styledComponents["default"].div(_templateObject4());
+var LeftSide = _styledComponents["default"].div(_templateObject3());
 
 exports.LeftSide = LeftSide;
 
-var RightSide = _styledComponents["default"].div(_templateObject5());
+var RightSide = _styledComponents["default"].div(_templateObject4());
 
 exports.RightSide = RightSide;

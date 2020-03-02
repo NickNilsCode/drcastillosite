@@ -3,15 +3,15 @@ const webpack = require('webpack');
 require('@babel/polyfill');
 const pages = [
   'home',
-  'about',
-  'services',
+  // 'about',
+  // 'services',
   'servicestemplate',
   'team',
   'teamtemplate',
   'gallery',
   'gallerytemplate',
   'patientinfo',
-  'contact',
+  // 'contact',
   'blog',
   'blogtemplate'
 ];

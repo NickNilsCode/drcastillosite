@@ -29,6 +29,7 @@ export { default as NavHeader } from "./NavHeader";
 export { default as NewPatientInfo } from "./NewPatientInfo";
 export { default as RelatedContent } from "./RelatedContent";
 export { default as ReviewBanner } from "./ReviewBanner";
+export { default as ReviewCard } from "./ReviewCard";
 export { default as ScheduleBanner } from "./ScheduleBanner";
 export { default as ServiceCard } from "./ServiceCard";
 export { default as ServicesList } from "./ServicesList";

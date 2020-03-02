@@ -45,7 +45,11 @@ function (_Component) {
   _createClass(MapComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_Map.Map, null, "Map");
+      return _react["default"].createElement(_Map.Map, null, _react["default"].createElement("iframe", {
+        src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBUtDW2kgUk1rCKcVwjQKecQIh7NwsTz-M&q=116 5359 N Fresno St # 110 Fresno, CA 93710&zoom=11",
+        width: "100%",
+        height: "100%"
+      }));
     }
   }]);
 

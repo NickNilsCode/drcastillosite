@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import ExperienceCard from './ExperienceCard';
-import { AboutExperience, Description, FlexWrap, LeftSide, RightSide } from '../styled-components/components/AboutExperience';
-import { Para, H2BannerTitle } from '../styled-components/global';
+import { AboutExperience, FlexWrap, LeftSide, RightSide } from '../styled-components/components/AboutExperience';
+import { Para, H2BannerTitle, Description } from '../styled-components/global';
 import aboutExperience from '../data/aboutExperience';
 
 class AboutExperienceComponent extends Component {
   render(){
     return (
-      <AboutExperience>
+      <AboutExperience id="about">
         <Description>
           <H2BannerTitle>ABOUT OUR EXPERIENCE</H2BannerTitle>
           <hr/>

@@ -11,6 +11,8 @@ var _ = require("./");
 
 var _Contact = require("../styled-components/components/Contact");
 
+var _global = require("../styled-components/global");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -47,7 +49,11 @@ function (_Component) {
   _createClass(ContactComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_Contact.Contact, null, _react["default"].createElement(_.ContactForm, null), _react["default"].createElement(_.Map, null));
+      return _react["default"].createElement(_Contact.Contact, {
+        id: "contact"
+      }, _react["default"].createElement(_global.Description, {
+        className: "description"
+      }, _react["default"].createElement(_global.H2BannerTitle, null, "Contact"), _react["default"].createElement("hr", null)), _react["default"].createElement(_Contact.ContactForms, null, _react["default"].createElement(_.ContactForm, null), _react["default"].createElement(_.Map, null)));
     }
   }]);
 

@@ -7,7 +7,15 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ = require("./");
+
 var _ReviewBanner = require("../styled-components/components/ReviewBanner");
+
+var _global = require("../styled-components/global");
+
+var _reviewList = _interopRequireDefault(require("../data/reviewList"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -23,29 +31,73 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var ReviewBannerComponent =
 /*#__PURE__*/
 function (_Component) {
   _inherits(ReviewBannerComponent, _Component);
 
-  function ReviewBannerComponent() {
+  function ReviewBannerComponent(props) {
+    var _this;
+
     _classCallCheck(this, ReviewBannerComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ReviewBannerComponent).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ReviewBannerComponent).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "clickReview", function (i) {
+      _this.setState({
+        selectedReview: i
+      });
+    });
+
+    _this.state = {
+      selectedReview: 2
+    };
+    return _this;
   }
 
   _createClass(ReviewBannerComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_ReviewBanner.ReviewBanner, null, "Review Banner");
+      var _this2 = this;
+
+      var selectedReview = this.state.selectedReview;
+      return _react["default"].createElement(_global.Parallax, {
+        img: "/images/testimonial.jpg"
+      }, _react["default"].createElement(_ReviewBanner.ReviewBanner, null, _react["default"].createElement(_global.Slider, {
+        count: _reviewList["default"].length,
+        index: selectedReview
+      }, _reviewList["default"].map(function (a, i) {
+        return _react["default"].createElement(_.ReviewCard, {
+          message: a.message,
+          author: a.author,
+          count: _reviewList["default"].length,
+          key: i,
+          num: i
+        });
+      }))), _react["default"].createElement(_ReviewBanner.Stars, null, _reviewList["default"].map(function (a, i) {
+        return _react["default"].createElement(_ReviewBanner.StarImg, {
+          key: i,
+          selected: i == selectedReview,
+          src: "/images/reviews.png",
+          onClick: function onClick() {
+            _this2.clickReview(i);
+          }
+        });
+      })), _react["default"].createElement(_global.H2, {
+        style: {
+          color: "#000"
+        }
+      }, _reviewList["default"][selectedReview].author));
     }
   }]);
 
