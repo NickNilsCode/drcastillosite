@@ -110,7 +110,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: auto;\n  margin-bottom: 24px;\n  max-width: 1140px;\n  hr {\n    width: 330px;\n    border: 1px solid #27b1d2;\n    margin: 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: auto;\n  margin-bottom: 24px;\n  max-width: 1140px;\n  hr {\n    width: 330px;\n    border: 1px solid #27b1d2;\n    margin: 0;\n  }\n  h3 {\n    text-align: left;\n    margin-bottom: 0;\n  }\n  p {\n    margin-top: 0;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;

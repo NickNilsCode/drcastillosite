@@ -36,6 +36,13 @@ export const Description = styled.div`
     border: 1px solid #27b1d2;
     margin: 0;
   }
+  h3 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+  }
 `;
 
 export const H3 = styled.h3`

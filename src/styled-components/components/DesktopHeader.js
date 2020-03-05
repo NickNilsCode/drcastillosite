@@ -8,6 +8,7 @@ export const DesktopHeader = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   img {
     width: 100px;
     margin-bottom: 12px;
@@ -38,7 +39,7 @@ export const MenuLink = styled.a`
   }
   h3 {
     display: inline-block;
-    margin: 0 12px;
+    margin: 0 8px;
     width: max-content;
     text-align: center;
   }

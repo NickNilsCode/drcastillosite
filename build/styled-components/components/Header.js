@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  position: -webkit-sticky; /* Safari */\n  position: sticky;\n  top: -69px;\n  z-index: 100;\n  background-color: #fff;\n  @media(min-width: 700px){\n    top: -36px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

@@ -10,13 +10,7 @@ var _server = require("react-dom/server");
 
 var _HomeRoot = _interopRequireDefault(require("./roots/HomeRoot"));
 
-var _AboutRoot = _interopRequireDefault(require("./roots/AboutRoot"));
-
-var _ServicesRoot = _interopRequireDefault(require("./roots/ServicesRoot"));
-
 var _ServicestemplateRoot = _interopRequireDefault(require("./roots/ServicestemplateRoot"));
-
-var _TeamRoot = _interopRequireDefault(require("./roots/TeamRoot"));
 
 var _TeamtemplateRoot = _interopRequireDefault(require("./roots/TeamtemplateRoot"));
 
@@ -26,8 +20,6 @@ var _GallerytemplateRoot = _interopRequireDefault(require("./roots/Gallerytempla
 
 var _PatientinfoRoot = _interopRequireDefault(require("./roots/PatientinfoRoot"));
 
-var _ContactRoot = _interopRequireDefault(require("./roots/ContactRoot"));
-
 var _BlogRoot = _interopRequireDefault(require("./roots/BlogRoot"));
 
 var _BlogtemplateRoot = _interopRequireDefault(require("./roots/BlogtemplateRoot"));
@@ -35,6 +27,8 @@ var _BlogtemplateRoot = _interopRequireDefault(require("./roots/BlogtemplateRoot
 var _styledComponents = require("styled-components");
 
 var _config = _interopRequireDefault(require("./config"));
+
+var _teamList = _interopRequireDefault(require("./data/teamList"));
 
 var _fs = _interopRequireDefault(require("fs"));
 
@@ -50,6 +44,10 @@ var _nodemailer = _interopRequireDefault(require("nodemailer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+// import AboutRoot from "./roots/AboutRoot";
+// import ServicesRoot from "./roots/ServicesRoot";
+// import TeamRoot from "./roots/TeamRoot";
+// import ContactRoot from "./roots/ContactRoot";
 var Cryptr = require('cryptr');
 
 var cryptr = new Cryptr(_config["default"].key);
@@ -61,17 +59,17 @@ app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
 var dataObj = {},
     homeBundle = "",
-    aboutBundle = "",
-    servicesBundle = "",
-    servicestemplateBundle = "",
+    // aboutBundle = "",
+// servicesBundle = "",
+servicestemplateBundle = "",
     drcastilloBundle = "",
     teamBundle = "",
     teamtemplateBundle = "",
     galleryBundle = "",
     gallerytemplateBundle = "",
     patientinfoBundle = "",
-    contactBundle = "",
-    blogBundle = "",
+    // contactBundle = "",
+blogBundle = "",
     blogtemplateBundle = "";
 
 _fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, data) {
@@ -135,32 +133,34 @@ app.get('/', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "home"));
-});
-app.get('/about', function (req, res) {
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "about"));
-});
-app.get('/services', function (req, res) {
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "services"));
-});
+}); // app.get('/about', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, homeBundle, HomeRoot, "about"));
+// });
+// app.get('/services', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, homeBundle, HomeRoot,  "services"));
+// });
+
 app.get('/services/:id', function (req, res) {
   var data = {
     serviceId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, servicestemplateBundle, _ServicestemplateRoot["default"], "servicestemplate"));
-});
-app.get('/staff', function (req, res) {
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, teamBundle, _TeamRoot["default"], "team"));
-});
+}); // app.get('/staff', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, teamBundle, TeamRoot, "team"));
+// });
+
 app.get('/team/:id', function (req, res) {
   var data = {
-    teamId: req.params.id
+    member: _teamList["default"].find(function (a) {
+      return a.id == req.params.id;
+    })
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamtemplateBundle, _TeamtemplateRoot["default"], "teamtemplate"));
@@ -181,12 +181,12 @@ app.get('/patient-information', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, patientinfoBundle, _PatientinfoRoot["default"], "patientinfo"));
-});
-app.get('/contact', function (req, res) {
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, patientinfoBundle, _PatientinfoRoot["default"], "contact"));
-});
+}); // app.get('/contact', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "contact"));
+// });
+
 app.get('/blog', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');

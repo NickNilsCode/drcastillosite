@@ -9,7 +9,15 @@ class Team extends Component {
           <TeamWrapper>
               <Header/>
               <TeamContent>
-                team page
+                <MainBanner/>
+                <MembersList/>
+                <ConsultationForm/>
+                <DentistQuote
+                  name="DR. LUIS CASTILLO"
+                  blurb="We are proud to have the opportunity to give you the smile of your dreams."
+                  link="/"
+                  img="/images/layer-01.png"
+                />
               </TeamContent>
               <Footer/>
           </TeamWrapper>

@@ -3,10 +3,10 @@ module.exports = [{
   link: "/"
 },{
   label: "ABOUT",
-  link: "/about"
+  link: "/#about"
 },{
   label: "SERVICES",
-  link: "/services",
+  link: "/#services",
   dropdown: [{
     label: "COSMETIC DENTISTRY",
     link: "/services/cosmetic-dentistry"
@@ -21,15 +21,15 @@ module.exports = [{
     link: "/services/general-dentistry"
   }]
 },{
-  label: "STAFF",
-  link: "/staff"
+  label: "DR CASTILLO",
+  link: "/team/drcastillo"
 },{
   label: "PATIENT INFORMATION",
   link: "/patient-information"
 },{
   label: "CONTACT",
-  link: "/contact"
+  link: "/#contact"
 },{
   label: "BLOG",
-  link: "/blog"
+  link: "/#blog"
 }]

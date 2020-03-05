@@ -51,7 +51,12 @@ function (_Component) {
   _createClass(Team, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_team.TeamWrapper, null, _react["default"].createElement(_Header["default"], null), _react["default"].createElement(_team.TeamContent, null, "team page"), _react["default"].createElement(_Footer["default"], null));
+      return _react["default"].createElement(_team.TeamWrapper, null, _react["default"].createElement(_Header["default"], null), _react["default"].createElement(_team.TeamContent, null, _react["default"].createElement(MainBanner, null), _react["default"].createElement(MembersList, null), _react["default"].createElement(ConsultationForm, null), _react["default"].createElement(DentistQuote, {
+        name: "DR. LUIS CASTILLO",
+        blurb: "We are proud to have the opportunity to give you the smile of your dreams.",
+        link: "/",
+        img: "/images/layer-01.png"
+      })), _react["default"].createElement(_Footer["default"], null));
     }
   }]);
 

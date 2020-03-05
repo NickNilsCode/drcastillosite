@@ -9,6 +9,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _NewPatientInfo = require("../styled-components/components/NewPatientInfo");
 
+var _global = require("../styled-components/global");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -45,7 +47,7 @@ function (_Component) {
   _createClass(NewPatientInfoComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_NewPatientInfo.NewPatientInfo, null, "New Patient Info");
+      return _react["default"].createElement(_NewPatientInfo.NewPatientInfo, null, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "NEW PATIENT INFORMATION"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.H3, null, "Consultation & Diagnostics"), _react["default"].createElement(_global.Para, null, "There have never been so many different possibilities as today to save severely damaged teeth and to replace lost teeth. But which treatment is the appropriate ? What are the costs? Dr. Castillo and his friendly team will help you make the right decision."), _react["default"].createElement(_global.H3, null, "\"Crucial to the success of any treatment is the trust between patient and doctor, which is why we take the time to get to know our patients and listen to their questions, concerns and expectations.\""), _react["default"].createElement(_global.Para, null, "-Dr. Luis Castillo"), _react["default"].createElement(_global.Para, null, "At our office we want to get to know you first, and your expectations before an extensive diagnosis is carried out and a treatment plan is established. We utilize the following technology to assure the desired outcome of your treatment:"), _react["default"].createElement(_global.Para, null, "- Dental Magnifying Glasses for a precise diagnostic", _react["default"].createElement("br", null), "- Intraoral camera so that you, the patient is able to see what treatment is necessary", _react["default"].createElement("br", null), "- Digital x-rays - This kind of x-ray diagnostic gives us the immediate access with 90% less radiation"), _react["default"].createElement(_global.Para, null, "\"My valued team and I are here to help and serve you with any questions and concerns\"")));
     }
   }]);
 

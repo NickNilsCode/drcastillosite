@@ -70,7 +70,10 @@ function (_Component) {
         text: "GENTLE - FRIENDLY - EASY",
         bgPos: "right",
         bgPosSmall: "right",
-        textLeft: true
+        textLeft: true,
+        style: {
+          maxHeight: '600px'
+        }
       }) : _react["default"].createElement(_.MainBanner, {
         img: "/images/heroimage.jpg",
         title: "ACHIEVE A FLAWLESS SMILE",

@@ -4,21 +4,22 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 
 import HomeRoot from "./roots/HomeRoot";
-import AboutRoot from "./roots/AboutRoot";
-import ServicesRoot from "./roots/ServicesRoot";
+// import AboutRoot from "./roots/AboutRoot";
+// import ServicesRoot from "./roots/ServicesRoot";
 import ServicestemplateRoot from "./roots/ServicestemplateRoot";
-import TeamRoot from "./roots/TeamRoot";
+// import TeamRoot from "./roots/TeamRoot";
 import TeamtemplateRoot from "./roots/TeamtemplateRoot";
 import GalleryRoot from "./roots/GalleryRoot";
 import GallerytemplateRoot from "./roots/GallerytemplateRoot";
 import PatientinfoRoot from "./roots/PatientinfoRoot";
-import ContactRoot from "./roots/ContactRoot";
+// import ContactRoot from "./roots/ContactRoot";
 import BlogRoot from "./roots/BlogRoot";
 import BlogtemplateRoot from "./roots/BlogtemplateRoot";
 
 import { ServerStyleSheet } from 'styled-components';
 
 import config from './config';
+import teamList from './data/teamList';
 
 const Cryptr = require('cryptr');
 const cryptr = new Cryptr(config.key);
@@ -40,8 +41,8 @@ app.use(bodyParser.urlencoded())
 
 var dataObj = {},
 homeBundle = "",
-aboutBundle = "",
-servicesBundle = "",
+// aboutBundle = "",
+// servicesBundle = "",
 servicestemplateBundle = "",
 drcastilloBundle = "",
 teamBundle = "",
@@ -49,7 +50,7 @@ teamtemplateBundle = "",
 galleryBundle = "",
 gallerytemplateBundle = "",
 patientinfoBundle = "",
-contactBundle = "",
+// contactBundle = "",
 blogBundle = "",
 blogtemplateBundle = "";
 
@@ -107,16 +108,16 @@ app.get('/', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, HomeRoot, "home"));
 });
-app.get('/about', (req, res) => {
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, HomeRoot, "about"));
-});
-app.get('/services', (req, res) => {
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, HomeRoot,  "services"));
-});
+// app.get('/about', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, homeBundle, HomeRoot, "about"));
+// });
+// app.get('/services', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, homeBundle, HomeRoot,  "services"));
+// });
 app.get('/services/:id', (req, res) => {
   let data = {
     serviceId: req.params.id
@@ -124,14 +125,14 @@ app.get('/services/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "servicestemplate"));
 });
-app.get('/staff', (req, res) => {
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, teamBundle, TeamRoot, "team"));
-});
+// app.get('/staff', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, teamBundle, TeamRoot, "team"));
+// });
 app.get('/team/:id', (req, res) => {
   let data = {
-    teamId: req.params.id
+    member: teamList.find(a => a.id == req.params.id)
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamtemplateBundle, TeamtemplateRoot, "teamtemplate"));
@@ -153,11 +154,11 @@ app.get('/patient-information', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "patientinfo"));
 });
-app.get('/contact', (req, res) => {
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "contact"));
-});
+// app.get('/contact', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "contact"));
+// });
 app.get('/blog', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');

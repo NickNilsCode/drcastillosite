@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 export const NewPatientInfo = styled.div`
-  width: calc(100% - 32px);
+  width: calc(100% - 30px);
+  max-width: calc(1140px - 30px);
+  padding: 50px 15px 0;
+  margin: auto;
   min-height: 100px;
   background-color: #fff;
-  border-bottom: 1px solid #8d8d8d;
   color: #000;
-  padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;

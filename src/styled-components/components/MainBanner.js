@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const MainBanner = styled.div`
   width: 100vw;
   height: 50vw;
-  max-height: 600px;
+  max-height: 400px;
   min-height: 350px;
   background-image: ${props => `url("${props.img}")`};
   background-size: cover;
@@ -13,8 +13,20 @@ export const MainBanner = styled.div`
   }
 `;
 
+export const Mask = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+`;
+
+
 export const TextGroup = styled.div`
   position: absolute;
+  z-index: 10;
   left: 12px;
   bottom: 20px;
   display: flex;

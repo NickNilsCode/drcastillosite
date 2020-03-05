@@ -7,7 +7,7 @@ import blogList from '../data/blogList';
 class BlogListComponent extends Component {
   render(){
     return (
-      <BlogList>
+      <BlogList id="blog">
         <Description>
           <H2BannerTitle>Latest Blog Posts</H2BannerTitle>
           <hr/>

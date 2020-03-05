@@ -3,9 +3,10 @@ export const DentistQuote = styled.div`
   width: calc(100% - 30px);
   max-width: calc(1140px - 30px);
   padding: 15px;
+  padding-bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   margin: auto;
 `;
 export const LeftSide = styled.div`
@@ -13,6 +14,7 @@ export const LeftSide = styled.div`
   margin-right: 24px;
   max-width: 1140px;
   text-align: left;
+  padding-bottom: 15px;
 `;
 export const RightSide = styled.div`
   width: 40%;

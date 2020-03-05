@@ -45,17 +45,11 @@ function (_Component) {
   }
 
   _createClass(Patientinfo, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (window.location.pathname == "/contact" && window.location.hash != "#contact") {
-        window.location.href = "/contact#contact";
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
       return _react["default"].createElement(_patientinfo.PatientinfoWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_patientinfo.PatientinfoContent, null, _react["default"].createElement(_components.MainBanner, {
-        img: "/images/banner6.jpg"
+        img: "/images/banner6.jpg",
+        mask: "true"
       }), _react["default"].createElement(_components.NewPatientInfo, null), _react["default"].createElement(_components.AboutExperience, null), _react["default"].createElement(_components.ServicesList, null), _react["default"].createElement(_components.ScheduleBanner, null), _react["default"].createElement(_components.ReviewBanner, null), _react["default"].createElement(_components.Contact, null)), _react["default"].createElement(_components.Footer, null));
     }
   }]);
