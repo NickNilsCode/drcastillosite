@@ -51,12 +51,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var Cryptr = require('cryptr');
 
 var cryptr = new Cryptr(_config["default"].key);
+
+var cron = require('node-cron');
+
 var PORT = process.env.PORT || 3003;
 var app = (0, _express["default"])();
 app.use((0, _compression["default"])());
 app.use((0, _cors["default"])());
 app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
+cron.schedule('* */4 * * *', function () {
+  (0, _nodeFetch["default"])('https://drcastillo.herokuapp.com/').then(function (res) {
+    return console.log("requested at " + new Date());
+  });
+});
 var dataObj = {},
     homeBundle = "",
     // aboutBundle = "",

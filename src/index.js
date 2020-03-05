@@ -30,6 +30,7 @@ import cors from 'cors';
 import path from 'path';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
+var cron = require('node-cron');
 
 var PORT = process.env.PORT || 3003;
 
@@ -38,6 +39,11 @@ app.use(compression());
 app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
+
+cron.schedule('* */4 * * *', () => {
+  fetch('https://drcastillo.herokuapp.com/')
+  .then(res => console.log("requested at " + new Date()));
+});
 
 var dataObj = {},
 homeBundle = "",
