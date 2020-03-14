@@ -7,7 +7,13 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _GalleryCard = require("../styled-components/components/GalleryCard");
+var _ = require("./");
+
+var _EmptyBlogList = require("../styled-components/components/EmptyBlogList");
+
+var _blogList = _interopRequireDefault(require("../data/blogList"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -31,26 +37,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var GalleryCardComponent =
+var BlogListComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(GalleryCardComponent, _Component);
+  _inherits(BlogListComponent, _Component);
 
-  function GalleryCardComponent() {
-    _classCallCheck(this, GalleryCardComponent);
+  function BlogListComponent() {
+    _classCallCheck(this, BlogListComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(GalleryCardComponent).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(BlogListComponent).apply(this, arguments));
   }
 
-  _createClass(GalleryCardComponent, [{
+  _createClass(BlogListComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_GalleryCard.GalleryCard, null, "Gallery Card");
+      return _react["default"].createElement(_EmptyBlogList.BlogList, null, _react["default"].createElement(_EmptyBlogList.FlexWrap, null, _blogList["default"].map(function (a, i) {
+        return _react["default"].createElement(_.BlogCard, {
+          key: i,
+          link: a.link,
+          img: a.img,
+          title: a.title,
+          author: a.author,
+          blurb: a.blurb
+        });
+      })), _react["default"].createElement(DentistLine, null));
     }
   }]);
 
-  return GalleryCardComponent;
+  return BlogListComponent;
 }(_react.Component);
 
-var _default = GalleryCardComponent;
+var _default = BlogListComponent;
 exports["default"] = _default;

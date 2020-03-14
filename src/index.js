@@ -40,7 +40,7 @@ app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
-cron.schedule('* */4 * * *', () => {
+cron.schedule('* * 1 * *', () => {
   fetch('https://drcastillo.herokuapp.com/')
   .then(res => console.log("requested at " + new Date()));
 });

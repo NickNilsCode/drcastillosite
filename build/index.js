@@ -60,7 +60,7 @@ app.use((0, _compression["default"])());
 app.use((0, _cors["default"])());
 app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
-cron.schedule('* */4 * * *', function () {
+cron.schedule('* * 1 * *', function () {
   (0, _nodeFetch["default"])('https://drcastillo.herokuapp.com/').then(function (res) {
     return console.log("requested at " + new Date());
   });

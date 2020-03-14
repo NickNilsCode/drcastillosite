@@ -64,14 +64,16 @@ function (_Component) {
           author: a.author,
           blurb: a.blurb
         });
-      })), _react["default"].createElement(_global.Button, {
+      })), _react["default"].createElement("a", {
+        href: "/blog"
+      }, _react["default"].createElement(_global.Button, {
         color1: "#fff",
         color2: "#27b1d2",
         color3: "#27b1d2",
         style: {
           marginBottom: '24px'
         }
-      }, "See Full Blog Page"), _react["default"].createElement(_.DentistLine, null));
+      }, "See Full Blog Page")), _react["default"].createElement(_.DentistLine, null));
     }
   }]);
 

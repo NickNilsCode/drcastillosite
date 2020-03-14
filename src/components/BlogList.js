@@ -29,12 +29,14 @@ class BlogListComponent extends Component {
             })
           }
         </FlexWrap>
-        <Button
-          color1="#fff"
-          color2="#27b1d2"
-          color3="#27b1d2"
-          style={{ marginBottom: '24px' }}
-        >See Full Blog Page</Button>
+        <a href="/blog">
+          <Button
+            color1="#fff"
+            color2="#27b1d2"
+            color3="#27b1d2"
+            style={{ marginBottom: '24px' }}
+          >See Full Blog Page</Button>
+        </a>
         <DentistLine/>
       </BlogList>
     );

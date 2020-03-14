@@ -47,7 +47,7 @@ function (_Component) {
   _createClass(Blog, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_blog.BlogWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_blog.BlogContent, null, _react["default"].createElement(_components.MainBanner, null), _react["default"].createElement(_components.BlogList, null), _react["default"].createElement(_components.ScheduleBanner, null)), _react["default"].createElement(_components.Footer, null));
+      return _react["default"].createElement(_blog.BlogWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_blog.BlogContent, null, _react["default"].createElement(_components.MainBanner, null), _react["default"].createElement(_components.EmptyBlogList, null), _react["default"].createElement(_components.ScheduleBanner, null)), _react["default"].createElement(_components.Footer, null));
     }
   }]);
 

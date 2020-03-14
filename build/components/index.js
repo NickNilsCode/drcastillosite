@@ -81,6 +81,12 @@ Object.defineProperty(exports, "Dropdown", {
     return _Dropdown["default"];
   }
 });
+Object.defineProperty(exports, "EmptyBlogList", {
+  enumerable: true,
+  get: function get() {
+    return _EmptyBlogList["default"];
+  }
+});
 Object.defineProperty(exports, "ExperienceCard", {
   enumerable: true,
   get: function get() {
@@ -97,18 +103,6 @@ Object.defineProperty(exports, "FooterCard", {
   enumerable: true,
   get: function get() {
     return _FooterCard["default"];
-  }
-});
-Object.defineProperty(exports, "GalleryCard", {
-  enumerable: true,
-  get: function get() {
-    return _GalleryCard["default"];
-  }
-});
-Object.defineProperty(exports, "GalleryList", {
-  enumerable: true,
-  get: function get() {
-    return _GalleryList["default"];
   }
 });
 Object.defineProperty(exports, "Header", {
@@ -258,15 +252,13 @@ var _DesktopHeader = _interopRequireDefault(require("./DesktopHeader"));
 
 var _Dropdown = _interopRequireDefault(require("./Dropdown"));
 
+var _EmptyBlogList = _interopRequireDefault(require("./EmptyBlogList"));
+
 var _ExperienceCard = _interopRequireDefault(require("./ExperienceCard"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
 var _FooterCard = _interopRequireDefault(require("./FooterCard"));
-
-var _GalleryCard = _interopRequireDefault(require("./GalleryCard"));
-
-var _GalleryList = _interopRequireDefault(require("./GalleryList"));
 
 var _Header = _interopRequireDefault(require("./Header"));
 
