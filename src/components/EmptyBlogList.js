@@ -23,7 +23,6 @@ class BlogListComponent extends Component {
             })
           }
         </FlexWrap>
-        <DentistLine/>
       </BlogList>
     );
   }

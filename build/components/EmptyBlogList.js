@@ -60,7 +60,7 @@ function (_Component) {
           author: a.author,
           blurb: a.blurb
         });
-      })), _react["default"].createElement(DentistLine, null));
+      })));
     }
   }]);
 
