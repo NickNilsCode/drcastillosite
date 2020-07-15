@@ -55,7 +55,9 @@ function (_Component) {
     value: function render() {
       return _react["default"].createElement(_BlogList.BlogList, null, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.HashMark, {
         id: "blog"
-      }), _react["default"].createElement(_global.H2BannerTitle, null, "Latest Blog Posts"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "Our practice prides itself on providing the very finest level of service, from a simple filling to complex cosmetic dentistry.")), _react["default"].createElement(_BlogList.FlexWrap, null, _blogList["default"].map(function (a, i) {
+      }), _react["default"].createElement(_global.H2BannerTitle, null, "Latest Blog Posts"), _react["default"].createElement("hr", {
+        className: "line"
+      }), _react["default"].createElement(_global.Para, null, "Our practice prides itself on providing the very finest level of service, from a simple filling to complex cosmetic dentistry.")), _react["default"].createElement(_BlogList.FlexWrap, null, _blogList["default"].map(function (a, i) {
         return _react["default"].createElement(_.BlogCard, {
           key: i,
           link: a.link,

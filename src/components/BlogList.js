@@ -11,7 +11,7 @@ class BlogListComponent extends Component {
         <Description>
           <HashMark id="blog" />
           <H2BannerTitle>Latest Blog Posts</H2BannerTitle>
-          <hr/>
+          <hr className="line"/>
           <Para>Our practice prides itself on providing the very finest level of service, from a simple filling to complex cosmetic dentistry.</Para>
         </Description>
         <FlexWrap>

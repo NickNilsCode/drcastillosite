@@ -10,7 +10,7 @@ class ContactComponent extends Component {
         <Description className="description">
           <HashMark id="contact" />
           <H2BannerTitle>Contact</H2BannerTitle>
-          <hr/>
+          <hr className="line"/>
         </Description>
         <ContactForms>
           <ContactForm/>

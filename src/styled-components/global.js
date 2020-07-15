@@ -32,7 +32,7 @@ export const Description = styled.div`
   position: relative;
   margin-bottom: 24px;
   max-width: 1140px;
-  hr {
+  .line {
     width: 330px;
     border: 1px solid #27b1d2;
     margin: 0;
@@ -153,5 +153,5 @@ export const Slider = styled.div`
 export const HashMark = styled.hr`
   position: absolute;
   top: -80px;
-  border-width: 0;
+  border: none;
 `;

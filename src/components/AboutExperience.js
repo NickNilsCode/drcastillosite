@@ -11,7 +11,7 @@ class AboutExperienceComponent extends Component {
         <Description>
           <HashMark id="about" />
           <H2BannerTitle>ABOUT OUR EXPERIENCE</H2BannerTitle>
-          <hr/>
+          <hr className="line"/>
           <Para>By entrusting us with your dental needs and concerns, we will provide you with compassionate care tailored to your specific needs. As equal partners in achieving total dental wellness for you, we will develop an individualized dental plan to work together with our team of qualified, caring professionls to reach your goal.</Para>
         </Description>
         <FlexWrap>

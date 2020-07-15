@@ -8,7 +8,7 @@ class NewPatientInfoComponent extends Component {
       <NewPatientInfo>
         <Description>
           <H2BannerTitle>NEW PATIENT INFORMATION</H2BannerTitle>
-          <hr/>
+          <hr className="line"/>
           <H3>Consultation & Diagnostics</H3>
           <Para>There have never been so many different possibilities as today to save severely damaged teeth and to replace lost teeth. But which treatment is the appropriate ? What are the costs? Dr. Castillo and his friendly team will help you make the right decision.</Para>
           <H3>"Crucial to the success of any treatment is the trust between patient and doctor, which is why we take the time to get to know our patients and listen to their questions, concerns and expectations."</H3>

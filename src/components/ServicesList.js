@@ -11,7 +11,7 @@ class ServicesListComponent extends Component {
         <Description>
           <HashMark id="services" />
           <H2BannerTitle>Services</H2BannerTitle>
-          <hr/>
+          <hr className="line"/>
           <Para>We provide comprehensive care to our patients. You will get a thorough understanding of your dental issues and what can be done to help you be in optimal dental health.</Para>
         </Description>
         <FlexWrap>

@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: -80px;\n  border-width: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: -80px;\n  border: none;\n"]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -120,7 +120,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: auto;\n  position: relative;\n  margin-bottom: 24px;\n  max-width: 1140px;\n  hr {\n    width: 330px;\n    border: 1px solid #27b1d2;\n    margin: 0;\n  }\n  h3 {\n    text-align: left;\n    margin-bottom: 0;\n  }\n  p {\n    margin-top: 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: auto;\n  position: relative;\n  margin-bottom: 24px;\n  max-width: 1140px;\n  .line {\n    width: 330px;\n    border: 1px solid #27b1d2;\n    margin: 0;\n  }\n  h3 {\n    text-align: left;\n    margin-bottom: 0;\n  }\n  p {\n    margin-top: 0;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
