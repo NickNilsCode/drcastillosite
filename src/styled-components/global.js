@@ -153,4 +153,5 @@ export const Slider = styled.div`
 export const HashMark = styled.hr`
   position: absolute;
   top: -80px;
+  border-width: 0;
 `;
