@@ -9,18 +9,18 @@ class ConsultationFormComponent extends Component {
     super(props);
     this.state = {
       selectedTreatments: [],
-      name: "",
-      surname: "",
+      firstName: "",
+      lastName: "",
       phone: "",
       email: ""
     }
   }
   submitForm = (e) => {
     e.preventDefault();
-    const { name, surname, email, phone, selectedTreatments } = this.state;
+    const { firstName, lastName, email, phone, selectedTreatments } = this.state;
     var data = {
-      name: name,
-      surname: surname,
+      firstName: firstName,
+      lastName: lastName,
       phone: phone,
       email: email,
       procedures: selectedTreatments.join(', '),
@@ -36,8 +36,8 @@ class ConsultationFormComponent extends Component {
       alert("An email has been submitted to Dr. Castillo's office. Someone will be in contact with you regarding your inquiry.")
       this.setState({
         selectedTreatments: [],
-        name: "",
-        surname: "",
+        firstName: "",
+        lastName: "",
         phone: "",
         email: ""
       })
@@ -46,8 +46,8 @@ class ConsultationFormComponent extends Component {
       alert("Something went wrong. Please contact Dr. Castillo's office directly. We are sorry for the inconvenience.")
       this.setState({
         selectedTreatments: [],
-        name: "",
-        surname: "",
+        firstName: "",
+        lastName: "",
         phone: "",
         email: ""
       })
@@ -61,7 +61,6 @@ class ConsultationFormComponent extends Component {
   changeTreatment = (e) => {
     e.preventDefault();
     if(e.target.value){
-      console.log(e.target.value);
       let vals = this.state.selectedTreatments;
       let removeIndex = vals.findIndex(a => a == e.target.value);
       if(removeIndex == -1){
@@ -73,19 +72,19 @@ class ConsultationFormComponent extends Component {
     }
   }
   render(){
-    const { name, surname, email, phone, selectedTreatments } = this.state;
+    const { firstName, lastName, email, phone, selectedTreatments } = this.state;
     return (
       <ConsultationForm onSubmit={this.submitForm}>
         <ConsultationCard title="REQUEST A CONSULTATION">
           <ConsultationInput
-            placeholder="Name"
-            onChange={(e) => { this.changeState(e, "name")}}
-            value={name} type="text" required
+            placeholder="First Name"
+            onChange={(e) => { this.changeState(e, "firstName")}}
+            value={firstName} type="text" required
           />
           <ConsultationInput
-            placeholder="Surname"
-            onChange={(e) => { this.changeState(e, "surname")}}
-            value={surname} type="text" required
+            placeholder="Last Name"
+            onChange={(e) => { this.changeState(e, "lastName")}}
+            value={lastName} type="text" required
           />
         </ConsultationCard>
         <ConsultationCard title="OTHER INFORMATION">
@@ -108,7 +107,7 @@ class ConsultationFormComponent extends Component {
             }
           </PillBox>
           <Dropdown
-            placeholder="Select Treatment(s)"
+            placeholder="Treatment(s) - Select All That Apply"
             options={treatmentsList}
             value={selectedTreatments}
             onClick={this.changeTreatment}

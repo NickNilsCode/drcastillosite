@@ -48,17 +48,16 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ContactFormComponent).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "submitForm", function (e) {
-      console.log("submit");
       e.preventDefault();
       var _this$state = _this.state,
-          name = _this$state.name,
-          surname = _this$state.surname,
+          firstName = _this$state.firstName,
+          lastName = _this$state.lastName,
           phone = _this$state.phone,
           email = _this$state.email,
           message = _this$state.message;
       var data = {
-        name: name,
-        surname: surname,
+        firstName: firstName,
+        lastName: lastName,
         phone: phone,
         email: email,
         message: message,
@@ -73,23 +72,21 @@ function (_Component) {
       }).then(function (res) {
         return res.json();
       }).then(function (res) {
-        console.log("success");
         alert("An email has been submitted to Dr. Castillo's office. Someone will be in contact with you regarding your inquiry.");
 
         _this.setState({
-          name: "",
-          surname: "",
+          firstName: "",
+          lastName: "",
           phone: "",
           email: "",
           message: ""
         });
       })["catch"](function (err) {
-        console.log("crash");
         alert("Something went wrong. Please contact Dr. Castillo's office directly. We are sorry for the inconvenience.");
 
         _this.setState({
-          name: "",
-          surname: "",
+          firstName: "",
+          lastName: "",
           phone: "",
           email: "",
           message: ""
@@ -102,13 +99,11 @@ function (_Component) {
       obj[prop] = e.target.value;
 
       _this.setState(obj);
-
-      console.log(obj);
     });
 
     _this.state = {
-      name: "",
-      surname: "",
+      firstName: "",
+      lastName: "",
       phone: "",
       email: "",
       message: ""
@@ -122,27 +117,27 @@ function (_Component) {
       var _this2 = this;
 
       var _this$state2 = this.state,
-          name = _this$state2.name,
-          surname = _this$state2.surname,
+          firstName = _this$state2.firstName,
+          lastName = _this$state2.lastName,
           email = _this$state2.email,
           phone = _this$state2.phone,
           message = _this$state2.message;
       return _react["default"].createElement(_ContactForm.ContactForm, {
         onSubmit: this.submitForm
       }, _react["default"].createElement(_ContactForm.ContactWrap, null, _react["default"].createElement(_global.H2BannerTitle, null, "SEND US A MESSAGE"), _react["default"].createElement(_ContactForm.Input, {
-        placeholder: "Name",
+        placeholder: "First Name",
         onChange: function onChange(e) {
-          _this2.changeState(e, "name");
+          _this2.changeState(e, "firstName");
         },
-        value: name,
+        value: firstName,
         type: "text",
         required: true
       }), _react["default"].createElement(_ContactForm.Input, {
-        placeholder: "Surname",
+        placeholder: "Last Name",
         onChange: function onChange(e) {
-          _this2.changeState(e, "surname");
+          _this2.changeState(e, "lastName");
         },
-        value: surname,
+        value: lastName,
         type: "text",
         required: true
       }), _react["default"].createElement(_ContactForm.Input, {

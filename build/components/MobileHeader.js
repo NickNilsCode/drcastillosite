@@ -74,6 +74,8 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$state = this.state,
           showMenu = _this$state.showMenu,
           thisPath = _this$state.thisPath;
@@ -88,14 +90,16 @@ function (_Component) {
         var thisPage = thisPath == a.link ? "thisPage" : "";
         return _react["default"].createElement(_react.Fragment, null, _react["default"].createElement(_MobileHeader.MenuLink, {
           key: i,
-          href: a.link
+          href: a.link,
+          onClick: _this2.menuChange
         }, _react["default"].createElement(_global.H3, {
           className: thisPage
         }, a.label)), a.dropdown && a.dropdown.map(function (b, ind) {
           var thisPage2 = thisPath == a.link ? "thisPage" : "";
           return _react["default"].createElement(_MobileHeader.MenuLink, {
             key: ind,
-            href: b.link
+            href: b.link,
+            onClick: _this2.menuChange
           }, _react["default"].createElement(_global.H3, {
             className: "shiftRight ".concat(thisPage2)
           }, b.label));

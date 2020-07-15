@@ -56,14 +56,14 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "submitForm", function (e) {
       e.preventDefault();
       var _this$state = _this.state,
-          name = _this$state.name,
-          surname = _this$state.surname,
+          firstName = _this$state.firstName,
+          lastName = _this$state.lastName,
           email = _this$state.email,
           phone = _this$state.phone,
           selectedTreatments = _this$state.selectedTreatments;
       var data = {
-        name: name,
-        surname: surname,
+        firstName: firstName,
+        lastName: lastName,
         phone: phone,
         email: email,
         procedures: selectedTreatments.join(', '),
@@ -82,8 +82,8 @@ function (_Component) {
 
         _this.setState({
           selectedTreatments: [],
-          name: "",
-          surname: "",
+          firstName: "",
+          lastName: "",
           phone: "",
           email: ""
         });
@@ -92,8 +92,8 @@ function (_Component) {
 
         _this.setState({
           selectedTreatments: [],
-          name: "",
-          surname: "",
+          firstName: "",
+          lastName: "",
           phone: "",
           email: ""
         });
@@ -111,7 +111,6 @@ function (_Component) {
       e.preventDefault();
 
       if (e.target.value) {
-        console.log(e.target.value);
         var vals = _this.state.selectedTreatments;
         var removeIndex = vals.findIndex(function (a) {
           return a == e.target.value;
@@ -131,8 +130,8 @@ function (_Component) {
 
     _this.state = {
       selectedTreatments: [],
-      name: "",
-      surname: "",
+      firstName: "",
+      lastName: "",
       phone: "",
       email: ""
     };
@@ -145,8 +144,8 @@ function (_Component) {
       var _this2 = this;
 
       var _this$state2 = this.state,
-          name = _this$state2.name,
-          surname = _this$state2.surname,
+          firstName = _this$state2.firstName,
+          lastName = _this$state2.lastName,
           email = _this$state2.email,
           phone = _this$state2.phone,
           selectedTreatments = _this$state2.selectedTreatments;
@@ -155,19 +154,19 @@ function (_Component) {
       }, _react["default"].createElement(_.ConsultationCard, {
         title: "REQUEST A CONSULTATION"
       }, _react["default"].createElement(_ConsultationForm.ConsultationInput, {
-        placeholder: "Name",
+        placeholder: "First Name",
         onChange: function onChange(e) {
-          _this2.changeState(e, "name");
+          _this2.changeState(e, "firstName");
         },
-        value: name,
+        value: firstName,
         type: "text",
         required: true
       }), _react["default"].createElement(_ConsultationForm.ConsultationInput, {
-        placeholder: "Surname",
+        placeholder: "Last Name",
         onChange: function onChange(e) {
-          _this2.changeState(e, "surname");
+          _this2.changeState(e, "lastName");
         },
-        value: surname,
+        value: lastName,
         type: "text",
         required: true
       })), _react["default"].createElement(_.ConsultationCard, {
@@ -195,7 +194,7 @@ function (_Component) {
           key: i
         }, a);
       }) : null), _react["default"].createElement(_.Dropdown, {
-        placeholder: "Select Treatment(s)",
+        placeholder: "Treatment(s) - Select All That Apply",
         options: _treatmentsList["default"],
         value: selectedTreatments,
         onClick: this.changeTreatment,

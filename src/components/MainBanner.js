@@ -9,7 +9,7 @@ class MainBannerComponent extends Component {
         {
           (title || text) && (
             <TextGroup {...this.props}>
-              { title && <h1>{title}</h1> }
+              { title && <h2>{title}</h2> }
               { text && <h3>{text}</h3>}
             </TextGroup>
           )

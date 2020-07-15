@@ -29,6 +29,7 @@ export const H2BannerTitle = styled.h2`
 export const Description = styled.div`
   width: 100%;
   margin: auto;
+  position: relative;
   margin-bottom: 24px;
   max-width: 1140px;
   hr {
@@ -147,4 +148,9 @@ export const Slider = styled.div`
   display: flex;
   flex-direction: row;
   transition: left 1s;
+`;
+
+export const HashMark = styled.hr`
+  position: absolute;
+  top: -80px;
 `;

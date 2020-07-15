@@ -9,8 +9,8 @@ import HomeRoot from "./roots/HomeRoot";
 import ServicestemplateRoot from "./roots/ServicestemplateRoot";
 // import TeamRoot from "./roots/TeamRoot";
 import TeamtemplateRoot from "./roots/TeamtemplateRoot";
-import GalleryRoot from "./roots/GalleryRoot";
-import GallerytemplateRoot from "./roots/GallerytemplateRoot";
+// import GalleryRoot from "./roots/GalleryRoot";
+// import GallerytemplateRoot from "./roots/GallerytemplateRoot";
 import PatientinfoRoot from "./roots/PatientinfoRoot";
 // import ContactRoot from "./roots/ContactRoot";
 import BlogRoot from "./roots/BlogRoot";
@@ -53,8 +53,8 @@ servicestemplateBundle = "",
 drcastilloBundle = "",
 teamBundle = "",
 teamtemplateBundle = "",
-galleryBundle = "",
-gallerytemplateBundle = "",
+// galleryBundle = "",
+// gallerytemplateBundle = "",
 patientinfoBundle = "",
 // contactBundle = "",
 blogBundle = "",
@@ -84,14 +84,14 @@ fs.readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   teamtemplateBundle = data || "";
 })
-fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  galleryBundle = data || "";
-})
-fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
-  if (err) console.log("ERR" ,err);
-  gallerytemplateBundle = data || "";
-})
+// fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   galleryBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   gallerytemplateBundle = data || "";
+// })
 fs.readFile('./dist/js/patientinfo.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   patientinfoBundle = data || "";
@@ -143,18 +143,18 @@ app.get('/team/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamtemplateBundle, TeamtemplateRoot, "teamtemplate"));
 });
-app.get('/gallery', (req, res) => {
-  let data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, galleryBundle, GalleryRoot, "gallery"));
-});
-app.get('/gallery/:id', (req, res) => {
-  let data = {
-    galleryId: req.params.id
-  };
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, gallerytemplateBundle, GallerytemplateRoot, "gallerytemplate"));
-});
+// app.get('/gallery', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, galleryBundle, GalleryRoot, "gallery"));
+// });
+// app.get('/gallery/:id', (req, res) => {
+//   let data = {
+//     galleryId: req.params.id
+//   };
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, gallerytemplateBundle, GallerytemplateRoot, "gallerytemplate"));
+// });
 app.get('/patient-information', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');

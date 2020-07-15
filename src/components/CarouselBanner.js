@@ -28,7 +28,6 @@ class CarouselBannerComponent extends Component {
             bgPos="right"
             bgPosSmall="right"
             textLeft={true}
-            style={{ maxHeight: '600px' }}
           /> :
           <MainBanner
             img="/images/heroimage.jpg"

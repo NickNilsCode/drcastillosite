@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  background-color: #ffffff80;\n  border-radius: 4px;\n  display: inline-block;\n  font-size: 8px;\n  height: initial;\n  padding: 2px 2px;\n  margin: 2px 2px;\n  overflow-x: scroll;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #ffffff80;\n  border-radius: 4px;\n  display: inline-block;\n  font-size: 12px;\n  height: initial;\n  padding: 2px 2px;\n  margin: 2px 2px;\n  overflow-x: scroll;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -55,20 +55,7 @@ var ConsultationForm = _styledComponents["default"].form(_templateObject());
 
 exports.ConsultationForm = ConsultationForm;
 
-var ConsultationInput = _styledComponents["default"].input(_templateObject2()); // export const ConsultationSubmit = styled.button`
-//   background: transparent;
-//   border: #FFF 1px solid;
-//   color: #FFF;
-//   padding: 10px 20px;
-//   -moz-border-radius: 5px;
-//   -webkit-border-radius: 5px;
-//   border-radius: 5px;
-//   font-family: "Montserrat", sans-serif;
-//   font-size: 12px;
-//   font-weight: normal;
-//   text-transform: uppercase;
-// `;
-
+var ConsultationInput = _styledComponents["default"].input(_templateObject2());
 
 exports.ConsultationInput = ConsultationInput;
 

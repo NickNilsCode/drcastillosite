@@ -53,9 +53,9 @@ function (_Component) {
   _createClass(AboutExperienceComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_AboutExperience.AboutExperience, {
+      return _react["default"].createElement(_AboutExperience.AboutExperience, null, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.HashMark, {
         id: "about"
-      }, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "ABOUT OUR EXPERIENCE"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "By entrusting us with your dental needs and concerns, we will provide you with compassionate care tailored to your specific needs. As equal partners in achieving total dental wellness for you, we will develop an individualized dental plan to work together with our team of qualified, caring professionls to reach your goal.")), _react["default"].createElement(_AboutExperience.FlexWrap, null, _react["default"].createElement(_AboutExperience.LeftSide, null, _aboutExperience["default"].map(function (a, i) {
+      }), _react["default"].createElement(_global.H2BannerTitle, null, "ABOUT OUR EXPERIENCE"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "By entrusting us with your dental needs and concerns, we will provide you with compassionate care tailored to your specific needs. As equal partners in achieving total dental wellness for you, we will develop an individualized dental plan to work together with our team of qualified, caring professionls to reach your goal.")), _react["default"].createElement(_AboutExperience.FlexWrap, null, _react["default"].createElement(_AboutExperience.LeftSide, null, _aboutExperience["default"].map(function (a, i) {
         return _react["default"].createElement(_ExperienceCard["default"], {
           key: i,
           Icon: a.Icon,

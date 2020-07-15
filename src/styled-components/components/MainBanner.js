@@ -33,7 +33,7 @@ export const TextGroup = styled.div`
   flex-direction: column;
   align-items: ${props => props.textLeft ? "flex-start" : "flex-end"};
   justify-content: flex-end;
-  h1 {
+  h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -58,7 +58,7 @@ export const TextGroup = styled.div`
   @media(min-width: 700px){
     left: ${props => props.textLeft ? "30px" : "initial"};
     right: ${props => props.textLeft ? "initial" : "30px"};
-    h1 {
+    h2 {
       width: max-content;
       font-size: 36px;
     }

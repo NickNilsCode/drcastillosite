@@ -49,11 +49,11 @@ function (_Component) {
   _createClass(ContactComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_Contact.Contact, {
-        id: "contact"
-      }, _react["default"].createElement(_global.Description, {
+      return _react["default"].createElement(_Contact.Contact, null, _react["default"].createElement(_global.Description, {
         className: "description"
-      }, _react["default"].createElement(_global.H2BannerTitle, null, "Contact"), _react["default"].createElement("hr", null)), _react["default"].createElement(_Contact.ContactForms, null, _react["default"].createElement(_.ContactForm, null), _react["default"].createElement(_.Map, null)));
+      }, _react["default"].createElement(_global.HashMark, {
+        id: "contact"
+      }), _react["default"].createElement(_global.H2BannerTitle, null, "Contact"), _react["default"].createElement("hr", null)), _react["default"].createElement(_Contact.ContactForms, null, _react["default"].createElement(_.ContactForm, null), _react["default"].createElement(_.Map, null)));
     }
   }]);
 

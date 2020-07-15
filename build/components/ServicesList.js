@@ -53,9 +53,9 @@ function (_Component) {
   _createClass(ServicesListComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_ServicesList.ServicesList, {
+      return _react["default"].createElement(_ServicesList.ServicesList, null, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.HashMark, {
         id: "services"
-      }, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "Services"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "We provide comprehensive care to our patients. You will get a thorough understanding of your dental issues and what can be done to help you be in optimal dental health.")), _react["default"].createElement(_ServicesList.FlexWrap, null, _servicesList["default"].map(function (a, i) {
+      }), _react["default"].createElement(_global.H2BannerTitle, null, "Services"), _react["default"].createElement("hr", null), _react["default"].createElement(_global.Para, null, "We provide comprehensive care to our patients. You will get a thorough understanding of your dental issues and what can be done to help you be in optimal dental health.")), _react["default"].createElement(_ServicesList.FlexWrap, null, _servicesList["default"].map(function (a, i) {
         return _react["default"].createElement(_.ServiceCard, {
           key: i,
           num: i + 1,

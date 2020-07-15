@@ -35,7 +35,7 @@ class MobileHeaderComponent extends Component {
                 const thisPage = thisPath == a.link ? "thisPage" : "";
                 return (
                   <Fragment>
-                    <MenuLink key={i} href={a.link}>
+                    <MenuLink key={i} href={a.link} onClick={this.menuChange}>
                       <H3 className={thisPage}>{a.label}</H3>
                     </MenuLink>
                     {
@@ -43,7 +43,7 @@ class MobileHeaderComponent extends Component {
                       a.dropdown.map((b, ind) => {
                         const thisPage2 = thisPath == a.link ? "thisPage" : "";
                         return (
-                          <MenuLink  key={ind} href={b.link}>
+                          <MenuLink  key={ind} href={b.link} onClick={this.menuChange}>
                             <H3 className={`shiftRight ${thisPage2}`}>{b.label}</H3>
                           </MenuLink>
                         )

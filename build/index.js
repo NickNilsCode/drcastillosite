@@ -14,10 +14,6 @@ var _ServicestemplateRoot = _interopRequireDefault(require("./roots/Servicestemp
 
 var _TeamtemplateRoot = _interopRequireDefault(require("./roots/TeamtemplateRoot"));
 
-var _GalleryRoot = _interopRequireDefault(require("./roots/GalleryRoot"));
-
-var _GallerytemplateRoot = _interopRequireDefault(require("./roots/GallerytemplateRoot"));
-
 var _PatientinfoRoot = _interopRequireDefault(require("./roots/PatientinfoRoot"));
 
 var _BlogRoot = _interopRequireDefault(require("./roots/BlogRoot"));
@@ -47,6 +43,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // import AboutRoot from "./roots/AboutRoot";
 // import ServicesRoot from "./roots/ServicesRoot";
 // import TeamRoot from "./roots/TeamRoot";
+// import GalleryRoot from "./roots/GalleryRoot";
+// import GallerytemplateRoot from "./roots/GallerytemplateRoot";
 // import ContactRoot from "./roots/ContactRoot";
 var Cryptr = require('cryptr');
 
@@ -73,9 +71,9 @@ servicestemplateBundle = "",
     drcastilloBundle = "",
     teamBundle = "",
     teamtemplateBundle = "",
-    galleryBundle = "",
-    gallerytemplateBundle = "",
-    patientinfoBundle = "",
+    // galleryBundle = "",
+// gallerytemplateBundle = "",
+patientinfoBundle = "",
     // contactBundle = "",
 blogBundle = "",
     blogtemplateBundle = "";
@@ -106,17 +104,15 @@ _fs["default"].readFile('./dist/js/team.bundle.min.js', "utf8", function (err, d
 _fs["default"].readFile('./dist/js/teamtemplate.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   teamtemplateBundle = data || "";
-});
+}); // fs.readFile('./dist/js/gallery.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   galleryBundle = data || "";
+// })
+// fs.readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", (err, data) => {
+//   if (err) console.log("ERR" ,err);
+//   gallerytemplateBundle = data || "";
+// })
 
-_fs["default"].readFile('./dist/js/gallery.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  galleryBundle = data || "";
-});
-
-_fs["default"].readFile('./dist/js/gallerytemplate.bundle.min.js', "utf8", function (err, data) {
-  if (err) console.log("ERR", err);
-  gallerytemplateBundle = data || "";
-});
 
 _fs["default"].readFile('./dist/js/patientinfo.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
@@ -172,19 +168,19 @@ app.get('/team/:id', function (req, res) {
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, teamtemplateBundle, _TeamtemplateRoot["default"], "teamtemplate"));
-});
-app.get('/gallery', function (req, res) {
-  var data = "";
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, galleryBundle, _GalleryRoot["default"], "gallery"));
-});
-app.get('/gallery/:id', function (req, res) {
-  var data = {
-    galleryId: req.params.id
-  };
-  res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, gallerytemplateBundle, _GallerytemplateRoot["default"], "gallerytemplate"));
-});
+}); // app.get('/gallery', (req, res) => {
+//   let data = "";
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, galleryBundle, GalleryRoot, "gallery"));
+// });
+// app.get('/gallery/:id', (req, res) => {
+//   let data = {
+//     galleryId: req.params.id
+//   };
+//   res.set('Cache-Control', 'public, max-age=31557600');
+//   res.send(returnHTML(data, gallerytemplateBundle, GallerytemplateRoot, "gallerytemplate"));
+// });
+
 app.get('/patient-information', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');

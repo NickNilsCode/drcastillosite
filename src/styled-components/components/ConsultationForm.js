@@ -41,19 +41,6 @@ export const ConsultationInput = styled.input`
   }
 `;
 
-// export const ConsultationSubmit = styled.button`
-//   background: transparent;
-//   border: #FFF 1px solid;
-//   color: #FFF;
-//   padding: 10px 20px;
-//   -moz-border-radius: 5px;
-//   -webkit-border-radius: 5px;
-//   border-radius: 5px;
-//   font-family: "Montserrat", sans-serif;
-//   font-size: 12px;
-//   font-weight: normal;
-//   text-transform: uppercase;
-// `;
 
 export const PillBox = styled.div`
   width: calc(100% - 8px);
@@ -70,7 +57,7 @@ export const Pill = styled.span`
   background-color: #ffffff80;
   border-radius: 4px;
   display: inline-block;
-  font-size: 8px;
+  font-size: 12px;
   height: initial;
   padding: 2px 2px;
   margin: 2px 2px;

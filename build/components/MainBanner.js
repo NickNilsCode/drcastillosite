@@ -51,7 +51,7 @@ function (_Component) {
           text = _this$props.text,
           textLeft = _this$props.textLeft,
           mask = _this$props.mask;
-      return _react["default"].createElement(_MainBanner.MainBanner, this.props, (title || text) && _react["default"].createElement(_MainBanner.TextGroup, this.props, title && _react["default"].createElement("h1", null, title), text && _react["default"].createElement("h3", null, text)), mask && _react["default"].createElement(_MainBanner.Mask, null));
+      return _react["default"].createElement(_MainBanner.MainBanner, this.props, (title || text) && _react["default"].createElement(_MainBanner.TextGroup, this.props, title && _react["default"].createElement("h2", null, title), text && _react["default"].createElement("h3", null, text)), mask && _react["default"].createElement(_MainBanner.Mask, null));
     }
   }]);
 

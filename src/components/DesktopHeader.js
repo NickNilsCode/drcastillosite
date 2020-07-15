@@ -10,10 +10,14 @@ class DesktopHeaderComponent extends Component {
       thisPath: ""
     }
   }
-  componentDidMount(){
+  setHash = () => {
+    let val = window.location.hash ? "/" + window.location.hash : window.location.pathname;
     this.setState({
-      thisPath: window.location.pathname
+      thisPath: val
     })
+  }
+  componentDidMount(){
+    this.setHash();
   }
   render(){
     const { thisPath } = this.state;
@@ -23,12 +27,13 @@ class DesktopHeaderComponent extends Component {
         <LinkWrap>
         {
           menuOptions.map((a,i) => {
+
             const thisPage = thisPath == a.link ? "thisPage" : "";
             return (
               <Fragment key={i}>
                 { a.link != '/' && <span>&#183;</span>}
                 <MenuLink href={a.link}>
-                  <H3 className={thisPage}>{a.label}</H3>
+                  <H3 className={thisPage} onClick={this.setHash}>{a.label}</H3>
                 </MenuLink>
               </Fragment>
             )
