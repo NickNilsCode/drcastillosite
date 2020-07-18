@@ -7,6 +7,7 @@ import HomeRoot from "./roots/HomeRoot";
 // import AboutRoot from "./roots/AboutRoot";
 // import ServicesRoot from "./roots/ServicesRoot";
 import ServicestemplateRoot from "./roots/ServicestemplateRoot";
+import ProcedurestemplateRoot from "./roots/ProcedurestemplateRoot";
 // import TeamRoot from "./roots/TeamRoot";
 import TeamtemplateRoot from "./roots/TeamtemplateRoot";
 // import GalleryRoot from "./roots/GalleryRoot";
@@ -50,6 +51,7 @@ homeBundle = "",
 // aboutBundle = "",
 // servicesBundle = "",
 servicestemplateBundle = "",
+procedurestemplateBundle = "",
 drcastilloBundle = "",
 teamBundle = "",
 teamtemplateBundle = "",
@@ -75,6 +77,10 @@ fs.readFile('./dist/js/home.bundle.min.js', "utf8", (err, data) => {
 fs.readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
   servicestemplateBundle = data || "";
+})
+fs.readFile('./dist/js/procedurestemplate.bundle.min.js', "utf8", (err, data) => {
+  if (err) console.log("ERR" ,err);
+  procedurestemplateBundle = data || "";
 })
 fs.readFile('./dist/js/team.bundle.min.js', "utf8", (err, data) => {
   if (err) console.log("ERR" ,err);
@@ -130,6 +136,13 @@ app.get('/services/:id', (req, res) => {
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "servicestemplate"));
+});
+app.get('/procedures/:id', (req, res) => {
+  let data = {
+    procedureId: req.params.id
+  };
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.send(returnHTML(data, procedurestemplateBundle, ProcedurestemplateRoot, "procedurestemplate"));
 });
 // app.get('/staff', (req, res) => {
 //   let data = "";

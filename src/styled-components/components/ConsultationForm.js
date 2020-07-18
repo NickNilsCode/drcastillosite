@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+
+export const FormWrap = styled.div`
+  width: 100%;
+`;
 export const ConsultationForm = styled.form`
   width: 100%;
   padding-top: 24px;

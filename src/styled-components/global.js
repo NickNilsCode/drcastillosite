@@ -82,6 +82,22 @@ export const Para = styled.p`
   color: #696969;
 `;
 
+export const Html = styled.div`
+  margin-top: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  text-align: left;
+  font-size: 14px;
+  line-height: 25px;
+  color: #696969;
+  span {
+    font-weight: bold;
+  }
+  a {
+    color: #27b1d2;
+  }
+`;
+
 export const LargeMessage = styled.p`
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -154,4 +170,17 @@ export const HashMark = styled.hr`
   position: absolute;
   top: -80px;
   border: none;
+`;
+
+export const FlexWrap = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  @media (min-width: 700px){
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;

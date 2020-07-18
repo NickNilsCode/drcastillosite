@@ -3,14 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SingleService = void 0;
+exports.BlueBanner = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: calc(100% - 32px);\n  min-height: 100px;\n  background-color: #fff;\n  border-bottom: 1px solid #8d8d8d;\n  color: #000;\n  padding: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  height: 125px;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: #154254;\n  h2 {\n    letter-spacing: 12px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -21,6 +21,6 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var SingleService = _styledComponents["default"].div(_templateObject());
+var BlueBanner = _styledComponents["default"].div(_templateObject());
 
-exports.SingleService = SingleService;
+exports.BlueBanner = BlueBanner;

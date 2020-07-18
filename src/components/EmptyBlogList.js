@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BlogCard } from './'
-import { BlogList, FlexWrap } from '../styled-components/components/EmptyBlogList';
+import { BlogList } from '../styled-components/components/EmptyBlogList';
+import { FlexWrap } from '../styled-components/global';
 import blogList from '../data/blogList';
 
 class BlogListComponent extends Component {

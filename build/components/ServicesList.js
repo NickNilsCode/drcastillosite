@@ -29,44 +29,48 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var ServicesListComponent =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ServicesListComponent = /*#__PURE__*/function (_Component) {
   _inherits(ServicesListComponent, _Component);
+
+  var _super = _createSuper(ServicesListComponent);
 
   function ServicesListComponent() {
     _classCallCheck(this, ServicesListComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ServicesListComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(ServicesListComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_ServicesList.ServicesList, null, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.HashMark, {
+      return /*#__PURE__*/_react["default"].createElement(_ServicesList.ServicesList, null, /*#__PURE__*/_react["default"].createElement(_global.Description, null, /*#__PURE__*/_react["default"].createElement(_global.HashMark, {
         id: "services"
-      }), _react["default"].createElement(_global.H2BannerTitle, null, "Services"), _react["default"].createElement("hr", {
+      }), /*#__PURE__*/_react["default"].createElement(_global.H2BannerTitle, null, "Services"), /*#__PURE__*/_react["default"].createElement("hr", {
         className: "line"
-      }), _react["default"].createElement(_global.Para, null, "We provide comprehensive care to our patients. You will get a thorough understanding of your dental issues and what can be done to help you be in optimal dental health.")), _react["default"].createElement(_ServicesList.FlexWrap, null, _servicesList["default"].map(function (a, i) {
-        return _react["default"].createElement(_.ServiceCard, {
+      }), /*#__PURE__*/_react["default"].createElement(_global.Para, null, "We provide comprehensive care to our patients. You will get a thorough understanding of your dental issues and what can be done to help you be in optimal dental health.")), /*#__PURE__*/_react["default"].createElement(_global.FlexWrap, null, _servicesList["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement(_.ServiceCard, {
           key: i,
           num: i + 1,
           link: a.link,
           img: a.img,
-          title: a.title,
-          blurb: a.blurb
+          title: a.cardTitle,
+          blurb: a.cardBlurb
         });
-      })), _react["default"].createElement(_.DentistLine, null));
+      })), /*#__PURE__*/_react["default"].createElement(_.DentistLine, null));
     }
   }]);
 

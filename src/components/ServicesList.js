@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { DentistLine, ServiceCard } from './'
-import { ServicesList, FlexWrap } from '../styled-components/components/ServicesList';
-import { Para, H2BannerTitle, Description, HashMark } from '../styled-components/global';
+import { ServicesList } from '../styled-components/components/ServicesList';
+import { Para, H2BannerTitle, Description, HashMark, FlexWrap } from '../styled-components/global';
 import servicesList from '../data/servicesList';
 
 class ServicesListComponent extends Component {
@@ -23,8 +23,8 @@ class ServicesListComponent extends Component {
                   num={i+1}
                   link={a.link}
                   img={a.img}
-                  title={a.title}
-                  blurb={a.blurb}
+                  title={a.cardTitle}
+                  blurb={a.cardBlurb}
                 />
               )
             })

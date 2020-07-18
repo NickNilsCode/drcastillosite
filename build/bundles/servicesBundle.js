@@ -8,6 +8,6 @@ var _ServicesPage = _interopRequireDefault(require("../pages/ServicesPage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-if (window) (0, _reactDom.render)(_react["default"].createElement(_ServicesPage["default"], {
+if (window) (0, _reactDom.render)( /*#__PURE__*/_react["default"].createElement(_ServicesPage["default"], {
   data: window.__DATA__
 }), document.getElementById('app'));

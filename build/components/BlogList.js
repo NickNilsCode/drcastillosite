@@ -29,36 +29,40 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var BlogListComponent =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var BlogListComponent = /*#__PURE__*/function (_Component) {
   _inherits(BlogListComponent, _Component);
+
+  var _super = _createSuper(BlogListComponent);
 
   function BlogListComponent() {
     _classCallCheck(this, BlogListComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(BlogListComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(BlogListComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_BlogList.BlogList, null, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.HashMark, {
+      return /*#__PURE__*/_react["default"].createElement(_BlogList.BlogList, null, /*#__PURE__*/_react["default"].createElement(_global.Description, null, /*#__PURE__*/_react["default"].createElement(_global.HashMark, {
         id: "blog"
-      }), _react["default"].createElement(_global.H2BannerTitle, null, "Latest Blog Posts"), _react["default"].createElement("hr", {
+      }), /*#__PURE__*/_react["default"].createElement(_global.H2BannerTitle, null, "Latest Blog Posts"), /*#__PURE__*/_react["default"].createElement("hr", {
         className: "line"
-      }), _react["default"].createElement(_global.Para, null, "Our practice prides itself on providing the very finest level of service, from a simple filling to complex cosmetic dentistry.")), _react["default"].createElement(_BlogList.FlexWrap, null, _blogList["default"].map(function (a, i) {
-        return _react["default"].createElement(_.BlogCard, {
+      }), /*#__PURE__*/_react["default"].createElement(_global.Para, null, "Our practice prides itself on providing the very finest level of service, from a simple filling to complex cosmetic dentistry.")), /*#__PURE__*/_react["default"].createElement(_global.FlexWrap, null, _blogList["default"].map(function (a, i) {
+        return /*#__PURE__*/_react["default"].createElement(_.BlogCard, {
           key: i,
           link: a.link,
           img: a.img,
@@ -66,16 +70,16 @@ function (_Component) {
           author: a.author,
           blurb: a.blurb
         });
-      })), _react["default"].createElement("a", {
+      })), /*#__PURE__*/_react["default"].createElement("a", {
         href: "/blog"
-      }, _react["default"].createElement(_global.Button, {
+      }, /*#__PURE__*/_react["default"].createElement(_global.Button, {
         color1: "#fff",
         color2: "#27b1d2",
         color3: "#27b1d2",
         style: {
           marginBottom: '24px'
         }
-      }, "See Full Blog Page")), _react["default"].createElement(_.DentistLine, null));
+      }, "See Full Blog Page")), /*#__PURE__*/_react["default"].createElement(_.DentistLine, null));
     }
   }]);
 

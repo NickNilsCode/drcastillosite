@@ -23,39 +23,43 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var InformationalFooterComponent =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var InformationalFooterComponent = /*#__PURE__*/function (_Component) {
   _inherits(InformationalFooterComponent, _Component);
+
+  var _super = _createSuper(InformationalFooterComponent);
 
   function InformationalFooterComponent() {
     _classCallCheck(this, InformationalFooterComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(InformationalFooterComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(InformationalFooterComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_InformationalFooter.InformationalFooter, null, _react["default"].createElement(_.FooterCard, {
+      return /*#__PURE__*/_react["default"].createElement(_InformationalFooter.InformationalFooter, null, /*#__PURE__*/_react["default"].createElement(_.FooterCard, {
         title: "COME TO OUR OFFICE"
-      }, _react["default"].createElement("p", null, "Luis Castillo Professional Dental Corp.", _react["default"].createElement("br", null), "5359 N Fresno St # 110", _react["default"].createElement("br", null), "Fresno, CA 93710", _react["default"].createElement("br", null))), _react["default"].createElement(_.FooterCard, {
+      }, /*#__PURE__*/_react["default"].createElement("p", null, "Luis Castillo Professional Dental Corp.", /*#__PURE__*/_react["default"].createElement("br", null), "5359 N Fresno St # 110", /*#__PURE__*/_react["default"].createElement("br", null), "Fresno, CA 93710", /*#__PURE__*/_react["default"].createElement("br", null))), /*#__PURE__*/_react["default"].createElement(_.FooterCard, {
         title: "OFFICE HOURS"
-      }, _react["default"].createElement("p", null, "Monday to Friday: 8:00am - 5:30pm", _react["default"].createElement("br", null), "Saturday: By Appointment", _react["default"].createElement("br", null), "Sunday: Closed")), _react["default"].createElement(_.FooterCard, {
+      }, /*#__PURE__*/_react["default"].createElement("p", null, "Monday to Friday: 8:00am - 5:30pm", /*#__PURE__*/_react["default"].createElement("br", null), "Saturday: By Appointment", /*#__PURE__*/_react["default"].createElement("br", null), "Sunday: Closed")), /*#__PURE__*/_react["default"].createElement(_.FooterCard, {
         title: "CONTACT US"
-      }, _react["default"].createElement("p", null, _react["default"].createElement("i", {
+      }, /*#__PURE__*/_react["default"].createElement("p", null, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-envelope i-margin"
-      }), "dentalsmiles222@gmail.com", _react["default"].createElement("br", null), _react["default"].createElement("i", {
+      }), "dentalsmiles222@gmail.com", /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-phone-alt i-margin"
       }), "(559) 221- 0302")));
     }

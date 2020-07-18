@@ -12,6 +12,8 @@ var _HomeRoot = _interopRequireDefault(require("./roots/HomeRoot"));
 
 var _ServicestemplateRoot = _interopRequireDefault(require("./roots/ServicestemplateRoot"));
 
+var _ProcedurestemplateRoot = _interopRequireDefault(require("./roots/ProcedurestemplateRoot"));
+
 var _TeamtemplateRoot = _interopRequireDefault(require("./roots/TeamtemplateRoot"));
 
 var _PatientinfoRoot = _interopRequireDefault(require("./roots/PatientinfoRoot"));
@@ -68,6 +70,7 @@ var dataObj = {},
     // aboutBundle = "",
 // servicesBundle = "",
 servicestemplateBundle = "",
+    procedurestemplateBundle = "",
     drcastilloBundle = "",
     teamBundle = "",
     teamtemplateBundle = "",
@@ -94,6 +97,11 @@ _fs["default"].readFile('./dist/js/home.bundle.min.js', "utf8", function (err, d
 _fs["default"].readFile('./dist/js/servicestemplate.bundle.min.js', "utf8", function (err, data) {
   if (err) console.log("ERR", err);
   servicestemplateBundle = data || "";
+});
+
+_fs["default"].readFile('./dist/js/procedurestemplate.bundle.min.js', "utf8", function (err, data) {
+  if (err) console.log("ERR", err);
+  procedurestemplateBundle = data || "";
 });
 
 _fs["default"].readFile('./dist/js/team.bundle.min.js', "utf8", function (err, data) {
@@ -154,6 +162,13 @@ app.get('/services/:id', function (req, res) {
   };
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, servicestemplateBundle, _ServicestemplateRoot["default"], "servicestemplate"));
+});
+app.get('/procedures/:id', function (req, res) {
+  var data = {
+    procedureId: req.params.id
+  };
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.send(returnHTML(data, procedurestemplateBundle, _ProcedurestemplateRoot["default"], "procedurestemplate"));
 }); // app.get('/staff', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
@@ -277,7 +292,7 @@ function fetcher(url) {
 function returnHTML(data, bundle, Page, title) {
   var dataString = JSON.stringify(data);
   var sheet = new _styledComponents.ServerStyleSheet();
-  var body = (0, _server.renderToString)(sheet.collectStyles(_react["default"].createElement(Page, {
+  var body = (0, _server.renderToString)(sheet.collectStyles( /*#__PURE__*/_react["default"].createElement(Page, {
     data: data
   })));
   var styles = sheet.getStyleTags();

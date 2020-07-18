@@ -23,33 +23,37 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var NewPatientInfoComponent =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var NewPatientInfoComponent = /*#__PURE__*/function (_Component) {
   _inherits(NewPatientInfoComponent, _Component);
+
+  var _super = _createSuper(NewPatientInfoComponent);
 
   function NewPatientInfoComponent() {
     _classCallCheck(this, NewPatientInfoComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(NewPatientInfoComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(NewPatientInfoComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_NewPatientInfo.NewPatientInfo, null, _react["default"].createElement(_global.Description, null, _react["default"].createElement(_global.H2BannerTitle, null, "NEW PATIENT INFORMATION"), _react["default"].createElement("hr", {
+      return /*#__PURE__*/_react["default"].createElement(_NewPatientInfo.NewPatientInfo, null, /*#__PURE__*/_react["default"].createElement(_global.Description, null, /*#__PURE__*/_react["default"].createElement(_global.H2BannerTitle, null, "NEW PATIENT INFORMATION"), /*#__PURE__*/_react["default"].createElement("hr", {
         className: "line"
-      }), _react["default"].createElement(_global.H3, null, "Consultation & Diagnostics"), _react["default"].createElement(_global.Para, null, "There have never been so many different possibilities as today to save severely damaged teeth and to replace lost teeth. But which treatment is the appropriate ? What are the costs? Dr. Castillo and his friendly team will help you make the right decision."), _react["default"].createElement(_global.H3, null, "\"Crucial to the success of any treatment is the trust between patient and doctor, which is why we take the time to get to know our patients and listen to their questions, concerns and expectations.\""), _react["default"].createElement(_global.Para, null, "-Dr. Luis Castillo"), _react["default"].createElement(_global.Para, null, "At our office we want to get to know you first, and your expectations before an extensive diagnosis is carried out and a treatment plan is established. We utilize the following technology to assure the desired outcome of your treatment:"), _react["default"].createElement(_global.Para, null, "- Dental Magnifying Glasses for a precise diagnostic", _react["default"].createElement("br", null), "- Intraoral camera so that you, the patient is able to see what treatment is necessary", _react["default"].createElement("br", null), "- Digital x-rays - This kind of x-ray diagnostic gives us the immediate access with 90% less radiation"), _react["default"].createElement(_global.Para, null, "\"My valued team and I are here to help and serve you with any questions and concerns\"")));
+      }), /*#__PURE__*/_react["default"].createElement(_global.H3, null, "Consultation & Diagnostics"), /*#__PURE__*/_react["default"].createElement(_global.Para, null, "There have never been so many different possibilities as today to save severely damaged teeth and to replace lost teeth. But which treatment is the appropriate ? What are the costs? Dr. Castillo and his friendly team will help you make the right decision."), /*#__PURE__*/_react["default"].createElement(_global.H3, null, "\"Crucial to the success of any treatment is the trust between patient and doctor, which is why we take the time to get to know our patients and listen to their questions, concerns and expectations.\""), /*#__PURE__*/_react["default"].createElement(_global.Para, null, "-Dr. Luis Castillo"), /*#__PURE__*/_react["default"].createElement(_global.Para, null, "At our office we want to get to know you first, and your expectations before an extensive diagnosis is carried out and a treatment plan is established. We utilize the following technology to assure the desired outcome of your treatment:"), /*#__PURE__*/_react["default"].createElement(_global.Para, null, "- Dental Magnifying Glasses for a precise diagnostic", /*#__PURE__*/_react["default"].createElement("br", null), "- Intraoral camera so that you, the patient is able to see what treatment is necessary", /*#__PURE__*/_react["default"].createElement("br", null), "- Digital x-rays - This kind of x-ray diagnostic gives us the immediate access with 90% less radiation"), /*#__PURE__*/_react["default"].createElement(_global.Para, null, "\"My valued team and I are here to help and serve you with any questions and concerns\"")));
     }
   }]);
 

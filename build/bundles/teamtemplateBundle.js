@@ -8,6 +8,6 @@ var _TeamtemplatePage = _interopRequireDefault(require("../pages/TeamtemplatePag
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-if (window) (0, _reactDom.render)(_react["default"].createElement(_TeamtemplatePage["default"], {
+if (window) (0, _reactDom.render)( /*#__PURE__*/_react["default"].createElement(_TeamtemplatePage["default"], {
   data: window.__DATA__
 }), document.getElementById('app'));

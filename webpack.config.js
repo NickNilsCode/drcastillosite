@@ -6,6 +6,7 @@ const pages = [
   // 'about',
   // 'services',
   'servicestemplate',
+  'procedurestemplate',
   'team',
   'teamtemplate',
   // 'gallery',

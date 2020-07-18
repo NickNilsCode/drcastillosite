@@ -27,6 +27,12 @@ Object.defineProperty(exports, "BlogList", {
     return _BlogList["default"];
   }
 });
+Object.defineProperty(exports, "BlueBanner", {
+  enumerable: true,
+  get: function get() {
+    return _BlueBanner["default"];
+  }
+});
 Object.defineProperty(exports, "CarouselBanner", {
   enumerable: true,
   get: function get() {
@@ -207,12 +213,6 @@ Object.defineProperty(exports, "ServicesList", {
     return _ServicesList["default"];
   }
 });
-Object.defineProperty(exports, "SingleService", {
-  enumerable: true,
-  get: function get() {
-    return _SingleService["default"];
-  }
-});
 Object.defineProperty(exports, "SocialFooter", {
   enumerable: true,
   get: function get() {
@@ -233,6 +233,8 @@ var _BlogCard = _interopRequireDefault(require("./BlogCard"));
 var _BlogDetails = _interopRequireDefault(require("./BlogDetails"));
 
 var _BlogList = _interopRequireDefault(require("./BlogList"));
+
+var _BlueBanner = _interopRequireDefault(require("./BlueBanner"));
 
 var _CarouselBanner = _interopRequireDefault(require("./CarouselBanner"));
 
@@ -293,8 +295,6 @@ var _ScheduleBanner = _interopRequireDefault(require("./ScheduleBanner"));
 var _ServiceCard = _interopRequireDefault(require("./ServiceCard"));
 
 var _ServicesList = _interopRequireDefault(require("./ServicesList"));
-
-var _SingleService = _interopRequireDefault(require("./SingleService"));
 
 var _SocialFooter = _interopRequireDefault(require("./SocialFooter"));
 
