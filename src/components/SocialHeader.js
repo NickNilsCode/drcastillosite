@@ -12,29 +12,26 @@ class SocialHeaderComponent extends Component {
           <span>Call for free consultation: (559) 221-0302</span>
         </H6>
         <LinkWrap>
-          <a href="">
+          <a href="https://www.facebook.com/luiscastillodentalcorp/">
             <LinkSquare>
               <i className="fab fa-facebook-f"></i>
             </LinkSquare>
           </a>
-          <a href="">
-            <LinkSquare>
-              <i className="fab fa-google-plus-g"></i>
-            </LinkSquare>
-          </a>
-          <a href="">
+          <a href="https://in.pinterest.com/karincastillo38/boards/">
             <LinkSquare>
               <i className="fab fa-pinterest"></i>
             </LinkSquare>
           </a>
-          <a href="">
+          {
+          // <a href="">
+          //   <LinkSquare>
+          //     <i className="fab fa-youtube"></i>
+          //   </LinkSquare>
+          // </a>
+          }
+          <a href="https://www.instagram.com/castillosmilecare/">
             <LinkSquare>
-              <i className="fab fa-youtube"></i>
-            </LinkSquare>
-          </a>
-          <a href="">
-            <LinkSquare>
-              <i className="fas fa-rss"></i>
+              <i className="fa fa-instagram"></i>
             </LinkSquare>
           </a>
         </LinkWrap>

@@ -10,19 +10,19 @@ class SocialFooterComponent extends Component {
           <span style={{fontWeight: "bold"}}>Luis Castillo</span> - Professional Dental Corporation. All rights reserved 2016.
         </H6>
         <LinkWrap>
-          <a href="">
+          <a href="https://www.facebook.com/luiscastillodentalcorp/">
             <LinkSquare>
               <i className="fab fa-facebook-f"></i>
             </LinkSquare>
           </a>
-          <a href="">
-            <LinkSquare>
-              <i className="fab fa-google-plus-g"></i>
-            </LinkSquare>
-          </a>
-          <a href="">
+          <a href="https://in.pinterest.com/karincastillo38/boards/">
             <LinkSquare>
               <i className="fab fa-pinterest"></i>
+            </LinkSquare>
+          </a>
+          <a href="https://www.instagram.com/castillosmilecare/">
+            <LinkSquare>
+              <i className="fa fa-instagram"></i>
             </LinkSquare>
           </a>
         </LinkWrap>

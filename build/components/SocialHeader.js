@@ -54,25 +54,17 @@ var SocialHeaderComponent = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/_react["default"].createElement(_SocialHeader.SocialHeader, null, /*#__PURE__*/_react["default"].createElement(_global.H6, null, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fas fa-phone-alt i-margin"
       }), /*#__PURE__*/_react["default"].createElement("span", null, "Call for free consultation: (559) 221-0302")), /*#__PURE__*/_react["default"].createElement(_SocialHeader.LinkWrap, null, /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
+        href: "https://www.facebook.com/luiscastillodentalcorp/"
       }, /*#__PURE__*/_react["default"].createElement(_SocialHeader.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fab fa-facebook-f"
       }))), /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
-      }, /*#__PURE__*/_react["default"].createElement(_SocialHeader.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
-        className: "fab fa-google-plus-g"
-      }))), /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
+        href: "https://in.pinterest.com/karincastillo38/boards/"
       }, /*#__PURE__*/_react["default"].createElement(_SocialHeader.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fab fa-pinterest"
       }))), /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
+        href: "https://www.instagram.com/castillosmilecare/"
       }, /*#__PURE__*/_react["default"].createElement(_SocialHeader.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
-        className: "fab fa-youtube"
-      }))), /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
-      }, /*#__PURE__*/_react["default"].createElement(_SocialHeader.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
-        className: "fas fa-rss"
+        className: "fa fa-instagram"
       })))));
     }
   }]);

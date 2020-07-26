@@ -56,17 +56,17 @@ var SocialFooterComponent = /*#__PURE__*/function (_Component) {
           fontWeight: "bold"
         }
       }, "Luis Castillo"), " - Professional Dental Corporation. All rights reserved 2016."), /*#__PURE__*/_react["default"].createElement(_SocialFooter.LinkWrap, null, /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
+        href: "https://www.facebook.com/luiscastillodentalcorp/"
       }, /*#__PURE__*/_react["default"].createElement(_SocialFooter.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fab fa-facebook-f"
       }))), /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
-      }, /*#__PURE__*/_react["default"].createElement(_SocialFooter.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
-        className: "fab fa-google-plus-g"
-      }))), /*#__PURE__*/_react["default"].createElement("a", {
-        href: ""
+        href: "https://in.pinterest.com/karincastillo38/boards/"
       }, /*#__PURE__*/_react["default"].createElement(_SocialFooter.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
         className: "fab fa-pinterest"
+      }))), /*#__PURE__*/_react["default"].createElement("a", {
+        href: "https://www.instagram.com/castillosmilecare/"
+      }, /*#__PURE__*/_react["default"].createElement(_SocialFooter.LinkSquare, null, /*#__PURE__*/_react["default"].createElement("i", {
+        className: "fa fa-instagram"
       })))));
     }
   }]);
