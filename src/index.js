@@ -203,8 +203,8 @@ const getEmailHTML = (req, option) => {
         <h3>Hi Dr. Castillo!</h3>
         <h3>The following person is requesting a consultation for the listed procedures.<h3/>
 
-        <h4>First Name: ${req.body.name}</h4>
-        <h4>Last Name: ${req.body.surname}</h4>
+        <h4>First Name: ${req.body.firstName}</h4>
+        <h4>Last Name: ${req.body.lastName}</h4>
         <h4>Email: ${req.body.email}</h4>
         <h4>Phone: ${req.body.phone}</h4>
         <h4>Procedures: ${req.body.procedures}</h4>
@@ -214,8 +214,8 @@ const getEmailHTML = (req, option) => {
         <h3>Hi Dr. Castillo!</h3>
         <h3>The following person is has a message for you.<h3/>
 
-        <h4>First Name: ${req.body.name}</h4>
-        <h4>Last Name: ${req.body.surname}</h4>
+        <h4>First Name: ${req.body.firstName}</h4>
+        <h4>Last Name: ${req.body.lastName}</h4>
         <h4>Email: ${req.body.email}</h4>
         <h4>Phone: ${req.body.phone}</h4>
 

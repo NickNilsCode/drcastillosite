@@ -226,10 +226,10 @@ app.get('/images/:id', function (req, res) {
 var getEmailHTML = function getEmailHTML(req, option) {
   switch (option) {
     case 1:
-      return "\n        <h3>Hi Dr. Castillo!</h3>\n        <h3>The following person is requesting a consultation for the listed procedures.<h3/>\n\n        <h4>First Name: ".concat(req.body.name, "</h4>\n        <h4>Last Name: ").concat(req.body.surname, "</h4>\n        <h4>Email: ").concat(req.body.email, "</h4>\n        <h4>Phone: ").concat(req.body.phone, "</h4>\n        <h4>Procedures: ").concat(req.body.procedures, "</h4>\n      ");
+      return "\n        <h3>Hi Dr. Castillo!</h3>\n        <h3>The following person is requesting a consultation for the listed procedures.<h3/>\n\n        <h4>First Name: ".concat(req.body.firstName, "</h4>\n        <h4>Last Name: ").concat(req.body.lastName, "</h4>\n        <h4>Email: ").concat(req.body.email, "</h4>\n        <h4>Phone: ").concat(req.body.phone, "</h4>\n        <h4>Procedures: ").concat(req.body.procedures, "</h4>\n      ");
 
     case 2:
-      return "\n        <h3>Hi Dr. Castillo!</h3>\n        <h3>The following person is has a message for you.<h3/>\n\n        <h4>First Name: ".concat(req.body.name, "</h4>\n        <h4>Last Name: ").concat(req.body.surname, "</h4>\n        <h4>Email: ").concat(req.body.email, "</h4>\n        <h4>Phone: ").concat(req.body.phone, "</h4>\n\n        <h4>Message: ").concat(req.body.message, "</h4>\n      ");
+      return "\n        <h3>Hi Dr. Castillo!</h3>\n        <h3>The following person is has a message for you.<h3/>\n\n        <h4>First Name: ".concat(req.body.firstName, "</h4>\n        <h4>Last Name: ").concat(req.body.lastName, "</h4>\n        <h4>Email: ").concat(req.body.email, "</h4>\n        <h4>Phone: ").concat(req.body.phone, "</h4>\n\n        <h4>Message: ").concat(req.body.message, "</h4>\n      ");
   }
 };
 
