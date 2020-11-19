@@ -66,7 +66,7 @@ var Servicestemplate = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/_react["default"].createElement(_servicestemplate.ServicestemplateWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_servicestemplate.ServicestemplateContent, null, /*#__PURE__*/_react["default"].createElement(_components.MainBanner, {
         img: data.banner,
         mask: "true"
-      }), /*#__PURE__*/_react["default"].createElement(_global.GreyBackground, null, /*#__PURE__*/_react["default"].createElement(_servicestemplate.ServicesDescription, null, /*#__PURE__*/_react["default"].createElement(_global.H2BannerTitle, null, data.title), /*#__PURE__*/_react["default"].createElement("hr", {
+      }), /*#__PURE__*/_react["default"].createElement(_global.GreyBackground, null, /*#__PURE__*/_react["default"].createElement(_servicestemplate.ServicesDescription, null, /*#__PURE__*/_react["default"].createElement(_global.H1BannerTitle, null, data.title), /*#__PURE__*/_react["default"].createElement("hr", {
         className: "line"
       }), /*#__PURE__*/_react["default"].createElement(_global.Html, {
         dangerouslySetInnerHTML: {

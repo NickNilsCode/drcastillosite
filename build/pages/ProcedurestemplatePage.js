@@ -65,7 +65,7 @@ var Procedurestemplate = /*#__PURE__*/function (_Component) {
 
       return /*#__PURE__*/_react["default"].createElement(_procedurestemplate.ProcedurestemplateWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_procedurestemplate.ProcedurestemplateContent, null, /*#__PURE__*/_react["default"].createElement(_components.BlueBanner, {
         title: data.title
-      }), /*#__PURE__*/_react["default"].createElement(_procedurestemplate.FlexWrapProcedure, null, /*#__PURE__*/_react["default"].createElement(_procedurestemplate.FlexDiv, null, /*#__PURE__*/_react["default"].createElement(_procedurestemplate.ProcedureH2, null, data.titleLeft), /*#__PURE__*/_react["default"].createElement("hr", {
+      }), /*#__PURE__*/_react["default"].createElement(_procedurestemplate.FlexWrapProcedure, null, /*#__PURE__*/_react["default"].createElement(_procedurestemplate.FlexDiv, null, /*#__PURE__*/_react["default"].createElement(_procedurestemplate.ProcedureH1, null, data.titleLeft), /*#__PURE__*/_react["default"].createElement("hr", {
         className: "partline"
       }), /*#__PURE__*/_react["default"].createElement(_global.Html, {
         dangerouslySetInnerHTML: {

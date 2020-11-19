@@ -3,14 +3,24 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FlexWrapProcedure = exports.ProcedureH2 = exports.FlexDiv = exports.ProcedurestemplateContent = exports.ProcedurestemplateWrapper = void 0;
+exports.FlexWrapProcedure = exports.ProcedureH2 = exports.ProcedureH1 = exports.FlexDiv = exports.ProcedurestemplateContent = exports.ProcedurestemplateWrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject5() {
+function _templateObject6() {
   var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    max-width: 1100px;\n    margin: auto;\n    justify-content: center;\n    align-items: flex-start;\n    flex-direction: column;\n    margin-bottom: 50px;\n    @media (min-width: 700px){\n      flex-direction: row;\n      flex-wrap: wrap;\n    }\n  "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    font-family: \"Montserrat\", sans-serif;\n    font-size: 18px;\n    letter-spacing: 4px;\n    color: #000;\n    margin: 12px 0;\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -73,10 +83,14 @@ var FlexDiv = _styledComponents["default"].div(_templateObject3());
 
 exports.FlexDiv = FlexDiv;
 
-var ProcedureH2 = _styledComponents["default"].h2(_templateObject4());
+var ProcedureH1 = _styledComponents["default"].h1(_templateObject4());
+
+exports.ProcedureH1 = ProcedureH1;
+
+var ProcedureH2 = _styledComponents["default"].h2(_templateObject5());
 
 exports.ProcedureH2 = ProcedureH2;
 
-var FlexWrapProcedure = _styledComponents["default"].div(_templateObject5());
+var FlexWrapProcedure = _styledComponents["default"].div(_templateObject6());
 
 exports.FlexWrapProcedure = FlexWrapProcedure;

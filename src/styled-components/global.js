@@ -13,6 +13,19 @@ export const H2 = styled.h2`
   color: #27b1d2;
 `;
 
+export const H1BannerTitle = styled.h1`
+  display: table;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  margin: 6px;
+`;
+
 export const H2BannerTitle = styled.h2`
   display: table;
   position: relative;

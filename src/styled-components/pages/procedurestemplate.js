@@ -24,6 +24,13 @@ import styled from 'styled-components';
     }
   `;
 
+  export const ProcedureH1 = styled.h1`
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #000;
+    margin: 12px 0;
+  `;
   export const ProcedureH2 = styled.h2`
     font-family: "Montserrat", sans-serif;
     font-size: 18px;

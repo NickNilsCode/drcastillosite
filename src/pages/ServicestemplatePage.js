@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Header, Footer, MainBanner, SingleService, RelatedContent, MoreProcedures, ConsultationForm, DentistQuote } from '../components';
 import { ServicestemplateWrapper, ServicestemplateContent, ServicesDescription } from '../styled-components/pages/servicestemplate';
-import { Para, H2BannerTitle, GreyBackground, Html } from '../styled-components/global';
+import { Para, H1BannerTitle, GreyBackground, Html } from '../styled-components/global';
 import servicesList from '../data/servicesList';
 
 class Servicestemplate extends Component {
@@ -18,7 +18,7 @@ class Servicestemplate extends Component {
                 />
                 <GreyBackground>
                   <ServicesDescription>
-                    <H2BannerTitle>{data.title}</H2BannerTitle>
+                    <H1BannerTitle>{data.title}</H1BannerTitle>
                     <hr className="line"/>
                     <Html dangerouslySetInnerHTML={{__html: data.blurb}} style={{textAlign: "left"}}/>
                   </ServicesDescription>

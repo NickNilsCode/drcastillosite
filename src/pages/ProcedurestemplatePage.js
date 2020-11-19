@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Header, Footer, MainBanner, SingleService, RelatedContent, MoreProcedures, ConsultationForm, DentistQuote, ScheduleBanner, BlueBanner } from '../components';
-import { ProcedurestemplateWrapper, ProcedurestemplateContent, FlexDiv, ProcedureH2, FlexWrapProcedure } from '../styled-components/pages/procedurestemplate';
+import { ProcedurestemplateWrapper, ProcedurestemplateContent, FlexDiv, ProcedureH1, ProcedureH2, FlexWrapProcedure } from '../styled-components/pages/procedurestemplate';
 import { Html } from '../styled-components/global';
 import moreProceduresList from '../data/moreProceduresList';
 
@@ -15,7 +15,7 @@ class Procedurestemplate extends Component {
                 <BlueBanner title={data.title}/>
                 <FlexWrapProcedure>
                   <FlexDiv>
-                    <ProcedureH2>{data.titleLeft}</ProcedureH2>
+                    <ProcedureH1>{data.titleLeft}</ProcedureH1>
                     <hr className="partline"/>
                     <Html dangerouslySetInnerHTML={{__html: data.blurbLeft}}/>
                   </FlexDiv>
