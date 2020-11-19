@@ -118,7 +118,7 @@ fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
 app.get('/', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, HomeRoot, "home"));
+  res.send(returnHTML(data, homeBundle, HomeRoot, "Fresno CA Dentist", "meta goes here"));
 });
 // app.get('/about', (req, res) => {
 //   let data = "";
@@ -135,14 +135,14 @@ app.get('/services/:id', (req, res) => {
     serviceId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "servicestemplate"));
+  res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "servicestemplate", "meta goes here"));
 });
 app.get('/procedures/:id', (req, res) => {
   let data = {
     procedureId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, procedurestemplateBundle, ProcedurestemplateRoot, "procedurestemplate"));
+  res.send(returnHTML(data, procedurestemplateBundle, ProcedurestemplateRoot, "procedurestemplate", "meta goes here"));
 });
 // app.get('/staff', (req, res) => {
 //   let data = "";
@@ -154,7 +154,7 @@ app.get('/team/:id', (req, res) => {
     member: teamList.find(a => a.id == req.params.id)
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, teamtemplateBundle, TeamtemplateRoot, "teamtemplate"));
+  res.send(returnHTML(data, teamtemplateBundle, TeamtemplateRoot, "teamtemplate", "meta goes here"));
 });
 // app.get('/gallery', (req, res) => {
 //   let data = "";
@@ -171,7 +171,7 @@ app.get('/team/:id', (req, res) => {
 app.get('/patient-information', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "patientinfo"));
+  res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "patientinfo", "meta goes here"));
 });
 // app.get('/contact', (req, res) => {
 //   let data = "";
@@ -181,14 +181,14 @@ app.get('/patient-information', (req, res) => {
 app.get('/blog', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "blog"));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "blog", "meta goes here"));
 });
 app.get('/blog/:id', (req, res) => {
   let data = {
     blogId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "blogtemplate"));
+  res.send(returnHTML(data, blogtemplateBundle, BlogtemplateRoot, "blogtemplate", "meta goes here"));
 });
 
 app.get('/images/:id', (req, res) => {
@@ -279,7 +279,7 @@ function fetcher(url){
     }).catch(errHandle)
 }
 
-function returnHTML(data, bundle, Page, title){
+function returnHTML(data, bundle, Page, title, description){
     const dataString = JSON.stringify(data);
     const sheet = new ServerStyleSheet();
     const body = renderToString(sheet.collectStyles(<Page data={data}/>));
@@ -292,7 +292,7 @@ function returnHTML(data, bundle, Page, title){
                 <title>${title}</title>
                 <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7CMontserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
                 <script src="https://kit.fontawesome.com/c0157dbc17.js" crossorigin="anonymous"></script>
-                <meta name="Description" content="${title}">
+                <meta name="Description" content="${description}">
                 <style>
                   body { margin: 0; font-family: Helvetica; }
                   a { text-decoration: none; color: #000; }
