@@ -305,6 +305,13 @@ function returnHTML(data, bundle, Page, title, description){
                 <script>window.__DATA__=${dataString}</script>
                 <div id="app" role="main">${body}</div>
                 <script>${bundle}</script>
+                  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMHV0LLERQ"></script>
+                  <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-TMHV0LLERQ');
+                  </script>
               </body>
             </html>
           `;
