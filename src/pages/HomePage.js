@@ -12,6 +12,7 @@ class Home extends Component {
                 <CarouselBanner/>
                 <ToothBackground>
                   <ConsultationForm/>
+                    <h1 style={{maxWidth: '1110px', textAlign: 'left', margin: 'auto', padding: '15px'}}>Fresno, CA Dentist</h1>
                   <DentistQuote
                     title="TOTAL DENTAL WELLNESS"
                     name="DR. LUIS CASTILLO"
