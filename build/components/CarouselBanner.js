@@ -74,7 +74,7 @@ var CarouselBannerComponent = /*#__PURE__*/function (_Component) {
         text: "GENTLE - FRIENDLY - EASY",
         bgPos: "right",
         bgPosSmall: "right",
-        textLeft: true
+        textLeft: false
       }) : /*#__PURE__*/_react["default"].createElement(_.MainBanner, {
         img: "/images/heroimage.jpg",
         title: "ACHIEVE A FLAWLESS SMILE",

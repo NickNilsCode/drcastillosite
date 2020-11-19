@@ -53,7 +53,14 @@ var Home = /*#__PURE__*/function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_home.HomeWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_home.HomeContent, null, /*#__PURE__*/_react["default"].createElement(_components.CarouselBanner, null), /*#__PURE__*/_react["default"].createElement(_global.ToothBackground, null, /*#__PURE__*/_react["default"].createElement(_components.ConsultationForm, null), /*#__PURE__*/_react["default"].createElement(_components.DentistQuote, {
+      return /*#__PURE__*/_react["default"].createElement(_home.HomeWrapper, null, /*#__PURE__*/_react["default"].createElement(_components.Header, null), /*#__PURE__*/_react["default"].createElement(_home.HomeContent, null, /*#__PURE__*/_react["default"].createElement(_components.CarouselBanner, null), /*#__PURE__*/_react["default"].createElement(_global.ToothBackground, null, /*#__PURE__*/_react["default"].createElement(_components.ConsultationForm, null), /*#__PURE__*/_react["default"].createElement("h1", {
+        style: {
+          maxWidth: '1110px',
+          textAlign: 'left',
+          margin: 'auto',
+          padding: '15px'
+        }
+      }, "Fresno, CA Dentist"), /*#__PURE__*/_react["default"].createElement(_components.DentistQuote, {
         title: "TOTAL DENTAL WELLNESS",
         name: "DR. LUIS CASTILLO",
         blurb: "Give yourself the gift of a truly sensational and healthy smile. Start our Whole Health Dentistry Program.",
