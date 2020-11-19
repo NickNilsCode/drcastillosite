@@ -144,7 +144,7 @@ _fs["default"].readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", function
 app.get('/', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "home"));
+  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "Fresno CA Dentist", "meta goes here"));
 }); // app.get('/about', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
@@ -161,14 +161,14 @@ app.get('/services/:id', function (req, res) {
     serviceId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, servicestemplateBundle, _ServicestemplateRoot["default"], "servicestemplate"));
+  res.send(returnHTML(data, servicestemplateBundle, _ServicestemplateRoot["default"], "servicestemplate", "meta goes here"));
 });
 app.get('/procedures/:id', function (req, res) {
   var data = {
     procedureId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, procedurestemplateBundle, _ProcedurestemplateRoot["default"], "procedurestemplate"));
+  res.send(returnHTML(data, procedurestemplateBundle, _ProcedurestemplateRoot["default"], "procedurestemplate", "meta goes here"));
 }); // app.get('/staff', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
@@ -182,7 +182,7 @@ app.get('/team/:id', function (req, res) {
     })
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, teamtemplateBundle, _TeamtemplateRoot["default"], "teamtemplate"));
+  res.send(returnHTML(data, teamtemplateBundle, _TeamtemplateRoot["default"], "teamtemplate", "meta goes here"));
 }); // app.get('/gallery', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
@@ -199,7 +199,7 @@ app.get('/team/:id', function (req, res) {
 app.get('/patient-information', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, patientinfoBundle, _PatientinfoRoot["default"], "patientinfo"));
+  res.send(returnHTML(data, patientinfoBundle, _PatientinfoRoot["default"], "patientinfo", "meta goes here"));
 }); // app.get('/contact', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
@@ -209,14 +209,14 @@ app.get('/patient-information', function (req, res) {
 app.get('/blog', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _BlogRoot["default"], "blog"));
+  res.send(returnHTML(data, blogBundle, _BlogRoot["default"], "blog", "meta goes here"));
 });
 app.get('/blog/:id', function (req, res) {
   var data = {
     blogId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogtemplateBundle, _BlogtemplateRoot["default"], "blogtemplate"));
+  res.send(returnHTML(data, blogtemplateBundle, _BlogtemplateRoot["default"], "blogtemplate", "meta goes here"));
 });
 app.get('/images/:id', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
@@ -289,14 +289,14 @@ function fetcher(url) {
   })["catch"](errHandle);
 }
 
-function returnHTML(data, bundle, Page, title) {
+function returnHTML(data, bundle, Page, title, description) {
   var dataString = JSON.stringify(data);
   var sheet = new _styledComponents.ServerStyleSheet();
   var body = (0, _server.renderToString)(sheet.collectStyles( /*#__PURE__*/_react["default"].createElement(Page, {
     data: data
   })));
   var styles = sheet.getStyleTags();
-  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <link href=\"http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7CMontserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800\" rel=\"stylesheet\" type=\"text/css\">\n                <script src=\"https://kit.fontawesome.com/c0157dbc17.js\" crossorigin=\"anonymous\"></script>\n                <meta name=\"Description\" content=\"").concat(title, "\">\n                <style>\n                  body { margin: 0; font-family: Helvetica; }\n                  a { text-decoration: none; color: #000; }\n                  .i-margin { margin-right: 6px }\n                </style>\n                ").concat(styles, "\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
+  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <link href=\"http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7CMontserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800\" rel=\"stylesheet\" type=\"text/css\">\n                <script src=\"https://kit.fontawesome.com/c0157dbc17.js\" crossorigin=\"anonymous\"></script>\n                <meta name=\"Description\" content=\"").concat(description, "\">\n                <style>\n                  body { margin: 0; font-family: Helvetica; }\n                  a { text-decoration: none; color: #000; }\n                  .i-margin { margin-right: 6px }\n                </style>\n                ").concat(styles, "\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
 }
 
 function errHandle(err) {

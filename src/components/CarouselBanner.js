@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { MainBanner } from './';
-import { CarouselBanner } from '../styled-components/components/CarouselBanner';
+import { CarouselBanner, PageH1 } from '../styled-components/components/CarouselBanner';
 
 class CarouselBannerComponent extends Component {
   constructor(props){
@@ -27,7 +27,7 @@ class CarouselBannerComponent extends Component {
             text="GENTLE - FRIENDLY - EASY"
             bgPos="right"
             bgPosSmall="right"
-            textLeft={true}
+            textLeft={false}
           /> :
           <MainBanner
             img="/images/heroimage.jpg"
