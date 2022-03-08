@@ -182,7 +182,7 @@ app.get('/team/:id', function (req, res) {
     })
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, teamtemplateBundle, _TeamtemplateRoot["default"], "teamtemplate", "meta goes here"));
+  res.send(returnHTML(data, teamtemplateBundle, _TeamtemplateRoot["default"], "All About Dental Care | Health and Dentistry", "Dr. Castillo is the name you can count on to enhance your smile through cosmetic dentistry, implants, orthodontics, and general dentistry. For complete dental care, call us!"));
 }); // app.get('/gallery', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
@@ -199,7 +199,7 @@ app.get('/team/:id', function (req, res) {
 app.get('/patient-information', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, patientinfoBundle, _PatientinfoRoot["default"], "patientinfo", "meta goes here"));
+  res.send(returnHTML(data, patientinfoBundle, _PatientinfoRoot["default"], "Dental Consultation and Treatment plan| Luis Castillo Fresno, CA", "Our dental treatment plan outlines dental services you need to smile with confidence. For dental checkups and associate costs of treatment, give us a call!"));
 }); // app.get('/contact', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
@@ -209,7 +209,7 @@ app.get('/patient-information', function (req, res) {
 app.get('/blog', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, _BlogRoot["default"], "blog", "meta goes here"));
+  res.send(returnHTML(data, blogBundle, _BlogRoot["default"], "Dental Blogs - Tips to protect your teeth ", "Keep track of the latest dental news, what's trending in the dental industry, tips to protect your teeth through our blogs. "));
 });
 app.get('/blog/:id', function (req, res) {
   var data = {

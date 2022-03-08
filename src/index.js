@@ -154,7 +154,7 @@ app.get('/team/:id', (req, res) => {
     member: teamList.find(a => a.id == req.params.id)
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, teamtemplateBundle, TeamtemplateRoot, "teamtemplate", "meta goes here"));
+  res.send(returnHTML(data, teamtemplateBundle, TeamtemplateRoot, "All About Dental Care | Health and Dentistry", "Dr. Castillo is the name you can count on to enhance your smile through cosmetic dentistry, implants, orthodontics, and general dentistry. For complete dental care, call us!"));
 });
 // app.get('/gallery', (req, res) => {
 //   let data = "";
@@ -171,7 +171,7 @@ app.get('/team/:id', (req, res) => {
 app.get('/patient-information', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "patientinfo", "meta goes here"));
+  res.send(returnHTML(data, patientinfoBundle, PatientinfoRoot, "https://thetechventures.com/", "Our dental treatment plan outlines dental services you need to smile with confidence. For dental checkups and associate costs of treatment, give us a call!"));
 });
 // app.get('/contact', (req, res) => {
 //   let data = "";
@@ -181,7 +181,7 @@ app.get('/patient-information', (req, res) => {
 app.get('/blog', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, blogBundle, BlogRoot, "blog", "meta goes here"));
+  res.send(returnHTML(data, blogBundle, BlogRoot, "Dental Blogs - Tips to protect your teeth ", "Keep track of the latest dental news, what's trending in the dental industry, tips to protect your teeth through our blogs. "));
 });
 app.get('/blog/:id', (req, res) => {
   let data = {
