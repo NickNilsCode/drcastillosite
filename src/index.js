@@ -118,7 +118,7 @@ fs.readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", (err, data) => {
 app.get('/', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, HomeRoot, "Fresno Dental Professionals | Affordable Dentures in Fresno", "meta goes here"));
+  res.send(returnHTML(data, homeBundle, HomeRoot, "Fresno Dental Professionals | Affordable Dentures in Fresno", "Dr. Luis Castillo is the reliable dentist in Fresno you can count on to transform your smile. We provide complete dental care to our patients, from cosmetic dental care to general dentistry."));
 });
 // app.get('/about', (req, res) => {
 //   let data = "";
