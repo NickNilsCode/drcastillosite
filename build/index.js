@@ -144,7 +144,7 @@ _fs["default"].readFile('./dist/js/blogtemplate.bundle.min.js', "utf8", function
 app.get('/', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "Fresno CA Dentist", "meta goes here"));
+  res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "Fresno Dental Professionals | Affordable Dentures in Fresno", "meta goes here"));
 }); // app.get('/about', (req, res) => {
 //   let data = "";
 //   res.set('Cache-Control', 'public, max-age=31557600');
