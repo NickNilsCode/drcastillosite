@@ -135,7 +135,7 @@ app.get('/services/:id', (req, res) => {
     serviceId: req.params.id
   };
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "servicestemplate", "meta goes here"));
+  res.send(returnHTML(data, servicestemplateBundle, ServicestemplateRoot, "Cosmetic Dentistry near me - Quick Teeth Whitening Fresno", "Looking for affordable cosmetic dentistry service in Fresno? Dr. Luis Castillo provides patients with cosmetic solutions for quick teeth whitening, broken, chipped teeth& more."));
 });
 app.get('/procedures/:id', (req, res) => {
   let data = {
